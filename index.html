@@ -86,9 +86,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>test</p>
-<h3 id="jlsdfi"><a href="#jlsdfi" class="headerlink" title="jlsdfi"></a>jlsdfi</h3><p>jsldfasidfl </p>
+        <h2 id="Breaking-Changes"><a href="#Breaking-Changes" class="headerlink" title="Breaking Changes"></a>Breaking Changes</h2><ul>
+<li><p>Multilingual switch button support (</p>
+<p>#1391</p>
+<p>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+# Show multilingual switcher in footer.</span><br><span class="line">+language_switcher: false</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Remove</p>
+</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">safari_rainbow</span><br></pre></td></tr></table></figure>
 
+
+
+<p>  option in</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br></pre></td></tr></table></figure>
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-# Hide sticky headers and color the menu bar on Safari (iOS &#x2F; macOS).</span><br><span class="line">-safari_rainbow: false</span><br></pre></td></tr></table></figure>
+
+<h2 id="⭐-Features"><a href="#⭐-Features" class="headerlink" title="⭐ Features"></a>⭐ Features</h2><ul>
+<li>Simplify</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">footer.powered</span><br></pre></td></tr></table></figure>
+
+
+
+<p>  settings (</p>
+<p>  #1432</p>
+<p>  )</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">...</span><br><span class="line">-  powered:</span><br><span class="line">-    # Hexo link (Powered by Hexo).</span><br><span class="line">-    enable: true</span><br><span class="line">-    # Version info of Hexo after Hexo link (vX.X.X).</span><br><span class="line">-    version: true</span><br><span class="line">-</span><br><span class="line">-  theme:</span><br><span class="line">-    # Theme &amp; scheme info link (Theme - NexT.scheme).</span><br><span class="line">-    enable: true</span><br><span class="line">-    # Version info of NexT after scheme info (vX.X.X).</span><br><span class="line">-    version: true</span><br><span class="line">+  # Powered by Hexo &amp; NexT</span><br><span class="line">+  powered: true</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>New</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors</span><br></pre></td></tr></table></figure>
+
+
+
+<p>  option</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server_url</span><br></pre></td></tr></table></figure>
+
+
+
+<p>  (</p>
+<p>  #1426</p>
+<p>  )</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">leancloud_visitors:</span><br><span class="line">-  betterPerformance: false</span><br><span class="line">+  # Required for apps from CN region</span><br><span class="line">+  server_url: # &lt;your server url&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
