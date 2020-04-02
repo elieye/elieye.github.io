@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>NexT主题的安装</title>
-    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<blockquote>
-<p> Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-</blockquote>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>NexT主题是一款非常受欢迎的Hexo主题<a id="more"></a></p>
-<blockquote>
-<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
-<p>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
-</blockquote>
-<p>右键单击blog文件夹，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>也可去GitHub网站下载压缩包解压</p>
-<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse</p>
-<p>修改语言为中文</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
-
-<p>设置顶栏的显示</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<p>把要显示的栏目前的<code>＃</code>去掉即可</p>
-<p>再博客根目录下打开Git，创建标签文件夹，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件</p>
-<h3 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h3><p>依次执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>刷新网站就可以看到网站主题更新成功了</p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LaTex在Markdown中的基础应用</title>
     <url>/2020/04/02/LaTex%E5%9C%A8Markdown%E4%B8%AD%E7%9A%84%E5%9F%BA%E7%A1%80%E5%BA%94%E7%94%A8/</url>
     <content><![CDATA[<p>LaTex是一种基于TEX的排版系统，常用于论文写作等方面。Typora默认支持LaTex公式，但是需要掌握基础的语法<a id="more"></a></p>
@@ -432,78 +387,6 @@
       </tags>
   </entry>
   <entry>
-    <title>NexT主题优化</title>
-    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><h3 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h3><p>我们选用的是hexo-symbols-count-time插件，类似插件还有hexo-wordcount。首先安装，在博客根目录下打开Git，输入<a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
-
-<p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>exclude_codeblock排除代码块中的内容，默认为false</p>
-</blockquote>
-<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 4</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>awl为平均字长</p>
-<p>wpm为每分钟字数</p>
-</blockquote>
-<p>依次运行以下命令部署网站</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>在以上步骤的完成后刷新网站，正确显示字数和阅读时长即配置成功。如果字数显示为空白，阅读时长显示NaN，则清空缓存，运行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>再次部署网站刷新即可</p>
-<h3 id="首页文章折叠"><a href="#首页文章折叠" class="headerlink" title="首页文章折叠"></a>首页文章折叠</h3><ol>
-<li><p>在文章要要隐藏的内容前面添加<code>&lt;!-- more --&gt;</code>手动进行阶段，这样在首页就只会显示<code>&lt;!-- more --&gt;</code>之前的内容<strong>（推荐）</strong></p>
-</li>
-<li><p>在文章的头部添加一个<code>description</code>，<code>description</code>后面描述的内容就是显示的内容</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 主题美化</span><br><span class="line">date: 2020-04-2 21:07:16</span><br><span class="line">description: 描述内容</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="更改侧栏"><a href="#更改侧栏" class="headerlink" title="更改侧栏"></a>更改侧栏</h3><h4 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h4><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改主题配置文件中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机</p>
-<ol>
-<li><p>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
-<ul>
-<li>left - 靠左放置</li>
-<li>right - 靠右放置</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  position: left</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
-<ul>
-<li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
-<li><code>always</code> - 在所有页面中都显示</li>
-<li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
-<li><code>remove</code> - 完全移除</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  display: post</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h4><p>打开主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。链接地址可以是完整的网络链接，配置成以下格式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: http:&#x2F;&#x2F;example.com&#x2F;avatar.gif</span><br></pre></td></tr></table></figure>
-
-<p>如果是本地的地址，则将头像文件命名为avatar.gif，放在next文件夹下的<code>source/images/</code> 目录下或者<code>source/uploads/</code> 下（ uploads 目录若不存在就新建）。两种方法的配置如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
-
-<h4 id="作者昵称"><a href="#作者昵称" class="headerlink" title="作者昵称"></a>作者昵称</h4><p>打开站点配置文件，设置<code>author</code>为你的昵称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">author： elieye</span><br></pre></td></tr></table></figure>
-
-<h4 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h4><p>打开站点配置文件， 设置 <code>description</code> 字段为你的站点描述</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">description: &#39;漫漫长路，半程风雨，半程春&#39;</span><br></pre></td></tr></table></figure>
-
-<h3 id="显示阅读进度"><a href="#显示阅读进度" class="headerlink" title="显示阅读进度"></a>显示阅读进度</h3><p>打开 <code>themes/next/_config.yml</code>，搜索关键字 <code>scrollpercent</code>，把 <code>false</code> 改为 <code>true</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown基础语法</title>
     <url>/2020/04/02/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<p>Markdown是写博客的必备技能了，虽然现在简书等平台已经弱化了Markdown的作用，增加了富文本编辑模式，但是对于写个人博客网站来说还是必须掌握的。下面以Typora为例简要概括基本Markdown书写语法<a id="more"></a></p>
@@ -616,23 +499,120 @@
       </tags>
   </entry>
   <entry>
-    <title>ePUBee书籍免费下载</title>
-    <url>/2020/04/02/ePUBee%E4%B9%A6%E7%B1%8D%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p>ePUBee作为全球最大的免费电子书库,有超过10万本书籍,50万个文件版本。虽然说是免费，其实只是支持免费在线阅读，如果要下载的话，还是需要付费的<a id="more"></a></p>
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><blockquote>
-<p>ePUBee官网：<a href="http://cn.epubee.com/books/" target="_blank" rel="noopener">http://cn.epubee.com/books/</a></p>
-</blockquote>
-<p>搜索我们需要的书籍，点击保存到Cloud ID</p>
-<p>打开电子书管理器，找到我们需要下载的书籍，点击阅读</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>打开开发者工具（F12），选中<code>Network</code>选项卡，选择筛选<code>XHR</code>选择</p>
+    <title>NexT主题优化</title>
+    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><h3 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h3><p>我们选用的是hexo-symbols-count-time插件，类似插件还有hexo-wordcount。首先安装，在博客根目录下打开Git，输入<a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<p>Chrome需要在进入阅读界面之前打开开发者工具或者进入阅读界面，打开开发者工具之后再次刷新一遍</p>
+<p>exclude_codeblock排除代码块中的内容，默认为false</p>
 </blockquote>
-<p>选择后缀为<code>epub</code>的的文件</p>
-<p>找到<code>Request URL</code>，将下面的网址复制下来粘贴到浏览器地址栏就可以开始自动下载了</p>
+<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 4</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>awl为平均字长</p>
+<p>wpm为每分钟字数</p>
+</blockquote>
+<p>依次运行以下命令部署网站</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>在以上步骤的完成后刷新网站，正确显示字数和阅读时长即配置成功。如果字数显示为空白，阅读时长显示NaN，则清空缓存，运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>再次部署网站刷新即可</p>
+<h3 id="首页文章折叠"><a href="#首页文章折叠" class="headerlink" title="首页文章折叠"></a>首页文章折叠</h3><ol>
+<li><p>在文章要要隐藏的内容前面添加<code>&lt;!-- more --&gt;</code>手动进行阶段，这样在首页就只会显示<code>&lt;!-- more --&gt;</code>之前的内容<strong>（推荐）</strong></p>
+</li>
+<li><p>在文章的头部添加一个<code>description</code>，<code>description</code>后面描述的内容就是显示的内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 主题美化</span><br><span class="line">date: 2020-04-2 21:07:16</span><br><span class="line">description: 描述内容</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="更改侧栏"><a href="#更改侧栏" class="headerlink" title="更改侧栏"></a>更改侧栏</h3><h4 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h4><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改主题配置文件中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机</p>
+<ol>
+<li><p>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
+<ul>
+<li>left - 靠左放置</li>
+<li>right - 靠右放置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  position: left</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
+<ul>
+<li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
+<li><code>always</code> - 在所有页面中都显示</li>
+<li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
+<li><code>remove</code> - 完全移除</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  display: post</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h4><p>打开主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。链接地址可以是完整的网络链接，配置成以下格式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: http:&#x2F;&#x2F;example.com&#x2F;avatar.gif</span><br></pre></td></tr></table></figure>
+
+<p>如果是本地的地址，则将头像文件命名为avatar.gif，放在next文件夹下的<code>source/images/</code> 目录下或者<code>source/uploads/</code> 下（ uploads 目录若不存在就新建）。两种方法的配置如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
+
+<h4 id="作者昵称"><a href="#作者昵称" class="headerlink" title="作者昵称"></a>作者昵称</h4><p>打开站点配置文件，设置<code>author</code>为你的昵称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">author： elieye</span><br></pre></td></tr></table></figure>
+
+<h4 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h4><p>打开站点配置文件， 设置 <code>description</code> 字段为你的站点描述</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">description: &#39;漫漫长路，半程风雨，半程春&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="显示阅读进度"><a href="#显示阅读进度" class="headerlink" title="显示阅读进度"></a>显示阅读进度</h3><p>打开 <code>themes/next/_config.yml</code>，搜索关键字 <code>scrollpercent</code>，把 <code>false</code> 改为 <code>true</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT主题的安装</title>
+    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<blockquote>
+<p> Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+</blockquote>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>NexT主题是一款非常受欢迎的Hexo主题<a id="more"></a></p>
+<blockquote>
+<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
+<p>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
+</blockquote>
+<p>右键单击blog文件夹，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>也可去GitHub网站下载压缩包解压</p>
+<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse</p>
+<p>修改语言为中文</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
+
+<p>设置顶栏的显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>把要显示的栏目前的<code>＃</code>去掉即可</p>
+<p>再博客根目录下打开Git，创建标签文件夹，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件</p>
+<h3 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h3><p>依次执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>刷新网站就可以看到网站主题更新成功了</p>
 ]]></content>
       <tags>
-        <tag>网络</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -868,6 +848,26 @@
 ]]></content>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ePUBee书籍免费下载</title>
+    <url>/2020/04/02/ePUBee%E4%B9%A6%E7%B1%8D%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p>ePUBee作为全球最大的免费电子书库,有超过10万本书籍,50万个文件版本。虽然说是免费，其实只是支持免费在线阅读，如果要下载的话，还是需要付费的<a id="more"></a></p>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><blockquote>
+<p>ePUBee官网：<a href="http://cn.epubee.com/books/" target="_blank" rel="noopener">http://cn.epubee.com/books/</a></p>
+</blockquote>
+<p>搜索我们需要的书籍，点击保存到Cloud ID</p>
+<p>打开电子书管理器，找到我们需要下载的书籍，点击阅读</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>打开开发者工具（F12），选中<code>Network</code>选项卡，选择筛选<code>XHR</code>选择</p>
+<blockquote>
+<p>Chrome需要在进入阅读界面之前打开开发者工具或者进入阅读界面，打开开发者工具之后再次刷新一遍</p>
+</blockquote>
+<p>选择后缀为<code>epub</code>的的文件</p>
+<p>找到<code>Request URL</code>，将下面的网址复制下来粘贴到浏览器地址栏就可以开始自动下载了</p>
+]]></content>
+      <tags>
+        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
