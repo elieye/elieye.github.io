@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>NexT主题添加文字计数和计时功能</title>
+    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E5%AD%97%E8%AE%A1%E6%95%B0%E5%92%8C%E8%AE%A1%E6%97%B6%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>我们选用的是hexo-symbols-count-time插件，类似插件还有hexo-wordcount。首先安装，在博客根目录下打开Git，输入<a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>exclude_codeblock排除代码块中的内容，默认为false</p>
+</blockquote>
+<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 4</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>awl为平均字长</p>
+<p>wpm为每分钟字数</p>
+</blockquote>
+<p>依次运行以下命令部署网站</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>在以上步骤的完成后刷新网站，正确显示字数和阅读时长即配置成功。如果字数显示为空白，阅读时长显示NaN，则清空缓存，运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>再次部署网站刷新即可</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT主题的安装</title>
+    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<blockquote>
+<p> Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+</blockquote>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>NexT主题是一款非常受欢迎的Hexo主题<a id="more"></a></p>
+<blockquote>
+<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
+<p>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
+</blockquote>
+<p>右键单击blog文件夹，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>也可去GitHub网站下载压缩包解压</p>
+<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse</p>
+<p>修改语言为中文</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
+
+<p>设置顶栏的显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>把要显示的栏目前的<code>＃</code>去掉即可</p>
+<p>再博客根目录下打开Git，创建标签文件夹，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件</p>
+<h3 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h3><p>依次执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>刷新网站就可以看到网站主题更新成功了</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown基础语法</title>
     <url>/2020/04/02/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<p>Markdown是写博客的必备技能了，虽然现在简书等平台已经弱化了Markdown的作用，增加了富文本编辑模式，但是对于写个人博客网站来说还是必须掌握的。下面以Typora为例简要概括基本Markdown书写语法<a id="more"></a></p>
@@ -499,102 +575,6 @@
       </tags>
   </entry>
   <entry>
-    <title>NexT主题的安装</title>
-    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<blockquote>
-<p> Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-</blockquote>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>NexT主题是一款非常受欢迎的Hexo主题<a id="more"></a></p>
-<blockquote>
-<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
-<p>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
-</blockquote>
-<p>右键单击blog文件夹，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>也可去GitHub网站下载压缩包解压</p>
-<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse</p>
-<p>修改语言为中文</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
-
-<p>设置顶栏的显示</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<p>把要显示的栏目前的<code>＃</code>去掉即可</p>
-<p>再博客根目录下打开Git，创建标签文件夹，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件</p>
-<h3 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h3><p>依次执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>刷新网站就可以看到网站主题更新成功了</p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NexT主题添加文字计数和计时功能</title>
-    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E5%AD%97%E8%AE%A1%E6%95%B0%E5%92%8C%E8%AE%A1%E6%97%B6%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>我们选用的是hexo-symbols-count-time插件，类似插件还有hexo-wordcount。首先安装，在博客根目录下打开Git，输入<a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>exclude_codeblock排除代码块中的内容，默认为false</p>
-</blockquote>
-<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 4</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>awl为平均字长</p>
-<p>wpm为每分钟字数</p>
-</blockquote>
-<p>依次运行以下命令部署网站</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>在以上步骤的完成后刷新网站，正确显示字数和阅读时长即配置成功。如果字数显示为空白，阅读时长显示NaN，则清空缓存，运行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>再次部署网站刷新即可</p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ePUBee书籍免费下载</title>
-    <url>/2020/04/02/ePUBee%E4%B9%A6%E7%B1%8D%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p>ePUBee作为全球最大的免费电子书库,有超过10万本书籍,50万个文件版本。虽然说是免费，其实只是支持免费在线阅读，如果要下载的话，还是需要付费的<a id="more"></a></p>
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><blockquote>
-<p>ePUBee官网：<a href="http://cn.epubee.com/books/" target="_blank" rel="noopener">http://cn.epubee.com/books/</a></p>
-</blockquote>
-<p>搜索我们需要的书籍，点击保存到Cloud ID</p>
-<p>打开电子书管理器，找到我们需要下载的书籍，点击阅读</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>打开开发者工具（F12），选中<code>Network</code>选项卡，选择筛选<code>XHR</code>选择</p>
-<blockquote>
-<p>Chrome需要在进入阅读界面之前打开开发者工具或者进入阅读界面，打开开发者工具之后再次刷新一遍</p>
-</blockquote>
-<p>选择后缀为<code>epub</code>的的文件</p>
-<p>找到<code>Request URL</code>，将下面的网址复制下来粘贴到浏览器地址栏就可以开始自动下载了</p>
-]]></content>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Typora快捷键</title>
     <url>/2020/04/02/Typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
     <content><![CDATA[<p>Typora默认的快捷键汇总<a id="more"></a></p>
@@ -827,6 +807,26 @@
 ]]></content>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ePUBee书籍免费下载</title>
+    <url>/2020/04/02/ePUBee%E4%B9%A6%E7%B1%8D%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p>ePUBee作为全球最大的免费电子书库,有超过10万本书籍,50万个文件版本。虽然说是免费，其实只是支持免费在线阅读，如果要下载的话，还是需要付费的<a id="more"></a></p>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><blockquote>
+<p>ePUBee官网：<a href="http://cn.epubee.com/books/" target="_blank" rel="noopener">http://cn.epubee.com/books/</a></p>
+</blockquote>
+<p>搜索我们需要的书籍，点击保存到Cloud ID</p>
+<p>打开电子书管理器，找到我们需要下载的书籍，点击阅读</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>打开开发者工具（F12），选中<code>Network</code>选项卡，选择筛选<code>XHR</code>选择</p>
+<blockquote>
+<p>Chrome需要在进入阅读界面之前打开开发者工具或者进入阅读界面，打开开发者工具之后再次刷新一遍</p>
+</blockquote>
+<p>选择后缀为<code>epub</code>的的文件</p>
+<p>找到<code>Request URL</code>，将下面的网址复制下来粘贴到浏览器地址栏就可以开始自动下载了</p>
+]]></content>
+      <tags>
+        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
