@@ -3,7 +3,7 @@
   <entry>
     <title>LaTex在Markdown中的基础应用</title>
     <url>/2020/04/02/LaTex%E5%9C%A8Markdown%E4%B8%AD%E7%9A%84%E5%9F%BA%E7%A1%80%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<p>LaTex是一种基于TEX的排版系统，常用于论文写作等方面。Typora默认支持LaTex公式，但是需要掌握基础的语法<a id="more"></a></p>
+    <content><![CDATA[<p>LaTex是一种基于TEX的排版系统，常用于论文写作等方面。Typora默认支持LaTex公式，但是需要掌握基础的语法</p>
 <h3 id="数学运算"><a href="#数学运算" class="headerlink" title="数学运算"></a>数学运算</h3><table>
 <thead>
 <tr>
@@ -387,110 +387,157 @@
       </tags>
   </entry>
   <entry>
-    <title>NexT主题优化</title>
-    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<h3 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h3><p>我们选用的是hexo-symbols-count-time插件，类似插件还有hexo-wordcount。首先安装，在博客根目录下打开Git，输入<a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
-
-<p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>exclude_codeblock排除代码块中的内容，默认为false</p>
-</blockquote>
-<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 4</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>awl为平均字长</p>
-<p>wpm为每分钟字数</p>
-</blockquote>
-<p>依次运行以下命令部署网站</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>在以上步骤的完成后刷新网站，正确显示字数和阅读时长即配置成功。如果字数显示为空白，阅读时长显示NaN，则清空缓存，运行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>再次部署网站刷新即可</p>
-<h3 id="首页文章折叠"><a href="#首页文章折叠" class="headerlink" title="首页文章折叠"></a>首页文章折叠</h3><ol>
-<li><p>在文章要要隐藏的内容前面添加<code>&lt;!-- more --&gt;</code>手动进行阶段，这样在首页就只会显示<code>&lt;!-- more --&gt;</code>之前的内容<strong>（推荐）</strong></p>
-</li>
-<li><p>在文章的头部添加一个<code>description</code>，<code>description</code>后面描述的内容就是显示的内容</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 主题美化</span><br><span class="line">date: 2020-04-2 21:07:16</span><br><span class="line">description: 描述内容</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="更改侧栏"><a href="#更改侧栏" class="headerlink" title="更改侧栏"></a>更改侧栏</h3><h4 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h4><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改主题配置文件中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机</p>
+    <title>Markdown基础语法</title>
+    <url>/2020/04/02/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>Markdown是写博客的必备技能了，虽然现在简书等平台已经弱化了Markdown的作用，增加了富文本编辑模式，但是对于写个人博客网站来说还是必须掌握的。下面以Typora为例简要概括基本Markdown书写语法</p>
+<h3 id="插入内容"><a href="#插入内容" class="headerlink" title="插入内容"></a>插入内容</h3><h4 id="换行符"><a href="#换行符" class="headerlink" title="换行符"></a>换行符</h4><p>在Markdown中，段落由多个空格分隔。在Typora中，只需回车即可创建新段落。</p>
+<h4 id="标题级别"><a href="#标题级别" class="headerlink" title="标题级别"></a>标题级别</h4><p># 一级标题 快捷键为 Ctrl + 1<br>## 二级标题 快捷键为 Ctrl + 2<br>……<br>###### 六级标题 快捷键为 Ctrl + 6</p>
+<h4 id="引用文字"><a href="#引用文字" class="headerlink" title="引用文字"></a>引用文字</h4><p>&gt; + 空格 + 引用文字</p>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>使用 * + - 都可以创建一个无序列表</p>
+<ul>
+<li>AAA</li>
+<li>BBB</li>
+<li>CCC</li>
+</ul>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>使用 1. 2. 3. 创建有序列表</p>
 <ol>
-<li><p>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
-<ul>
-<li>left - 靠左放置</li>
-<li>right - 靠右放置</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  position: left</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
-<ul>
-<li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
-<li><code>always</code> - 在所有页面中都显示</li>
-<li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
-<li><code>remove</code> - 完全移除</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  display: post</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>AAA</li>
+<li>BBB</li>
+<li>CCC</li>
 </ol>
-<h4 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h4><p>打开主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。链接地址可以是完整的网络链接，配置成以下格式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: http:&#x2F;&#x2F;example.com&#x2F;avatar.gif</span><br></pre></td></tr></table></figure>
+<h4 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h4><p>? -[ ] 不勾选<br>? -[x] 勾选</p>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>在Typora中插入程序代码的方式有两种：使用反引号 `（~ 键）、使用缩进（Tab）。</p>
+<ul>
+<li>插入行内代码，即插入一个单词或者一句代码的情况，使用 <code>code</code> 这样的形式插入。</li>
+<li>插入多行代码输入3个反引号（`） + 回车，并在后面选择一个语言名称即可实现语法高亮。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def helloworld():</span><br><span class="line">    print(&quot;hello, world!&quot;)</span><br></pre></td></tr></table></figure>
 
-<p>如果是本地的地址，则将头像文件命名为avatar.gif，放在next文件夹下的<code>source/images/</code> 目录下或者<code>source/uploads/</code> 下（ uploads 目录若不存在就新建）。两种方法的配置如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
+<h4 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h4><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。根据需要加载 Mathjax 对数学公式进行渲染。</p>
+<p>按下 <code>$$</code>，然后按下回车键，即可进行数学公式的编辑。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1\times\mathbf&#123;V&#125;_2 &#x3D; \mathbf&#123;X&#125;_3</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
 
-<h4 id="作者昵称"><a href="#作者昵称" class="headerlink" title="作者昵称"></a>作者昵称</h4><p>打开站点配置文件，设置<code>author</code>为你的昵称</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">author： elieye</span><br></pre></td></tr></table></figure>
+<h4 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h4><p>输入 <code>| 表头1 | 表头2 |</code>并回车。即可创建一个包含2列表。快捷键 <code>Ctrl+T</code>弹出对话框。</p>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>不管是哪种方式，第一行为表头，第二行为分割表头和主体部分，第三行开始每一行为一个表格行</li>
+<li>列与列之间用管道符号<code>|</code> 隔开</li>
+<li>还可设置对齐方式(表头与内容之间)，如果不使用对齐标记，内容默认左对齐，表头居中对齐<ul>
+<li>左对齐 ：|</li>
+<li>右对齐 |：</li>
+<li>中对齐 ：|：</li>
+</ul>
+</li>
+<li>为了美观，可以使用空格对齐不同行的单元格，并在左右两侧都使用 | 来标记单元格边界</li>
+<li>为了使 Markdown 更清晰，| 和 - 两侧需要至少有一个空格（最左侧和最右侧的 | 外就不需要了）。</li>
+</ul>
+<h4 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h4><p>这个例子的脚注为<a href="http://www.mamicode.com/info-detail-2794030.html#fn1" target="_blank" rel="noopener">1</a>。</p>
+<p>注意：该例子脚注标识是1，脚注标识可以为字母数字下划线，但是暂不支持中文。脚注内容可为任意字符，包括中文。</p>
+<h4 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h4><p>输入 <code>***</code> 或者 <code>---</code> 再按回车即可绘制一条水平线，如下：</p>
+<hr>
+<h4 id="目录（TOC）"><a href="#目录（TOC）" class="headerlink" title="目录（TOC）"></a>目录（TOC）</h4><p>输入 <code>[ toc ]</code> 然后回车，即可创建一个“目录”。TOC从文档中提取所有标题，其内容将自动更新。</p>
+<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p><strong>内部链接</strong></p>
+<p>这是一个带有标题属性的 <code>[链接](http://example.com/ &quot;标题&quot;)</code><br>这是一个没有标题属性的 <code>[链接](http://example.net/)</code></p>
+<p><a href="http://example.com/" target="_blank" rel="noopener" title="标题">链接</a></p>
+<p><a href="http://example.net/" target="_blank" rel="noopener">链接</a></p>
+<p><strong>参考链接</strong></p>
+<p>这是一个[参考链接]id – 无法执行</p>
+<h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><p>Typora允许用&lt;括号括起来&gt;, 把URL作为链接插入。</p>
+<p>Typora还会自动链接标准网址。</p>
+<p><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></p>
+<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![显示的文字](C:\Users\Hider\Desktop\echart.png &quot;图片标题&quot;)</span><br><span class="line">![显示的文字](C:\Users\Hider\Desktop\echart.png)</span><br></pre></td></tr></table></figure>
 
-<h4 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h4><p>打开站点配置文件， 设置 <code>description</code> 字段为你的站点描述</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">description: &#39;漫漫长路，半程风雨，半程春&#39;</span><br></pre></td></tr></table></figure>
-
-<h3 id="显示阅读进度"><a href="#显示阅读进度" class="headerlink" title="显示阅读进度"></a>显示阅读进度</h3><p>侧边栏阅读进度：打开 主题配置文件<code>_config.yml</code>，搜索 <code>scrollpercent</code>，把 <code>false</code> 改为 <code>true</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
-
-<p>顶栏阅读进度（二者可共存）：打开主题配置文件<code>_config.yml</code>搜索reading_progress，把<code>false</code>修改为<code>true</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-
-<h3 id="鼠标点击爱心"><a href="#鼠标点击爱心" class="headerlink" title="鼠标点击爱心"></a>鼠标点击爱心</h3><p>打开<code>next&gt;source&gt;js</code>文件夹，在里面新建一个src文件夹（有就打开它），新建<code>clicklove.js</code>文件，将以下代码复制至里面</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
-
-<p>然后打开<code>themes&gt;next&gt;layout&gt;_layout.swig</code>文件，在末尾添加以下代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="文章阅读次数"><a href="#文章阅读次数" class="headerlink" title="文章阅读次数"></a>文章阅读次数</h3><p>打开主题配置文件<code>_config.yml</code>，搜索<code>busuanzi</code>，将<code>false</code>改为<code>true</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-
-<h3 id="代码块复制功能"><a href="#代码块复制功能" class="headerlink" title="代码块复制功能"></a>代码块复制功能</h3><p>打开主题配置文件<code>_config.yml</code>，搜索<code>copy_button</code>，将<code>false</code>改为<code>true</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy_button:</span><br><span class="line">   enable: true</span><br></pre></td></tr></table></figure>
-
-<h3 id="侧边栏社交按钮"><a href="#侧边栏社交按钮" class="headerlink" title="侧边栏社交按钮"></a>侧边栏社交按钮</h3><p>打开主题配置文件<code>_config.yml</code>，搜索<code>social</code>，去掉要启用的链接前面的注释，并将链接设置为自己的链接</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;your-user-name</span><br><span class="line">  Twitter: https:&#x2F;&#x2F;twitter.com&#x2F;your-user-name</span><br><span class="line">  微博: http:&#x2F;&#x2F;weibo.com&#x2F;your-user-name</span><br><span class="line">  豆瓣: http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;your-user-name</span><br><span class="line">  知乎: http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;your-user-name</span><br></pre></td></tr></table></figure>
-
-<p>下方的<code>social_icons</code>对于相应的图标（大小写严格匹配），<code>enable</code>控制是否显示图标</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  微博: weibo</span><br></pre></td></tr></table></figure>
-
-<h3 id="博客里插入图片"><a href="#博客里插入图片" class="headerlink" title="博客里插入图片"></a>博客里插入图片</h3><h4 id="本地引用–绝对路径"><a href="#本地引用–绝对路径" class="headerlink" title="本地引用–绝对路径"></a>本地引用–绝对路径</h4><p>将图片统一放在source/images文件夹中，通过markdown语法访问它们。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source&#x2F;images&#x2F;image.jpg</span><br><span class="line"></span><br><span class="line">![(可以写关于图片的描述)](&#x2F;images&#x2F;image.jpg)</span><br></pre></td></tr></table></figure>
-
+<p>除了以上2种方式之外，还可以直接将图片拖拽进来，自动生成链接。</p>
+<h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
+<p>目前支持的 HTML 元素有&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</p>
+<h3 id="调整格式"><a href="#调整格式" class="headerlink" title="调整格式"></a>调整格式</h3><h4 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h4><p>使用 <code>*单个星号*</code> 或者 <code>_单下划线_</code> 可以字体倾斜。快捷键 <code>Ctrl+I</code></p>
+<p><em>斜体</em></p>
+<h4 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h4><p>使用 <code>**两个星号**</code>或者 <code>__两个下划线__</code>可以字体加粗。快捷键 <code>Ctrl+B</code></p>
+<p><strong>加粗</strong>or__加粗__</p>
+<h4 id="加粗斜体"><a href="#加粗斜体" class="headerlink" title="加粗斜体"></a>加粗斜体</h4><p>使用<code>***加粗斜体***</code>可以加粗斜体。快捷键<code>Ctrl+I</code></p>
+<p><strong><em>加粗斜体</em></strong></p>
+<h4 id="代码标记"><a href="#代码标记" class="headerlink" title="代码标记"></a>代码标记</h4><p>标记代码使用反引号`，即在英文输入法下，ESC键下面和1键左边的符号。</p>
 <blockquote>
-<p>图片既可以在首页内容中访问到，也可以在文章正文中访问到</p>
+<p>使用 <code>printf()</code>功能</p>
 </blockquote>
-<h4 id="本地引用–相对路径"><a href="#本地引用–相对路径" class="headerlink" title="本地引用–相对路径"></a>本地引用–相对路径</h4><p>图片除了可以放在统一的<code>images</code>文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置<code>_config.yml</code>来生成。搜索post_asset_folder将false改为true，新建文章时就会同时新建一个同名文件夹</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+<h4 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h4><p>使用<code>~~删除线~~</code> 快捷键<code>Alt + Shift + 5</code></p>
+<p><del>删除线</del></p>
+<h4 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h4><p>通过<code>&lt;u&gt;下划线&lt;/u&gt;</code>或快捷键<code>Ctrl + U</code>可实现下划线</p>
+<p><u>下划线</u></p>
+<h4 id="表情符号"><a href="#表情符号" class="headerlink" title="表情符号"></a>表情符号</h4><p><code>:happy::+1</code>:</p>
+<p>:happy::+1:</p>
+<h4 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h4><p><code>~下标~</code></p>
+<h4 id="上标"><a href="#上标" class="headerlink" title="上标"></a>上标</h4><p><code>^上标^</code></p>
+<p>X^2^</p>
+<h4 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h4><p><code>==高亮==</code></p>
+<p>==高亮==</p>
+<h4 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h4><p>使用 <code>&lt;center&gt;这是要居中的内容&lt;/center&gt;</code>可以使文本居中</p>
+<center>这是要居中的文本内容</center>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure>
+<h4 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h4><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<p><strong>文本加粗</strong><br>** 正常显示星号 **</p>
+<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
 
+<h4 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h4><p> <code>\color{颜色}{文字}</code> 或者 <code>\color { #rgb} {text}</code> </p>
+<p>$\color{red}{红色}$</p>
+<p>$ \color { #7e7e87} {灰色} $</p>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT主题的安装</title>
+    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<blockquote>
+<p> Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+</blockquote>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>NexT主题是一款非常受欢迎的Hexo主题</p>
 <blockquote>
-<p>上述是markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。</p>
+<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
+<p>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
 </blockquote>
-<h4 id="CDN引用"><a href="#CDN引用" class="headerlink" title="CDN引用"></a>CDN引用</h4><p>将图片上传到图床直接引用</p>
+<p>右键单击blog文件夹，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>也可去GitHub网站下载压缩包解压</p>
+<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse</p>
+<p>修改语言为中文</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
+
+<p>设置顶栏的显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>把要显示的栏目前的<code>＃</code>去掉即可</p>
+<p>再博客根目录下打开Git，创建标签文件夹，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件</p>
+<h3 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h3><p>依次执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>刷新网站就可以看到网站主题更新成功了</p>
 ]]></content>
       <tags>
         <tag>Hexo</tag>
@@ -499,7 +546,7 @@
   <entry>
     <title>Typora快捷键</title>
     <url>/2020/04/02/Typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<p>Typora默认的快捷键汇总<a id="more"></a></p>
+    <content><![CDATA[<p>Typora默认的快捷键汇总</p>
 <table>
 <thead>
 <tr>
@@ -732,189 +779,12 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown基础语法</title>
-    <url>/2020/04/02/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>Markdown是写博客的必备技能了，虽然现在简书等平台已经弱化了Markdown的作用，增加了富文本编辑模式，但是对于写个人博客网站来说还是必须掌握的。下面以Typora为例简要概括基本Markdown书写语法<a id="more"></a></p>
-<h3 id="插入内容"><a href="#插入内容" class="headerlink" title="插入内容"></a>插入内容</h3><h4 id="换行符"><a href="#换行符" class="headerlink" title="换行符"></a>换行符</h4><p>在Markdown中，段落由多个空格分隔。在Typora中，只需回车即可创建新段落。</p>
-<h4 id="标题级别"><a href="#标题级别" class="headerlink" title="标题级别"></a>标题级别</h4><p># 一级标题 快捷键为 Ctrl + 1<br>## 二级标题 快捷键为 Ctrl + 2<br>……<br>###### 六级标题 快捷键为 Ctrl + 6</p>
-<h4 id="引用文字"><a href="#引用文字" class="headerlink" title="引用文字"></a>引用文字</h4><p>&gt; + 空格 + 引用文字</p>
-<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>使用 * + - 都可以创建一个无序列表</p>
-<ul>
-<li>AAA</li>
-<li>BBB</li>
-<li>CCC</li>
-</ul>
-<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>使用 1. 2. 3. 创建有序列表</p>
-<ol>
-<li>AAA</li>
-<li>BBB</li>
-<li>CCC</li>
-</ol>
-<h4 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h4><p>? -[ ] 不勾选<br>? -[x] 勾选</p>
-<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>在Typora中插入程序代码的方式有两种：使用反引号 `（~ 键）、使用缩进（Tab）。</p>
-<ul>
-<li>插入行内代码，即插入一个单词或者一句代码的情况，使用 <code>code</code> 这样的形式插入。</li>
-<li>插入多行代码输入3个反引号（`） + 回车，并在后面选择一个语言名称即可实现语法高亮。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def helloworld():</span><br><span class="line">    print(&quot;hello, world!&quot;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h4><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。根据需要加载 Mathjax 对数学公式进行渲染。</p>
-<p>按下 <code>$$</code>，然后按下回车键，即可进行数学公式的编辑。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1\times\mathbf&#123;V&#125;_2 &#x3D; \mathbf&#123;X&#125;_3</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-
-<h4 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h4><p>输入 <code>| 表头1 | 表头2 |</code>并回车。即可创建一个包含2列表。快捷键 <code>Ctrl+T</code>弹出对话框。</p>
-<table>
-<thead>
-<tr>
-<th align="center">id</th>
-<th align="center">number</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<ul>
-<li>不管是哪种方式，第一行为表头，第二行为分割表头和主体部分，第三行开始每一行为一个表格行</li>
-<li>列与列之间用管道符号<code>|</code> 隔开</li>
-<li>还可设置对齐方式(表头与内容之间)，如果不使用对齐标记，内容默认左对齐，表头居中对齐<ul>
-<li>左对齐 ：|</li>
-<li>右对齐 |：</li>
-<li>中对齐 ：|：</li>
-</ul>
-</li>
-<li>为了美观，可以使用空格对齐不同行的单元格，并在左右两侧都使用 | 来标记单元格边界</li>
-<li>为了使 Markdown 更清晰，| 和 - 两侧需要至少有一个空格（最左侧和最右侧的 | 外就不需要了）。</li>
-</ul>
-<h4 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h4><p>这个例子的脚注为<a href="http://www.mamicode.com/info-detail-2794030.html#fn1" target="_blank" rel="noopener">1</a>。</p>
-<p>注意：该例子脚注标识是1，脚注标识可以为字母数字下划线，但是暂不支持中文。脚注内容可为任意字符，包括中文。</p>
-<h4 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h4><p>输入 <code>***</code> 或者 <code>---</code> 再按回车即可绘制一条水平线，如下：</p>
-<hr>
-<h4 id="目录（TOC）"><a href="#目录（TOC）" class="headerlink" title="目录（TOC）"></a>目录（TOC）</h4><p>输入 <code>[ toc ]</code> 然后回车，即可创建一个“目录”。TOC从文档中提取所有标题，其内容将自动更新。</p>
-<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p><strong>内部链接</strong></p>
-<p>这是一个带有标题属性的 <code>[链接](http://example.com/ &quot;标题&quot;)</code><br>这是一个没有标题属性的 <code>[链接](http://example.net/)</code></p>
-<p><a href="http://example.com/" target="_blank" rel="noopener" title="标题">链接</a></p>
-<p><a href="http://example.net/" target="_blank" rel="noopener">链接</a></p>
-<p><strong>参考链接</strong></p>
-<p>这是一个[参考链接]id – 无法执行</p>
-<h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><p>Typora允许用&lt;括号括起来&gt;, 把URL作为链接插入。</p>
-<p>Typora还会自动链接标准网址。</p>
-<p><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></p>
-<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![显示的文字](C:\Users\Hider\Desktop\echart.png &quot;图片标题&quot;)</span><br><span class="line">![显示的文字](C:\Users\Hider\Desktop\echart.png)</span><br></pre></td></tr></table></figure>
-
-<p>除了以上2种方式之外，还可以直接将图片拖拽进来，自动生成链接。</p>
-<h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
-<p>目前支持的 HTML 元素有&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</p>
-<h3 id="调整格式"><a href="#调整格式" class="headerlink" title="调整格式"></a>调整格式</h3><h4 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h4><p>使用 <code>*单个星号*</code> 或者 <code>_单下划线_</code> 可以字体倾斜。快捷键 <code>Ctrl+I</code></p>
-<p><em>斜体</em></p>
-<h4 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h4><p>使用 <code>**两个星号**</code>或者 <code>__两个下划线__</code>可以字体加粗。快捷键 <code>Ctrl+B</code></p>
-<p><strong>加粗</strong>or__加粗__</p>
-<h4 id="加粗斜体"><a href="#加粗斜体" class="headerlink" title="加粗斜体"></a>加粗斜体</h4><p>使用<code>***加粗斜体***</code>可以加粗斜体。快捷键<code>Ctrl+I</code></p>
-<p><strong><em>加粗斜体</em></strong></p>
-<h4 id="代码标记"><a href="#代码标记" class="headerlink" title="代码标记"></a>代码标记</h4><p>标记代码使用反引号`，即在英文输入法下，ESC键下面和1键左边的符号。</p>
-<blockquote>
-<p>使用 <code>printf()</code>功能</p>
-</blockquote>
-<h4 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h4><p>使用<code>~~删除线~~</code> 快捷键<code>Alt + Shift + 5</code></p>
-<p><del>删除线</del></p>
-<h4 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h4><p>通过<code>&lt;u&gt;下划线&lt;/u&gt;</code>或快捷键<code>Ctrl + U</code>可实现下划线</p>
-<p><u>下划线</u></p>
-<h4 id="表情符号"><a href="#表情符号" class="headerlink" title="表情符号"></a>表情符号</h4><p><code>:happy::+1</code>:</p>
-<p>:happy::+1:</p>
-<h4 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h4><p><code>~下标~</code></p>
-<h4 id="上标"><a href="#上标" class="headerlink" title="上标"></a>上标</h4><p><code>^上标^</code></p>
-<p>X^2^</p>
-<h4 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h4><p><code>==高亮==</code></p>
-<p>==高亮==</p>
-<h4 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h4><p>使用 <code>&lt;center&gt;这是要居中的内容&lt;/center&gt;</code>可以使文本居中</p>
-<center>这是要居中的文本内容</center>
-
-<h4 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h4><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
-<p><strong>文本加粗</strong><br>** 正常显示星号 **</p>
-<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
-
-<h4 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h4><p> <code>\color{颜色}{文字}</code> 或者 <code>\color { #rgb} {text}</code> </p>
-<p>$\color{red}{红色}$</p>
-<p>$ \color { #7e7e87} {灰色} $</p>
-]]></content>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NexT主题的安装</title>
-    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<blockquote>
-<p> Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-</blockquote>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>NexT主题是一款非常受欢迎的Hexo主题<a id="more"></a></p>
-<blockquote>
-<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
-<p>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
-</blockquote>
-<p>右键单击blog文件夹，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>也可去GitHub网站下载压缩包解压</p>
-<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse</p>
-<p>修改语言为中文</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
-
-<p>设置顶栏的显示</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<p>把要显示的栏目前的<code>＃</code>去掉即可</p>
-<p>再博客根目录下打开Git，创建标签文件夹，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件</p>
-<h3 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h3><p>依次执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>刷新网站就可以看到网站主题更新成功了</p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ePUBee书籍免费下载</title>
-    <url>/2020/04/02/ePUBee%E4%B9%A6%E7%B1%8D%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p>ePUBee作为全球最大的免费电子书库,有超过10万本书籍,50万个文件版本。虽然说是免费，其实只是支持免费在线阅读，如果要下载的话，还是需要付费的<a id="more"></a></p>
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><blockquote>
-<p>ePUBee官网：<a href="http://cn.epubee.com/books/" target="_blank" rel="noopener">http://cn.epubee.com/books/</a></p>
-</blockquote>
-<p>搜索我们需要的书籍，点击保存到Cloud ID</p>
-<p>打开电子书管理器，找到我们需要下载的书籍，点击阅读</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>打开开发者工具（F12），选中<code>Network</code>选项卡，选择筛选<code>XHR</code>选择</p>
-<blockquote>
-<p>Chrome需要在进入阅读界面之前打开开发者工具或者进入阅读界面，打开开发者工具之后再次刷新一遍</p>
-</blockquote>
-<p>选择后缀为<code>epub</code>的的文件</p>
-<p>找到<code>Request URL</code>，将下面的网址复制下来粘贴到浏览器地址栏就可以开始自动下载了</p>
-]]></content>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>利用GitHub+Hexo搭建个人博客</title>
     <url>/2020/04/01/%E5%88%A9%E7%94%A8GitHub+Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h3 id="在GitHub上创建个人仓库"><a href="#在GitHub上创建个人仓库" class="headerlink" title="在GitHub上创建个人仓库"></a>在GitHub上创建个人仓库</h3><blockquote>
 <p>GitHub官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
 </blockquote>
-<p>单击右上角的＋号，选择New repository，在Repository name一栏填入<a id="more"></a></p>
+<p>单击右上角的＋号，选择New repository，在Repository name一栏填入</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yourname.github.io</span><br></pre></td></tr></table></figure>
 
 <p>yourname为你的GitHub用户名，例如<code>elieye.github.io</code></p>
@@ -986,6 +856,140 @@
 <p>hexo g 即 hexo generate 生成<br>hexo s 即 hexo server 启动服务预览<br>hexo d 即 hexo deploy 部署</p>
 </blockquote>
 <p>刷新我们的网站，能看到文章即说明成功</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ePUBee书籍免费下载</title>
+    <url>/2020/04/02/ePUBee%E4%B9%A6%E7%B1%8D%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p>ePUBee作为全球最大的免费电子书库,有超过10万本书籍,50万个文件版本。虽然说是免费，其实只是支持免费在线阅读，如果要下载的话，还是需要付费的</p>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><blockquote>
+<p>ePUBee官网：<a href="http://cn.epubee.com/books/" target="_blank" rel="noopener">http://cn.epubee.com/books/</a></p>
+</blockquote>
+<p>搜索我们需要的书籍，点击保存到Cloud ID</p>
+<p>打开电子书管理器，找到我们需要下载的书籍，点击阅读</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>打开开发者工具（F12），选中<code>Network</code>选项卡，选择筛选<code>XHR</code>选择</p>
+<blockquote>
+<p>Chrome需要在进入阅读界面之前打开开发者工具或者进入阅读界面，打开开发者工具之后再次刷新一遍</p>
+</blockquote>
+<p>选择后缀为<code>epub</code>的的文件</p>
+<p>找到<code>Request URL</code>，将下面的网址复制下来粘贴到浏览器地址栏就可以开始自动下载了</p>
+]]></content>
+      <tags>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT主题的优化</title>
+    <url>/2020/04/02/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<h3 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h3><p>我们选用的是hexo-symbols-count-time插件，类似插件还有hexo-wordcount。首先安装，在博客根目录下打开Git，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>exclude_codeblock排除代码块中的内容，默认为false</p>
+</blockquote>
+<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 4</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>awl为平均字长</p>
+<p>wpm为每分钟字数</p>
+</blockquote>
+<p>依次运行以下命令部署网站</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>在以上步骤的完成后刷新网站，正确显示字数和阅读时长即配置成功。如果字数显示为空白，阅读时长显示NaN，则清空缓存，运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>再次部署网站刷新即可</p>
+<h3 id="首页文章折叠"><a href="#首页文章折叠" class="headerlink" title="首页文章折叠"></a>首页文章折叠</h3><ol>
+<li><p>在文章要要隐藏的内容前面添加<code>&lt;!-- more --&gt;</code>手动进行阶段，这样在首页就只会显示<code>&lt;!-- more --&gt;</code>之前的内容<strong>（推荐）</strong></p>
+</li>
+<li><p>在文章的头部添加一个<code>description</code>，<code>description</code>后面描述的内容就是显示的内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 主题美化</span><br><span class="line">date: 2020-04-2 21:07:16</span><br><span class="line">description: 描述内容</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="更改侧栏"><a href="#更改侧栏" class="headerlink" title="更改侧栏"></a>更改侧栏</h3><h4 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h4><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改主题配置文件中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机</p>
+<ol>
+<li><p>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
+<ul>
+<li>left - 靠左放置</li>
+<li>right - 靠右放置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  position: left</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
+<ul>
+<li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
+<li><code>always</code> - 在所有页面中都显示</li>
+<li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
+<li><code>remove</code> - 完全移除</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  display: post</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h4><p>打开主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。链接地址可以是完整的网络链接，配置成以下格式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: http:&#x2F;&#x2F;example.com&#x2F;avatar.gif</span><br></pre></td></tr></table></figure>
+
+<p>如果是本地的地址，则将头像文件命名为avatar.gif，放在next文件夹下的<code>source/images/</code> 目录下或者<code>source/uploads/</code> 下（ uploads 目录若不存在就新建）。两种方法的配置如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
+
+<h4 id="作者昵称"><a href="#作者昵称" class="headerlink" title="作者昵称"></a>作者昵称</h4><p>打开站点配置文件，设置<code>author</code>为你的昵称</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">author： elieye</span><br></pre></td></tr></table></figure>
+
+<h4 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h4><p>打开站点配置文件， 设置 <code>description</code> 字段为你的站点描述</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">description: &#39;漫漫长路，半程风雨，半程春&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="显示阅读进度"><a href="#显示阅读进度" class="headerlink" title="显示阅读进度"></a>显示阅读进度</h3><p>侧边栏阅读进度：打开 主题配置文件<code>_config.yml</code>，搜索 <code>scrollpercent</code>，把 <code>false</code> 改为 <code>true</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+<p>顶栏阅读进度（二者可共存）：打开主题配置文件<code>_config.yml</code>搜索reading_progress，把<code>false</code>修改为<code>true</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="鼠标点击爱心"><a href="#鼠标点击爱心" class="headerlink" title="鼠标点击爱心"></a>鼠标点击爱心</h3><p>打开<code>next&gt;source&gt;js</code>文件夹，在里面新建一个src文件夹（有就打开它），新建<code>clicklove.js</code>文件，将以下代码复制至里面</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+
+<p>然后打开<code>themes&gt;next&gt;layout&gt;_layout.swig</code>文件，在末尾添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="文章阅读次数"><a href="#文章阅读次数" class="headerlink" title="文章阅读次数"></a>文章阅读次数</h3><p>打开主题配置文件<code>_config.yml</code>，搜索<code>busuanzi</code>，将<code>false</code>改为<code>true</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="代码块复制功能"><a href="#代码块复制功能" class="headerlink" title="代码块复制功能"></a>代码块复制功能</h3><p>打开主题配置文件<code>_config.yml</code>，搜索<code>copy_button</code>，将<code>false</code>改为<code>true</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy_button:</span><br><span class="line">   enable: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="侧边栏社交按钮"><a href="#侧边栏社交按钮" class="headerlink" title="侧边栏社交按钮"></a>侧边栏社交按钮</h3><p>打开主题配置文件<code>_config.yml</code>，搜索<code>social</code>，去掉要启用的链接前面的注释，并将链接设置为自己的链接</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;your-user-name</span><br><span class="line">  Twitter: https:&#x2F;&#x2F;twitter.com&#x2F;your-user-name</span><br><span class="line">  微博: http:&#x2F;&#x2F;weibo.com&#x2F;your-user-name</span><br><span class="line">  豆瓣: http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;your-user-name</span><br><span class="line">  知乎: http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;your-user-name</span><br></pre></td></tr></table></figure>
+
+<p>下方的<code>social_icons</code>对于相应的图标（大小写严格匹配），<code>enable</code>控制是否显示图标</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  微博: weibo</span><br></pre></td></tr></table></figure>
+
+<h3 id="博客里插入图片"><a href="#博客里插入图片" class="headerlink" title="博客里插入图片"></a>博客里插入图片</h3><h4 id="本地引用–绝对路径"><a href="#本地引用–绝对路径" class="headerlink" title="本地引用–绝对路径"></a>本地引用–绝对路径</h4><p>将图片统一放在<code>source/images</code>文件夹中，通过markdown语法访问它们。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source&#x2F;images&#x2F;image.jpg</span><br><span class="line"></span><br><span class="line">![(可以写关于图片的描述)](&#x2F;images&#x2F;image.jpg)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图片既可以在首页内容中访问到，也可以在文章正文中访问到</p>
+</blockquote>
+<h4 id="本地引用–相对路径"><a href="#本地引用–相对路径" class="headerlink" title="本地引用–相对路径"></a>本地引用–相对路径</h4><p>图片除了可以放在统一的<code>images</code>文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置<code>_config.yml</code>来生成。搜索<code>post_asset_folder</code>将<code>false</code>改为<code>true</code>，新建文章时就会同时新建一个同名文件夹</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上述是markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。</p>
+</blockquote>
+<h4 id="CDN引用"><a href="#CDN引用" class="headerlink" title="CDN引用"></a>CDN引用</h4><p>将图片上传到图床直接引用</p>
+<h3 id="文章底部标签图标"><a href="#文章底部标签图标" class="headerlink" title="文章底部标签图标"></a>文章底部标签图标</h3><p>打开主题配置文件<code>_config.yml</code>，搜索<code>tag_icon</code>，将<code>false</code>改为<code>true</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="首页显示的文章篇数"><a href="#首页显示的文章篇数" class="headerlink" title="首页显示的文章篇数"></a>首页显示的文章篇数</h3><p>打开站点配置文件<code>_config.yml</code>，搜索<code>per_page</code>，修改为自己想要的数字即可，默认为10</p>
 ]]></content>
       <tags>
         <tag>Hexo</tag>
