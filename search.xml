@@ -771,7 +771,7 @@
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/04/03/GUF7GQ.jpg" alt=""></p>
 <a id="more"></a>
 
-<h3 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h3><p>我们选用的是hexo-symbols-count-time插件，类似插件还有hexo-wordcount。首先安装，在博客根目录下打开Git，输入</p>
+<h3 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h3><p>首先安装hexo-symbols-count-time插件，在博客根目录下打开Git，输入</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
 
 <p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
@@ -787,10 +787,7 @@
 <p>awl为平均字长</p>
 <p>wpm为每分钟字数</p>
 </blockquote>
-<p>依次运行以下命令部署网站</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>在以上步骤的完成后刷新网站，正确显示字数和阅读时长即配置成功。如果字数显示为空白，阅读时长显示NaN，则清空缓存，运行以下命令</p>
+<p>如果字数显示为空白，阅读时长显示NaN，尝试清空缓存，运行以下命令</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 
 <p>再次部署网站刷新即可</p>
@@ -879,8 +876,11 @@
 <h3 id="首页显示的文章篇数"><a href="#首页显示的文章篇数" class="headerlink" title="首页显示的文章篇数"></a>首页显示的文章篇数</h3><p>打开站点配置文件<code>_config.yml</code>，搜索<code>index_generator</code>，将下面的<code>per_page</code>字段修改为自己想要的数字即可，默认为10</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;</span><br><span class="line">  per_page: 6</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
 
-<p>归档页面的文章篇数通过修改<code>\# Pagination</code>字段下的<code>per_page</code>控制，默认为10</p>
+<p>归档页面的文章篇数通过修改<code># Pagination</code>字段下的<code>per_page</code>控制，默认为10</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 15</span><br><span class="line">pagination_dir: page</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置字体"><a href="#设置字体" class="headerlink" title="设置字体"></a>设置字体</h3><p>打开主题配置文件<code>_config.yml</code>，搜索<code>font</code>，将下面的<code>enable</code>字段改为<code>true</code>，在<code>host</code>字段填入你想要更换的外链字体。下方的<code>global</code>控制全局字体，<code>headings</code>控制标题字体，<code>posts</code>控制正文字体，<code>logo</code>控制logo字体，<code>codes</code>控制代码字体。<code>size</code>字段的单位为em</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line">  </span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Lato</span><br><span class="line">    size: 0.8</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <tags>
@@ -974,7 +974,7 @@
   <entry>
     <title>《写给大家看的设计书》</title>
     <url>/2020/04/03/%E3%80%8A%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6%E3%80%8B/</url>
-    <content><![CDATA[<p><img src="" alt=""></p>
+    <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/04/05/GBjXjI.jpg" alt=""></p>
 <a id="more"></a>
 
 <blockquote>
@@ -1018,6 +1018,8 @@
 </blockquote>
 <p>页面上所有的元素都应该遵循某种对齐原则，尽管我们可能利用亲密性原则将一些元素分开，但是利用对齐原则就会在各元素间建立某种线将它们联系起来，表现出一种有序性。在欣赏作品的时候养成划线的习惯可以帮助我们找到元素的对齐。常见的对齐有左对齐、右对齐和居中对齐。</p>
 <p>不管是左对齐或者右对齐，就算对齐的元素之间有足够的距离，但是对齐的边界就像一条线一样将元素联系在一起。两侧对齐不一定要是虚拟的线，我们可以用文字来创造一条线，或者用图片创造一条线，文字则对齐图片的边缘。注意绝对不要在左对齐的正文或缩进的文本上方将标题居中。如果文本没有明确的左边界和右边界，就无法区分标题是否确实居中，看起来它只是悬挂着而已。这样一来，没有对齐的部分就造成页面非常杂乱：缩进很大，文本的右边界呈锯齿状参差不齐，居中的标题左右两边都有空白，另外插图也居中。</p>
+<img src="https://s1.ax1x.com/2020/04/05/GBg3wV.jpg" style="zoom: 50%;" />
+
 <p>居中对齐是最稳妥的方式，它庄重高雅但是也缺乏活力死板，而且它没有一条明确的线来表达对齐的元素之间的关系，两侧凹凸不平的边界弱化了对齐线的强度，所以不建议使用居中对齐，除非你明确像表现出一种端庄的感觉。在运用居中对齐时我们可以运用一些技巧来让我们的设计不那么刻板。</p>
 <ul>
 <li>同时包含居中文本的块不要居中对齐</li>
@@ -1037,13 +1039,30 @@
 <p>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果</p>
 </blockquote>
 <p>Robin指出，要想实现有效的对比，对比就必须强烈。如果两个元素虽然不同，但是区别不大，这时候就不是对比了，而是冲突。新闻简报中又高又窄的列和水平方向有一些突出的标题，黑色背景和白色字体等等都形成了强烈的对比。对比的根本目的有两个。一个目的是增强页面的效果，另一个目的是有助于信息的组织。对比元素不能让读者混淆，也不能错误地强调重点。</p>
+<hr>
+<h3 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h3><p>常见的色彩模式又CMYK,RGB和Lab三种模式，Lab的颜色最多，RGB色彩模式运用最广，而CMYK用用于印刷。</p>
+<p>色轮的基础是红绿蓝三原色，将两两相邻的颜色混合就得到了<strong>三间色</strong>。色轮上相对的颜色称为<strong>互补色</strong>，搭配方法常常是一种作为主色，一种作为强调色。彼此等距的三种颜色通常会形成一个让人愉悦的<strong>三色组</strong>。红色、黄色和蓝色是基色三色组。从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色，不过并不直接使用这个互补色，而是使用该互补色两侧的颜色叫做<strong>分裂互补三色组</strong>。彼此相邻的颜色称为<strong>类似色</strong>。</p>
+<img src="https://s1.ax1x.com/2020/04/05/GBhrGT.jpg" style="zoom:80%;" />
+
+<hr>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>在我看来，字体设计都可以独立出一本书了，比较在平面设计中字体是非常重要的一环。当然，Robin也化了相当大的篇幅来阐述字体的原则。</p>
+<p>首先需要提出的就是在标点符号后需要跟一个空格。早在打字机时代，所有的字体都是等宽字体，而且每个标点符号后面都是两个空格（英文）。人们为了强调标题或者重要的内容常常将英文全大写。这并不是一个好的选择。因为我们辨识一个单词往往还需要根据它们的形状。英文的上半部分被称为海岸线，是我们辨识的重要依据。当我们把英文全大写了，它们就都是一个个矩形了。而且全大写的字号较比与同字号的小写看起来更小了。就是说如果我们像通过大写字母增大字号来突出重点的话，大可不必了。</p>
+<p>另外一个重要的点就是不要使用下划线。不得不说在文字下面加上下划线并不美观，而且会分割长英文字母。在汉字里会稍微没有那么突兀。下划线最初是打字员为了要告诉正在给这本书排字的工人哪些字需要印成斜体而留下的信号。段落缩进的距离不在是固定的，而是1em的距离，em根据字体大小决定。同时标题下面的首段可以不用缩进，大家都知道那是一个新的段落。</p>
+<p>字体设计的三个原则</p>
+<ol>
+<li>协调。如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。你可能标题会加粗，重点的地方会又斜体，但这基本是协调的。</li>
+<li>冲突。如果在同一个页面上设置了两个或多个类似的字体，它们并非完全不同，但也不完全相同，这个设计就是冲突的。</li>
+<li>对比。冲突是必须要避免的，而对比则是我们要表现的。对比可以是字体大小，粗细，结构，形状，方向，颜色等方面的对比。比如衬线体和无衬线体，全大写和全小写，罗马体和斜体等等都是明显的对比。以后有时间了可以找字体方面的专业书籍来学习。</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/04/05/GBqia4.png" alt=""></p>
+<p><img src="https://s1.ax1x.com/2020/04/05/GBqFIJ.png" alt=""></p>
 ]]></content>
       <categories>
         <category>读书记</category>
       </categories>
       <tags>
         <tag>读书记</tag>
-        <tag>设计</tag>
+        <tag>平面设计</tag>
       </tags>
   </entry>
   <entry>
