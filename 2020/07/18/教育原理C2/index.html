@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":"ture"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="教育原理 C2">
+<meta property="og:url" content="http://yoursite.com/2020/07/18/%E6%95%99%E8%82%B2%E5%8E%9F%E7%90%86C2/index.html">
+<meta property="og:site_name" content="elieye">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/28/J5nUSK.jpg">
+<meta property="article:published_time" content="2020-07-18T02:59:39.000Z">
+<meta property="article:modified_time" content="2020-07-18T03:08:17.689Z">
+<meta property="article:author" content="elieye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/28/J5nUSK.jpg">
+
+<link rel="canonical" href="http://yoursite.com/2020/07/18/%E6%95%99%E8%82%B2%E5%8E%9F%E7%90%86C2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>教育原理 C2 | elieye</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">elieye</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/18/%E6%95%99%E8%82%B2%E5%8E%9F%E7%90%86C2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="elieye">
+      <meta itemprop="description" content="漫漫长路，半程风雨，半程春">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="elieye">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          教育原理 C2
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-18 10:59:39 / 修改时间：11:08:17" itemprop="dateCreated datePublished" datetime="2020-07-18T10:59:39+08:00">2020-07-18</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>10k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>9 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://s1.ax1x.com/2020/04/28/J5nUSK.jpg" alt=""></p>
+<a id="more"></a>
+
+<h1 id="C2"><a href="#C2" class="headerlink" title="C2"></a>C2</h1><h2 id="教育的界定"><a href="#教育的界定" class="headerlink" title="教育的界定"></a>教育的界定</h2><p><strong>1、试比较汉语中对“教育”与西语中对“ Educate”的理解？</strong></p>
+<ol>
+<li>东方对“教育”的理解<ol>
+<li>“教”字的左右结构，教育是教师的教与学生的学共同构成的双边活动，东方教育重视教师与学生对象性交流的存在。此为东方教育重视教师在教育中的主导甚至支配作用的特点。</li>
+<li>“教”字左部结构的内涵表示东方教育重视对儿童青少年进行外部的系统文化经典传授，含有“学而知之”的朴素唯物观。此为东方教育重视系统的书本知识学习甚至偏于书本理论掌握的特点。</li>
+<li>“教”字右部结构的内涵表示东方教育重视施教者的权威性、教育过程的严肃性，此为教育强制性特点的反映。</li>
+</ol>
+</li>
+<li>西方对“教育”的理解：<ol>
+<li>教育即为教师对学生的引导，教师只不过是学生新思想的“助产”者。其任务在于帮助学生“生产”——新思想、观念的产生。因此，在西方教育中，强调热爱儿童、尊重学生，教师注意充分发挥学生的主体性，教师的支配作用较少，这反映了在西方教育中教师的引导作用之特点。</li>
+<li>既然智慧的种子早已存在于学生的心灵之中，教育仅仅是对学生内心智慧的回忆、导出。因此学生自然才是教育中的真正主体，在西方教育中，自然主义教育思潮、学生中心论盛行之故也就在于此，这反映了西方教育中学生的主体作用之特点。</li>
+<li>教育活动既然是学生对自己已存在的灵魂智慧的回忆，教学的全部过程不能缺少学生的主动参与，包括确定学习目标、选择学习内容以及学习方式等，教师只是学习环境的制造者，学生才是学习的自动者，教育少有强制、严格纪律约束等现象。</li>
+</ol>
+</li>
+<li>中西方教育存在着诸如：在具体的教育活动中各自所采用的教学模式、教学方法以及所持有的教育观念等方面的一些差别。<ol>
+<li>在我国，如“教”字左上部的内涵表示东方教育重视对儿童青少年进行外部的系统文化的传授，右部表示施教者的权威性、教育过程的感肃性等，这些就构成了我国几千年来的师道尊严，注重内化而不求外达、系统灌输而忽视启发死读书本而脱离实线务教育特点</li>
+<li>在西方教育的词根有引出、引导之意，在他们的教育中强调热爱儿童，尊重学生，教师特别注意发挥学生的主体性教师的支配作用较少，这些正是西方教育中教师引导作用的反映。</li>
+</ol>
+</li>
+</ol>
+<p><strong>2、简述关于教育的学术定义?</strong></p>
+<ol>
+<li>目前关于教育概念界定的方式可以划分为两大类：人们对教育进行规定性的定义时，主要是从社会和个体这两个角度进行的。对“教育”概念的操作性定义主要是从影响个体身发展的角度去定义综合关于教育定义的各种认识。</li>
+<li>借鉴叶澜先生的界定，将教育定义：<u>教育是一种培养人的社会活动上述定义申个体的社会化与社会的个体化的活动其目的就是要解决自然人与社会人之间的基本矛盾</u>。另外，此定义也包合教育的要素一一<u>教育者、受教育者、教育影响</u>。同时，此定义在兼顾个体和社会两方面要求中首先体现作用于人、服务于人的发展的特质在具体的实践中，这种育人的活动具有多种形态。</li>
+<li>广义地说，教育包括学校、家庭、社会在内的场所对入产生刺激、影响人的发展，都是教育，分别称为学校教育、家庭教育、社会教育。狭义地说，教育是指学校教育，它对教育者、受教者等教育主体的身份有特来规定，对教育的目的有明确要求，对主体实现目的的活动有规范要求，一般所谈教育均指学校教育。</li>
+</ol>
+<p><strong>3、试评价关于教育本质问题的重要学说？</strong></p>
+<ol>
+<li>教育本质上层建筑说、教育本质生产力说、教育本质文化说、教育本质工具说、教育本质社会化说、教育本质实践说。</li>
+<li>以上学说存在的问题<ol>
+<li>这些教育本质说中大多将教育的功能与教育本质混为一谈，将教育的功能或价值说成教育的本质。</li>
+<li>这些教育本质说中有的将教育与人（学生）之间对立起来，将教育外在于学生，这种观点中的教育压迫性、学生非主体地位的味道是十分明显的。</li>
+</ol>
+</li>
+<li>研究方向<ol>
+<li><strong>运用科学方法研究教育本质</strong>。研究教育本质首先要确定研究的方法论。通过引申研究法、特殊矛盾分析法、本质联系法等方法，从理性思维模式上经过“教育的质→扬弃→教育本质假说→求证→教育体质”的科学假说，从而获得教育本质的认识。</li>
+<li><strong>在教育过程中揭示教育本质</strong>。教育的本质是教育内部特殊的矛盾所决定的，探讨教育本质则自然要从教育活动中去寻找。教育活动中教育者、受教者与教育内容三个基本要素之间构成了教育中三对最为基本的矛盾：受教者与教育内容的矛盾、受教者与教育者的矛盾、教育者与教育内容的矛盾。我们认为，教育中的诸多矛盾中，受教者与教育内容这一对矛盾才是教育中的基本的、决定性的矛盾。这个矛盾的存在及其解决是教育活动中最简单、最一般的本质规定，是构成教育研究最直接和最基本的单位。</li>
+</ol>
+</li>
+</ol>
+<p><strong>4、简述教育的基本属性？</strong></p>
+<ol>
+<li><strong>教育具有丰富的内在属性</strong>。教育的内在属性是它培养人才的生产性。教育之所以存在就在于它<u>具有人力再生产和文化再生产的属性</u>，它在育人的过程中实现了人类个体的自我再生产—知识技能的增加、情感价值的丰富、思想境界的提升；同时在育人中也传递、传播、发展、交流与整合文化，实现人类文化的再生产。个体劳动能力的增强、人类文化的传递进而形成人类社会的生产力，扩展了教育的生产性。正是教育的生产性决定了人类对教育需求的永恒性。因此，教育不但从远古社会里萌生。同时，要认识到<u>教育这种生产性的效果具有迟效的特点</u>。因为无论是人类个体成其为人的自然性提升、社会化提高的过程，还是人类群体的完善、完美过程，都是一个长期的过程，体现了教育之中“育”的过程性、长期性。</li>
+<li><strong>教育具有特殊的外在属性</strong>。教育的外在属性是它受社会环境的制约性。一方面，社会的人口、经济、政治、文化、科技、道德，以及民族宗教等等因素既是教育的内容，也深深地影响着教育的运行。另一方面，教育又以自己的作用促进个体的社会化，实现个体的发展；通过人才培养间接为社会政治经济文化等领域提供人力产品，并且发挥思想导向、舆论支持等作用。教育的外在社会性表现在：其一，从社会发展角度看，教育总是发生在具体的历史时期，每一段历史的教育都有其不同特点，它是与当时人类社会的不同特点相适应的。其二，在具体的社会环境中，由于各种政治制度和经济模式的不同、文化类型与价值选择的差异，表现出相应的特定社会里的特性。其三，在多民族世界里，民族教育都是以本民族的文字和语言为工具、传播和发展自己的民族文化。</li>
+<li><strong>总之，教育具有多方面的属性</strong>。正是教育属性的多样性，体现了教育育人本质的丰富性、复杂性。当然，还要认识到教育属性的发展性，即上述教育属性是对教育活动历史与现实、形式与内容的普遍抽象的结果，其属性的具体内容是变化、发展的。</li>
+</ol>
+<p><strong>5、简述教育“育人”特质的内涵？</strong></p>
+<ol>
+<li><strong>教育的对象是“人”</strong>。学生具有主体性，如能动性、自觉性、主动性、自为性、为自性、创造性等，因而不是消极、被动的客体。同时，学生具有丰富的思想情感、态度、体验、价值观等，不是无情麻木的实体。</li>
+<li><strong>教育的过程是“教/育”</strong>。教育是通过教育者对受教者施加系统影响、营造适合环境，使受教者受到生理的、心理的影响，获得身心的全面发展，而不是简单机械的“工厂式”的敲打挤压。同时，学生及时接受教育的客体，也是自我教育的主体，他们既是“育”的对象，也是“育”的参与者。</li>
+<li><strong>教育的结果是“化”</strong>。所谓“化”就是将来自外在于个体的人类文化内化为受教者内在的素质，表现为受教者在知识技能、思想情感、价值观念的提高，而不是生产出具体、有形态结构的物；同时，获得的知识、技能、情感、价值又是可变的，或者是持续发展进步的，或者是蜕变、倒退的。</li>
+</ol>
+<p><strong>6、简述教育系统的构成要素及其关系？</strong>。</p>
+<ol>
+<li><strong>基础——主体性要素：学生、教育存在的基础</strong>。学生是指各种教育活动中从事学习的人。学生是教育的对象、教育中的学习主体，是构成教育的基本要素，其自身存在生物实体与社会实体的矛盾及其转化。而培养自然性与社会性统一和谐发展的人，是全部教育活动的逻辑起点。学生所具备的可教性与必教性，是教育活动的重要基础，其他教育要素的存在是受教者完成上述矛盾转化的客观条件，而学生的主体性是实现上述矛盾转化的内在依据。</li>
+<li><strong>目标——对象性要素：教育内容，师生活动的媒介</strong>。教育内容是教育者为促使、实现受教者的生物实体与社会实体之间矛盾转化而使之作用于受教者的教育影响，即课程。它是根据实现教育目的之需要、适合于受教者身心发展水平而经过选择和加工的、人类最为精华的文化部分，表现为显性的如教科书、教学参考书、课件等教学内容和隐性的如校风、教风、学风等校园文化。它所提出的教育目标集中体现了社会对不成熟成员的成长期望、受教者由生物实体向社会实体转化的方向。</li>
+<li><strong>支持一中介性要素：教师，教育活动的组织者</strong>。教育者作为专业工作人员，接受社会和家长的教育委托，直接担负教育受教育者的责任，成为教育过程系统的组织者、指导者、调节者、研究者，因而成为教育过程系统的重要要素。教育者是对受教者在知识、技能、情绪、情感、思想、道德、人格等方面起到教育影响作用的人，学校教育中的教育者是指在学校中担当教育教学任务的人。教育者存在的逻辑基础、价值与任务就是帮助受教者实现由生物实体向社会实体的转化，这种转化过程具体表现为教育者向受教者有目的有意识地传授人类文化，以引起、促进受教者的身心按照一定的方向发展。</li>
+<li><strong>条件一衍生性要素：教育条件，教育活动的支撑</strong>。有了学生、教师、教育内容三个基本要素存在，教育活动时，教育时间、教育空间、教育方法或手段便催生出现了。其中，当学生、教师和教育内容同时存在时，便是教学；只有学生和教育内容、而没有教师时便是自学。由此我们就可以辨识有关著述关于教育要素构成问题的说法了。</li>
+<li><strong>各因素之间的复杂关系</strong>。<ol>
+<li><strong>教育系统的要素构成了众多的内部关系</strong>。由学生—课程之间、学生—教师之间、教师—课程之间构成基本关系。学生、教师、课程与教育时间或空间之间、与方法或手段之间的关系等扩展关系。其中最为基本的关系是<u>学生—内容</u>的关系。</li>
+<li><strong>教育系统的环境产生了众多外部关系</strong>。教育的外部社会因素构成了教育的外部环境，并且各个社会因素与教育系统内部因素之间形成复杂的映射关系，这些关系包括两个方面：<u>社会因素及其变化对教育产生重要影响</u>；<u>教育作用的发挥又或深或浅地引起这些社会因素的变化</u>。</li>
+</ol>
+</li>
+</ol>
+<p><strong>7、简述教育的场所类型？</strong></p>
+<ol>
+<li><strong>第一教育场所：启蒙性的家庭教育</strong>。儿童青少年接受教育的第一场所是家庭，作为第一教育场所自然赋予了启蒙的色彩。广义上讲，家庭教育是发生在家庭成员之间的相互教育；狭义上讲，家庭教育主要指父母或年长者对子女进行的教育。</li>
+<li><strong>第二教育场所：专业化的学校教育</strong>。学校教育区别于其他类型教育的重要特征就在于它的专业化（教育者、受教育者、教育内容、教育过程、教育制度与管理、教育结果的专业）。学校教育不是随意活动，它的目的导向性、组织计划性、操作规范性、质效可控性等等都是其他任何教育所不能够比拟的。</li>
+<li><strong>第三教育场所：浸染性的社会教育</strong>。广义的社会教育是指社会作为一种环境对社会成员的影响，既包括社会机构组织的有计划的社会教育活动，也包括社会环境自发产生的无计划的社会影响，狭义的社会教育是指由政府、公共团体或私人利用社会教育资源，对儿童青少年等社会成员所进行的有组织活动。</li>
+<li><strong>第四教育场所：综合性的网络教育网络场所</strong>。具有横贯家庭、学校、社会的色彩，但又有相对独立的网络空间性质。广义的网络教育是指基于网络的教育，狭义的网络教育是指网络环境支撑下，以学习者的自主建构为中心的活动。</li>
+</ol>
+<p><strong>8、简述现代大教育体系的内容及特征？</strong></p>
+<ol>
+<li>基本内容。<ol>
+<li><strong>社会教育化</strong>。即不但要求全社会成员都重视教育，把教育放在优先发展的战略地位；而且要求全社会成员都接受教育，形成学习型社会。</li>
+<li><strong>教育社会化</strong>。即不断要求教育主动适应社会，服务于社会，为社会提供人才与技术支持；而且要求教育积极引导社会、矫正社会、为社会指出发展方向及道路。</li>
+<li><strong>教育终身化</strong>。即不断要求个体主动地接受教育熏陶，履行终身接受教育的责任；而且要求社会积极地提供教育条件，承担提供教育资源的责任。</li>
+</ol>
+</li>
+<li>基本特征<ol>
+<li><strong>时间长</strong>。各种教育都或多或少地贯穿个体的一生。</li>
+<li><strong>空间广</strong>。各种教育都涉及、需要学校、家庭、社会之间的大联合</li>
+<li><strong>效率高</strong>。教育促进人全面、和谐而高效地发展，并通过发展了的人去影响社会。</li>
+<li><strong>内容多</strong>。特别是学校教育以丰富的内容、通过强调“博—专—博”。进行博才教育。</li>
+<li><strong>质量好</strong>。受过良好教育训练的人能够很好地培养适应与引领社会的能力。</li>
+</ol>
+</li>
+</ol>
+<h2 id="教育的演进"><a href="#教育的演进" class="headerlink" title="教育的演进"></a>教育的演进</h2><p><strong>1、简述有关教育起源问题的学说？</strong></p>
+<ol>
+<li><strong>教育生物起源说</strong>。生物起源论认为教育是一种普遍存在的生物现象而非一种特殊的社会现象，教育过程是按生物学规律进行的本能的传投活动。代表人物有法国哲学家、社会学家利托尔诺和英国教育学家沛西·能。</li>
+<li><strong>教育心理起源说</strong>。美国著名教育史专家孟禄在所著的《教育史教科书》中提出，教育起源于儿童对成人的无意识模仿。他对原始教育做了系统深入的研究，断定原始社会的育过程是儿童凭借着对成人的观察模仿，从而习得各种生活知识和各种技町多。</li>
+<li><strong>教育劳动起源说</strong>。教育劳动起源说是在批判生物起源说和心理起源说，以历史唯物主义为指导下产生的，这种观点认为，人类教育起源于劳动或劳动过程中所产生的需要，数育就是传递劳动过程中形成与积淀的社会生产和生活经验。</li>
+<li><strong>教育交往起源说</strong>。教育学家叶澜先生认为：在原始社会人类活动中具有相互非物质性的交往活动，只要这类交往发生，就必然有交往的双方和交往的内容，并产生交往的结果在交往双方身上产生认识、情感、意志和行为的影响。当这类交往被意识到，并逐渐形成较为固定的教和学的关系时，教育活动就演化而生了。因此可以说，人类的教育活动起源于交往，在一定意义上，教育是人类一种特殊的交往活动。</li>
+</ol>
+<p><strong>2、简述教育出现的基本情形（或特征）？</strong></p>
+<ol>
+<li>教育性质的平等性。教育的平等性主要是指在原始社会中的所有人都能受到基本相同的教育。这种教育的无阶级性主要表现在两个方面，首先，所有的人都有受教育的权利。其次，所有人受教育的内容都一样的，没有高低之分，只有男女之别，教育是完全平等的。</li>
+<li>教育活动的原始性。<ol>
+<li><strong>教育目的的原始性</strong>。使年轻一代获得参加社会劳动的能力，以及学会生活的经验与技能。</li>
+<li><strong>教育内容的原始性</strong>。仅仅是传授一些磨制和使用石器工具的简单经验，以及一些社会习俗、礼仪和生活规范等。</li>
+<li><strong>教育过程的原始性</strong>。没有专门的教育者、受教育者以及专门的教育场所，教育还同其他上层建筑如政治事务、宗教、艺术等活动紧密结合在一起。</li>
+</ol>
+</li>
+</ol>
+<p><strong>3、简述教育发展的阶段及其特征？</strong></p>
+<ol>
+<li><p>古代教育</p>
+<ol>
+<li><strong>出现了学校教育，教育目标较为狭窄</strong>。培养各自所需的骑士、教士/牧师。“学而优则仕”即此谓也。</li>
+<li><strong>教育为统治阶级服务，教育具有阶级性</strong>。在奴隶社会，只有奴隶主、贵族子弟才有接受学校教育的权利。到封建社会，不同官职出身的子弟接受不同等级的教育。</li>
+<li><strong>以伦理道德为内容，教育内容封闭</strong>。奴隶社会教育内容多为军体教育，封建社会教育内容则多为封建伦理/宗教经典，以形成伦理道徳治国所需品质。</li>
+<li><strong>传授一接受式教学，教育方法机械</strong>。受教者必须从内心到外在行为坚决服从社会阶级、等级秩序，知识的学习只能是机械记忆、背诵，对既成定论的接受，不容许思考、怀疑，同时，辅之严格的纪律训练、约束。</li>
+<li><strong>教育经验不断丰富，理论认识不断提高</strong>。出现了大量总结和研究教育活动经验的论著，提出了比较丰富的教育教学思想。</li>
+</ol>
+</li>
+<li><p>现代教育</p>
+<ol>
+<li><strong>教育对象扩大、使人成为合格劳动力</strong>。义务教育开始普及，开始釆用班级授课制大规模地培训，精英教育开始走向大众教育，在普及义务教育的同时，还出现了学前教育纳入国民教育体系中，延长教育年限等趋势。</li>
+<li><strong>重视教育立法、使教育实现更好育人</strong>。重视教育立法，从法律上保证人们受教育的权利，有助于在法律上、制度上落实育人活动的进行。</li>
+<li><strong>教育内容丰富、使人的发展越来越丰满</strong>。学校教育的内容走向了自然科学与人文社会科学并举的新时期，教育内容由此逐步丰富起来。</li>
+<li><strong>教育手段现代化、提高育人的效率</strong>。随着现代科技的教育运用，教育的设备手段也逐步进入现代化，先进教学设备在学校教育中的广泛运用。</li>
+<li><strong>重视国际教育化、教育交流合作频繁</strong>。现代教育在培养学生的民族文化认同和爱国主义精神的同时，也要使他们具备从事国际业务的意识、知识、情感和技能。</li>
+<li><strong>重视教育研究、提高育人的科学性</strong>。人们开始思考教育的有效性问题，出现了教育效率问题的研究；各种教育现状促使人们去研究教育问题。又由于统计方法的教育运用，结合其他教育方法，使得教育研究成为现实。</li>
+</ol>
+</li>
+<li><p>未来教育</p>
+<ol>
+<li><p><strong>全民化下的全民教育</strong>。</p>
+<p>产生背景：自从义务教育在率先实现大工业生产的国家实施以来，教育的对象陡然增加，世界其他国家也纷纷相继进入义务救育行业，世界教育逐步进入教育全民性的轨道，展望未来，全民教育仍然是未来社会国际上影响力较大的教育思潮之一，它不仅成为当前世界各国教育改革的方向，还成为未来教育的发展趋势。</p>
+<p>全民教育则侧重于普及教育，它认为教育对象不分国家、地区、种族等，应向社会上的所有人开放。因为接受教育是社会成员的一项基本权利，全体社会成员都有接受教育的权利，近年来，在国际上日益流行的“全纳教育”也有助于进步支持、落实这种全民教育的趋向。</p>
+</li>
+<li><p><strong>终身化下的终身教育</strong>。<br>产生背景：教育终身化思想虽可追溯到古希腊哲学家柏拉图和亚里土多德等人那里，文艺复兴时期也有具有终身数有意义的成人教育，但现代意义上的终身教育的标志却是1965年法国成人教育家保罗·朝格朗的《论终身教育》报告书的发表。它不但标志着概念化和体系化的终身教育的开始，而且引起了世界各国的极大关注与认同。<br>终身教育在时间上贯穿人的一生，在空间上打通了学校与社会、家庭的阻隔，教育对象包括所有年龄阶段的所有社会成员，还包括对过去教育处境不利者提供补偿教育的机会。同时，终身教育对学校教育的培养目标和数学内容等也提出了新的要求，使传统教育各方面都发生相应的变革，更好地为个人及社会的发展服务。</p>
+</li>
+<li><p><strong>民主化下的民主教育</strong>。<br>产生背景：教育的民主化是20世纪后半叶时世界会及教育改革的主流思潮，并逐步成为许多国家教育的基本政策。它具体包括教育的民主和民主的教育两个方面。前者是民主外延的扩大，即把政治上的民主扩展到教育领域：后者是教育内涵的加深，即把过去那种专制的、不充分民主的教育变成充分民主的教育。<br>教育的民主化的核心是教育的公平，教育的公平不仅包括教育的机会平等，还包括教育的起点教育的过程，教育的结果等关于教育各方面一系列的平等。</p>
+</li>
+<li><p><strong>个性化下的因材施教</strong>。<br>产生背景：随着个性的解放、生产创新对个性发展的需要，人类社会进入了更注重个体个性爱展的新时代。工业时代初期“标准化”思维下形成的抹杀个性的统一化教学早就受到了人们广泛的质疑、批判，重视个性、培育个性、张扬学生个性的因材施教就成为未来教育改革与发展的重要取向。<br>基于个性化的因材施教将成为未来教育的重要特质。</p>
+</li>
+<li><p><strong>差异化下的多元教育</strong>。<br>产生背景：在人类逐步走向一个多元共生、共代情况下，教育的多元化也是题中应有之义。<br>具体表现在教育思想的多元化，可见社会教育中可以找到多种多样的教育指导思想；培养目标的多元化，在国家统一性目标被弱化，个性化的教育目标被突现出来的情况下，教育中出现各种各样的教育动机：办学模式的元化，适应多元教育需求的及其目标的教育模式也必然是多元化的。多元化的教育正好吻合了“不拘一格降人才”“的理想，可使育人的教育走向更加丰富多彩。</p>
+</li>
+<li><p><strong>信息化下的立体教育</strong>。<br>产生背景：计算机的广泛教有运用形成了以计算机为核心的教育信息化态势，引起了教育的系统性变革，表现在从信息存在到课程存储与展现形式的变革、教师任务与工作方式的转变，学生学习条件与学习模式的变化、课堂教学要素与组织形式的变革、教学测量和评价方式的信息化等发面的发展。<br>可以预见，在逐步克服当前教育硬件技术缺陷中，逐步实现学科与网络的有机整合、实现传统课堂教学与网络教学的功能耦合后，加之教师角色的顺利转型，教育将借助于信息化条件而变得局面更加友好、智能化程度更高、操作更为方便。</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>4、【补充】原始社会的教育的特征？</strong></p>
+<ol>
+<li>生产力水低而飞教育具有原始性。</li>
+<li>教育与宗教等活动联系密切，教育具有宗教性。</li>
+<li>教育对象没有等级的区分，教育无阶级性。</li>
+</ol>
+<p><strong>5、【补充】现代教育的基本特征？</strong></p>
+<ol>
+<li>现代教育与生产劳动日趋紧密。</li>
+<li>现代教育的普及性与专门性旦趋结合。</li>
+<li>现代教育形式更加多样化。</li>
+<li>现代教育具有商品性。</li>
+<li>科学性与人文性融合。</li>
+<li>现代教育具有发展性。</li>
+<li>教育具有民主性。</li>
+<li>现代教育的主体性。</li>
+<li>民族性与国际性日益结合。</li>
+<li>现代教育生态意识在增强。其中对教育主体性等提法具有新意。</li>
+</ol>
+<p>总之，在现代社会，由于各个国家或民族的民族传统特色不同、政治生活不同、经济水平的差距、文化观念的差异，因而各自的教育表现出自己的特点，其中既有共性，也有个性，现代教育的多姿多态由此而来，人类的教育在此精彩纷呈、碰撞交流中获得发展。</p>
+<p><strong>6、简述当代教育发展的趋势？</strong></p>
+<ol>
+<li>多元化。即体现在教育思想、教育目标、办学模式、教学形式、评价标准等方面。</li>
+<li>全民化。即各国致力于让所有人都受到教育，特别是使适龄儿童受到完全的初等教育、使中青年脱盲。</li>
+<li>终身化。即受终身教育思想的影响，逐步推进职前教育与职后教育、青少年教育与成人教育、学校教育与社会教育的一体化。</li>
+<li>民主化。即促进教育机会均等建立平等师生关系、促进教育过程机会均等。</li>
+<li>技术化。即现代科技被广泛运用于教育设备、手段、程序。</li>
+</ol>
+<h2 id="教育的作用"><a href="#教育的作用" class="headerlink" title="教育的作用"></a>教育的作用</h2><p><strong>1、简述教育功能的分类？</strong></p>
+<p>教育功能就是教育对其他事物的作用，它是教育作用的重要表现。</p>
+<ol>
+<li><strong>个体功能与社会功能</strong>。<u>从教育作用的对象是个体还是群体的角度</u>，可以将其划分为个体功能（本体功能）和社会功能（派生功能）。前者是指教育具有影响个体身心发展、培养个体的作用，我们又把这一功能称为本体功能；后者是指教育具有影响社会发展，培养社会所需要的人才的作用，这一功能又具体表现在通过对社会的政治、经济、女文化等方面的影响而作用于社会，我们又把这一功能称为派生功能。</li>
+<li><strong>显性功能和隐性功能</strong>。<u>从教育作用是明显还是隐性的</u>，可以将其划分为显性功能和隐性功能。前者是依照教育目的要求、在实际运行中所出现的与之相符合的结果，是指在教育过程中能够容易被人们知道、察觉的功能。后者是伴随显性教育功能所出现的非预期性功能，如教育复制了现有的社会关系、再现社会不平等，它是指在教育过程中不容易被人们所发现、所注意、察觉的功能，它是伴随着显性教育功能所出现的非预期性功能。</li>
+<li><strong>正向功能和负向功能</strong>。<u>从教育作用的性质是积极还是消极的角度</u>，可以将其划分为正向功能和负向功能。前者是指教育有助于个体发展和社会进步，促进人、社会向积极的方面变化的影响、作用。后者是指教育阻碍个体发展和社会进步，导致人与社会向消极方面变化—妨碍社会进步、个体自由生动活泼全面和谐的发展。</li>
+</ol>
+<p><strong>2、教育功能的选择？</strong></p>
+<ol>
+<li><strong>发挥教育的基本功能：促进个体发展</strong>。教育是培养人的社会实践活动，教育的首要任务是培养人，教育首先面临的对象是个体—学生，从而教育的第一个最基本的功能也就是教育对个体发展的促进功能，也即是说教育的个体功能，也是教育的本体功能。</li>
+<li><strong>发挥教育的扩展功能：促进社会发展</strong>。教育的社会功能又称教育的派生功能，它是教育在个体功能的基础上扩展出来的，又主要包括教育的经济功能教育的政治功能、文化功能以及社会的成层变迁功能。</li>
+<li>总之，不管人们是都愿意接受教育、不管人们如何扭曲教育、不管人们如何评价教育，教育都有它的客观效果。同时，面对众多的教育功能，需要注意处理好各功能之间的关系，即处理好教育的直接功能与间接功能，显性功能与隐形功能的关系，特别是避免负面影响的发生或者扩展。</li>
+</ol>
+<p><strong>3、简述教育价值的学说（或分类）？</strong></p>
+<ol>
+<li><strong>内外价值论</strong>。布鲁巴克强调教育对人文修养的作用，认为：“内在教育价值是具有本身所固有的价值，不是因为教育相对于另外某些事物有用处，而是因为它本身就是具有好的价值。”杜威则认为教育价值就是教育对现实社会和人的生活所带来的益处，外在价值是依赖教育去达到另一种价值所产生出来的，是因为教育对某种事物有用。</li>
+<li><strong>知识价值论</strong>。斯宾塞、巴格莱、怀特海等人从数育所包合事物知识的价值来划分，强调全部教育活动都是借助于知识的传授来实现的，如斯宾塞认为，任何一种知识的获得都有两种价值，一是知识的价值，一是训练的价值，知识的价值在于指导人的行为的作用，训练的价值是对学生的思维的培养和人格的训练，巴格莱强调科学知识的教育价值，肯定人类化遗方的教育价值，教育目的必有社会文化的价值。</li>
+<li><strong>文化价值论</strong>。教育学家斯普朗格用“文化”这一基本的范畴来统合个人与社会、自我与历史、主观精神与客视精神的多重关系，个人是文化生命的关键；教育就是一种文化活动，数育目的就在将包合于文化中的各种客观的价值入儿童经验中，以完成他的整个的、有效能的、自乐的人格。</li>
+</ol>
+<p><strong>4、简述教育价值的选择？</strong></p>
+<ol>
+<li><strong>认识教育价值取向的多元化</strong>。在社会日益趋向多元化的今天，教育者及受教者、家长和社会都要认识到这种教育价值取向的主体化、个性化、差异化、多元化等形势，以尊重、理解的态度对待不同教育主体的教育价值需求。</li>
+<li><strong>满足不同主体的教育价值需求</strong>。应该尊重不同教育主体的教育价值需求，使教育成为大多数人之所需。当然，在选择教育价值时，应尽可能顾及各个方面的价值取向，坚持个体的教育价值取向和社会的教育价值取向的辩证统一。</li>
+<li>总之，面对教育对人们众多的有用性，首先需要认识教育价值的复杂性，教育的价值之间客观存在正向价值与负向价值之间的矛盾、冲突，其次需要在实践中正确选择教育价值，既要重视教育发展社会的外在价值/客体价值，获取利益的功利性价值，更要重视教育的个体发展价值/内在价值、修养身心的非功利价值。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/18/%E6%95%99%E8%82%B2%E5%8E%9F%E7%90%86C1/" rel="prev" title="教育原理C1">
+      <i class="fa fa-chevron-left"></i> 教育原理C1
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/18/%E5%BF%83%E7%90%86%E5%AD%A6C1/" rel="next" title="心理学C1">
+      心理学C1 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C2"><span class="nav-number">1.</span> <span class="nav-text">C2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#教育的界定"><span class="nav-number">1.1.</span> <span class="nav-text">教育的界定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教育的演进"><span class="nav-number">1.2.</span> <span class="nav-text">教育的演进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教育的作用"><span class="nav-number">1.3.</span> <span class="nav-text">教育的作用</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="elieye"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">elieye</p>
+  <div class="site-description" itemprop="description">漫漫长路，半程风雨，半程春</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/elieye" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;elieye" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:elieye@163.com" title="E-Mail → mailto:elieye@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">elieye</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">48k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">43 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
