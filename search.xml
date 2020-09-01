@@ -1,22 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test</title>
-    <url>/2020/08/07/test/</url>
-    <content><![CDATA[<p>test.</p>
+    <title>NexT主题</title>
+    <url>/2020/06/01/2020-06-01-NexT%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<blockquote>
+<p>Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+</blockquote>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><blockquote>
+<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a></p>
+</blockquote>
+<blockquote>
+<p>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
+</blockquote>
+<a id="more"></a>右键单击blog文件夹，输入
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>也可去GitHub网站下载压缩包解压。</p>
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse。</p>
+<p>修改语言为中文：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
+
+<p>设置顶栏的显示：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>把要显示的栏目前的<code>＃</code>去掉即可。</p>
+<p>再博客根目录下打开Git，创建标签文件夹</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件。</p>
+<h2 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h2><p>依次执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>刷新网站就可以看到网站主题更新成功了。</p>
 ]]></content>
   </entry>
   <entry>
-    <title>你好</title>
-    <url>/2020/09/01/%E4%BD%A0%E5%A5%BD/</url>
-    <content><![CDATA[<p> 及反思黑积分累计第十九分上帝就发</p>
-<p>附件是的龙卷风</p>
-<p>附件是的龙卷风l</p>
-<p>房间数量单价覅</p>
-<p>偶是京东方</p>
-<p>jfjsdog附件里是大家</p>
-<p>发吉萨了</p>
-<p>发房间数量单价覅</p>
+    <title>NexT主题优化</title>
+    <url>/2020/06/01/2020-06-01-NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<blockquote>
+<p>常见的问题可以去NexT官网查询</p>
+<p><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">https://theme-next.iissnan.com/</a></p>
+</blockquote>
+<h2 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h2><a id="more"></a>首先安装hexo-symbols-count-time插件，在博客根目录下打开Git，输入
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>exclude_codeblock排除代码块中的内容，默认为false。</p>
+</blockquote>
+<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 2</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>awl为平均字长。</p>
+</blockquote>
+<blockquote>
+<p>wpm为每分钟字数。</p>
+</blockquote>
+<p>如果字数显示为空白，阅读时长显示NaN，尝试清空缓存，运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>再次部署网站刷新即可。</p>
+<h2 id="添加网站运行时间"><a href="#添加网站运行时间" class="headerlink" title="添加网站运行时间"></a>添加网站运行时间</h2><p>修改<code>/blog/themes/next/layout/_partials/footer.swig</code>文件，在末尾加入如下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;br&#x2F;&gt;</span><br><span class="line">&lt;!-- 网站运行时间的设置 --&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        var grt&#x3D; new Date(&quot;04&#x2F;21&#x2F;2019 15:54:40&quot;);&#x2F;&#x2F;此处修改你的建站时间或者网站上线时间</span><br><span class="line">        now.setTime(now.getTime()+250);</span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days);</span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours);</span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum);</span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125;</span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125;</span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;;</span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="侧边栏社交按钮"><a href="#侧边栏社交按钮" class="headerlink" title="侧边栏社交按钮"></a>侧边栏社交按钮</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>social</code>，去掉要启用的链接前面的注释，并将链接设置为自己的链接。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;your-user-name</span><br><span class="line">  Twitter: https:&#x2F;&#x2F;twitter.com&#x2F;your-user-name</span><br><span class="line">  微博: http:&#x2F;&#x2F;weibo.com&#x2F;your-user-name</span><br><span class="line">  豆瓣: http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;your-user-name</span><br><span class="line">  知乎: http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;your-user-name</span><br></pre></td></tr></table></figure>
+
+<p>下方的<code>social_icons</code>对于相应的图标（大小写严格匹配），<code>enable</code>控制是否显示图标。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  微博: weibo</span><br></pre></td></tr></table></figure>
+
+<h2 id="首页文章折叠"><a href="#首页文章折叠" class="headerlink" title="首页文章折叠"></a>首页文章折叠</h2><ol>
+<li>在文章要要隐藏的内容后面添加<code>&lt;!-- more --&gt;</code>手动进行截断，这样在首页就只会显示<code>&lt;!-- more --&gt;</code>之前的内容<strong>（推荐）</strong>。</li>
+<li>在文章的头部添加一个<code>description</code>，<code>description</code>后面描述的内容就是显示的内容。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 主题美化</span><br><span class="line">date: 2020-04-2 21:07:16</span><br><span class="line">description: 描述内容</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2 id="首页及归档显示的文章篇数"><a href="#首页及归档显示的文章篇数" class="headerlink" title="首页及归档显示的文章篇数"></a><strong>首页及归档显示的文章篇数</strong></h2><p>打开站点配置文件<code>_config.yml</code>，搜索<code>index_generator</code>，将下面的<code>per_page</code>字段修改为自己想要的数字即可，默认为10。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;</span><br><span class="line">  per_page: 6</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+
+<p>归档页面的文章篇数通过修改<code># Pagination</code>字段下的<code>per_page</code>控制，默认为10。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 15</span><br><span class="line">pagination_dir: page</span><br></pre></td></tr></table></figure>
+
+<h2 id="更改侧栏"><a href="#更改侧栏" class="headerlink" title="更改侧栏"></a>更改侧栏</h2><h3 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改主题配置文件中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
+<ol>
+<li><p>设置侧栏的位置，修改<code>sidebar.position</code>的值，支持的选项有：</p>
+<ul>
+<li>left - 靠左放置</li>
+<li>right - 靠右放置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">   positon: left</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置侧栏显示的时机，修改<code>sidebar.display</code>的值，支持的选项有：</p>
+<ul>
+<li><p><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</p>
+</li>
+<li><p><code>always</code> - 在所有页面中都显示</p>
+</li>
+<li><p><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</p>
+</li>
+<li><p><code>remove</code> - 完全移除</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  display: post</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h3><p>打开主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。链接地址可以是完整的网络链接，配置成以下格式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: http:&#x2F;&#x2F;example.com&#x2F;avatar.gif</span><br></pre></td></tr></table></figure>
+
+<p>如果是本地的地址，则将头像文件命名为avatar.gif，放在next文件夹下的<code>source/images/</code> 目录下或者<code>source/uploads/</code> 下（ uploads 目录若不存在就新建）。两种方法的配置如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="作者昵称"><a href="#作者昵称" class="headerlink" title="作者昵称"></a>作者昵称</h3><p>打开站点配置文件，设置<code>author</code>为你的昵称。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">author： elieye</span><br></pre></td></tr></table></figure>
+
+<h3 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h3><p>打开站点配置文件， 设置 <code>description</code> 字段为你的站点描述。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">description: &#39;漫漫长路，半程风雨，半程春&#39;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章底部标签图标"><a href="#文章底部标签图标" class="headerlink" title="文章底部标签图标"></a><strong>文章底部标签图标</strong></h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>tag_icon</code>，将<code>false</code>改为<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="隐藏底部由Hexo驱动"><a href="#隐藏底部由Hexo驱动" class="headerlink" title="隐藏底部由Hexo驱动"></a>隐藏底部由Hexo驱动</h2><p>打开<code>themes/next/layout/_partials/footer.swig</code>隐藏之间的代码即可，或者直接删除。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--</span><br><span class="line">&#123;%- if theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class&#x3D;&quot;powered-by&quot;&gt;</span><br><span class="line">    &#123;%- set next_site &#x3D; &#39;https:&#x2F;&#x2F;theme-next.org&#39; %&#125;</span><br><span class="line">    &#123;%- if theme.scheme !&#x3D;&#x3D; &#39;Gemini&#39; %&#125;</span><br><span class="line">      &#123;%- set next_site &#x3D; &#39;https:&#x2F;&#x2F;&#39; + theme.scheme | lower + &#39;.theme-next.org&#39; %&#125;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">    &#123;&#123;- __(&#39;footer.powered&#39;, next_url(&#39;https:&#x2F;&#x2F;hexo.io&#39;, &#39;Hexo&#39;, &#123;class: &#39;theme-link&#39;&#125;) + &#39; &amp; &#39; + next_url(next_site, &#39;NexT.&#39; + theme.scheme, &#123;class: &#39;theme-link&#39;&#125;)) &#125;&#125;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;%- if theme.add_this_id %&#125;</span><br><span class="line">  &lt;div class&#x3D;&quot;addthis_inline_share_toolbox&quot;&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;&#x2F;s7.addthis.com&#x2F;js&#x2F;300&#x2F;addthis_widget.js#pubid&#x3D;&#123;&#123; theme.add_this_id &#125;&#125;&quot; async&#x3D;&quot;async&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果同时设置了底部显示网站运行时间，需要删除底部时间的显示代码的换行<code>&lt;br/&gt;</code>，不然会有一行空白行。</p>
+<h2 id="博客模板"><a href="#博客模板" class="headerlink" title="博客模板"></a>博客模板</h2><p>打开博客根文件夹<code>/scaffolds/post.md</code></p>
+<h2 id="设置字体"><a href="#设置字体" class="headerlink" title="设置字体"></a>设置字体</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>font</code>，将下面的<code>enable</code>字段改为<code>true</code>，在<code>host</code>字段填入你想要更换的外链字体。下方的<code>global</code>控制全局字体，<code>headings</code>控制标题字体，<code>posts</code>控制正文字体，<code>logo</code>控制logo字体，<code>codes</code>控制代码字体，<code>size</code>字段的单位为em。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line">  </span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Lato</span><br><span class="line">    size: 0.8</span><br></pre></td></tr></table></figure>
+
+<h2 id="取消目录自动编号"><a href="#取消目录自动编号" class="headerlink" title="取消目录自动编号"></a>取消目录自动编号</h2><p>在主题配置文件中搜索</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\# Automatically add list number to toc.</span><br></pre></td></tr></table></figure>
+
+<p>将下面的<code>number: ture</code>改为false。</p>
+<h2 id="显示阅读进度"><a href="#显示阅读进度" class="headerlink" title="显示阅读进度"></a>显示阅读进度</h2><p>侧边栏阅读进度：打开 主题配置文件<code>_config.yml</code>，搜索 <code>scrollpercent</code>，把 <code>false</code> 改为 <code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+<p>顶栏阅读进度（二者可共存）：打开主题配置文件<code>_config.yml</code>搜索reading_progress，把<code>false</code>修改为<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="鼠标点击爱心"><a href="#鼠标点击爱心" class="headerlink" title="鼠标点击爱心"></a>鼠标点击爱心</h2><p>打开<code>next&gt;source&gt;js</code>文件夹，在里面新建一个src文件夹（有就打开它），新建<code>clicklove.js</code>文件，将以下代码复制至里面。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+
+<p>然后打开<code>themes&gt;next&gt;layout&gt;_layout.swig</code>文件，在末尾添加以下代码。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="鼠标点击爆炸效果"><a href="#鼠标点击爆炸效果" class="headerlink" title="鼠标点击爆炸效果"></a>鼠标点击爆炸效果</h2><p>打开<code>next&gt;source&gt;js</code>文件夹，在里面新建一个src文件夹（有就打开它），新建<code>fireworks.js</code>文件，将以下代码复制至里面。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;use strict&quot;;function updateCoords(e)&#123;pointerX&#x3D;(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY&#x3D;e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t&#x3D;anime.random(0,360)*Math.PI&#x2F;180,a&#x3D;anime.random(50,180),n&#x3D;[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;colors[anime.random(0,colors.length-1)],a.radius&#x3D;anime.random(16,32),a.endPos&#x3D;setParticuleDirection(a),a.draw&#x3D;function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle&#x3D;a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;&quot;#F00&quot;,a.radius&#x3D;0.1,a.alpha&#x3D;0.5,a.lineWidth&#x3D;6,a.draw&#x3D;function()&#123;ctx.globalAlpha&#x3D;a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth&#x3D;a.lineWidth,ctx.strokeStyle&#x3D;a.color,ctx.stroke(),ctx.globalAlpha&#x3D;1&#125;,a&#125;function renderParticule(e)&#123;for(var t&#x3D;0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a&#x3D;createCircle(e,t),n&#x3D;[],i&#x3D;0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n&#x3D;this,i&#x3D;arguments;clearTimeout(a),a&#x3D;setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl&#x3D;document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx&#x3D;canvasEl.getContext(&quot;2d&quot;),numberOfParticules&#x3D;30,pointerX&#x3D;0,pointerY&#x3D;0,tap&#x3D;&quot;mousedown&quot;,colors&#x3D;[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize&#x3D;debounce(function()&#123;canvasEl.width&#x3D;2*window.innerWidth,canvasEl.height&#x3D;2*window.innerHeight,canvasEl.style.width&#x3D;window.innerWidth+&quot;px&quot;,canvasEl.style.height&#x3D;window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render&#x3D;anime(&#123;duration:1&#x2F;0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;A&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;&quot;IMG&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;&quot;use strict&quot;;function updateCoords(e)&#123;pointerX&#x3D;(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY&#x3D;e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t&#x3D;anime.random(0,360)*Math.PI&#x2F;180,a&#x3D;anime.random(50,180),n&#x3D;[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;colors[anime.random(0,colors.length-1)],a.radius&#x3D;anime.random(16,32),a.endPos&#x3D;setParticuleDirection(a),a.draw&#x3D;function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle&#x3D;a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;&quot;#F00&quot;,a.radius&#x3D;0.1,a.alpha&#x3D;0.5,a.lineWidth&#x3D;6,a.draw&#x3D;function()&#123;ctx.globalAlpha&#x3D;a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth&#x3D;a.lineWidth,ctx.strokeStyle&#x3D;a.color,ctx.stroke(),ctx.globalAlpha&#x3D;1&#125;,a&#125;function renderParticule(e)&#123;for(var t&#x3D;0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a&#x3D;createCircle(e,t),n&#x3D;[],i&#x3D;0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n&#x3D;this,i&#x3D;arguments;clearTimeout(a),a&#x3D;setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl&#x3D;document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx&#x3D;canvasEl.getContext(&quot;2d&quot;),numberOfParticules&#x3D;30,pointerX&#x3D;0,pointerY&#x3D;0,tap&#x3D;&quot;mousedown&quot;,colors&#x3D;[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize&#x3D;debounce(function()&#123;canvasEl.width&#x3D;2*window.innerWidth,canvasEl.height&#x3D;2*window.innerHeight,canvasEl.style.width&#x3D;window.innerWidth+&quot;px&quot;,canvasEl.style.height&#x3D;window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render&#x3D;anime(&#123;duration:1&#x2F;0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;A&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;&quot;IMG&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>然后打开<code>themes/next/layout/_layout.swig</code>,在<code>&lt;/body&gt;</code>上面写下如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">   &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt; </span><br><span class="line">   &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt; </span><br><span class="line">   &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打开主题配置文件，在里面最后写下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Fireworks</span><br><span class="line">fireworks: true</span><br></pre></td></tr></table></figure>
+
+<p>刷新页面即可。</p>
+<h2 id="文章阅读次数"><a href="#文章阅读次数" class="headerlink" title="文章阅读次数"></a>文章阅读次数</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>busuanzi</code>，将<code>false</code>改为<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码块复制功能"><a href="#代码块复制功能" class="headerlink" title="代码块复制功能"></a>代码块复制功能</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>copy_button</code>，将<code>false</code>改为<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy_button:</span><br><span class="line">   enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="博客里插入图片"><a href="#博客里插入图片" class="headerlink" title="博客里插入图片"></a>博客里插入图片</h2><h3 id="本地引用–绝对路径"><a href="#本地引用–绝对路径" class="headerlink" title="本地引用–绝对路径"></a>本地引用–绝对路径</h3><p>将图片统一放在<code>source/images</code>文件夹中，通过markdown语法访问它们。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source&#x2F;images&#x2F;image.jpg</span><br><span class="line"></span><br><span class="line">![(可以写关于图片的描述)](&#x2F;images&#x2F;image.jpg)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图片既可以在首页内容中访问到，也可以在文章正文中访问到。</p>
+</blockquote>
+<h3 id="本地引用–相对路径"><a href="#本地引用–相对路径" class="headerlink" title="本地引用–相对路径"></a>本地引用–相对路径</h3><p>图片除了可以放在统一的<code>images</code>文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置<code>_config.yml</code>来生成。搜索<code>post_asset_folder</code>将<code>false</code>改为<code>true</code>，新建文章时就会同时新建一个同名文件夹。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上述是markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。</p>
+</blockquote>
+<h3 id="CDN引用"><a href="#CDN引用" class="headerlink" title="CDN引用"></a>CDN引用</h3><p>将图片上传到图床直接引用。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>博客搭建</title>
+    <url>/2020/06/01/2020-06-01-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="在GitHub上创建个人仓库"><a href="#在GitHub上创建个人仓库" class="headerlink" title="在GitHub上创建个人仓库"></a>在GitHub上创建个人仓库</h2><blockquote>
+<p>GitHub官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
+</blockquote>
+<p>单击右上角的＋号，选择<code>New repository</code>，在<code>Repository name</code>一栏填入<a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yourname.github.io</span><br></pre></td></tr></table></figure>
+
+<p>yourname为你的GitHub用户名，例如<code>elieye.github.io</code>。</p>
+<p>勾选下方的<code>Initialize this repository with a README</code>栏。</p>
+<p>然后单击下方绿色按钮<code>Create repository</code>即创建成功。</p>
+<p>在浏览器地址栏输入<code>yourname.github.io</code>即可跳转至你的网站。</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><blockquote>
+<p>node.js官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></p>
+</blockquote>
+<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>显示版本号即安装成功。</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><blockquote>
+<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+</blockquote>
+<blockquote>
+<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+</blockquote>
+<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>显示版本号即安装成功。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在D盘新建一个文件夹，命名为<code>blog</code>，用来存放博客的文章、配置文件等等。</p>
+<p>右键单击<code>blog</code>文件夹选择<code>Git Bash Here</code>，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕后检验是否安装成功，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p>接着初始化博客网站，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>安装必需的组件，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>至此本地网站已经配置完毕，下面生成静态网页，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>打开本地服务器，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>打开浏览器地址栏输入<code>localhost:4000</code>如果显示了我们的网站即配置成功，<code>ctrl+c</code>退出。</p>
+<h2 id="将Git与GitHub进行绑定"><a href="#将Git与GitHub进行绑定" class="headerlink" title="将Git与GitHub进行绑定"></a>将Git与GitHub进行绑定</h2><p>鼠标右键选择<code>Git Bash Here</code>,输入你的GitHub用户名和邮箱</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>生成ssh文件，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>复制ssh文件的内容，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>将输出的内容复制到剪切板，打开<code>GitHub-&gt;settings-&gt;SSH and GPG keys</code>，选择<code>New SSH key</code>，新建一个ssh，Title栏输入ssh，Key栏填入刚才复制的内容。</p>
+<p>检测GitHub公钥设置是否成功，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>如果显示你的用户名即成功</p>
+<p>使用文本编辑器（vs、sublime等）打开blog文件夹下的<code>_config.yml</code>文件（它是博客的配置文件区别于<code>themes</code>文件夹下的<code>_config.yml</code>，它是主题配置文件），找到文件的最后修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;yourname&#x2F;yourname.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>在<code>blog</code>文件夹右键单击选择<code>Git Bash Here</code>，安装扩展，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>创建一篇文章，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;article title&quot;</span><br></pre></td></tr></table></figure>
+
+<p>打开<code>blog\source\_posts</code>文件夹，里面应该会有一个md文件，它就是我们的文章。再创建一个images文件夹用来存放md里面的图片</p>
+<p>下面将我们写好的文字上传至GitHub，依次输入以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo g 即 hexo generate 生成；hexo s 即 hexo server 启动服务预览；hexo d 即 hexo deploy 部署</p>
+</blockquote>
+<p>刷新网站，能看到文章就说明成功了。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>博客待办</title>
+    <url>/2020/09/02/2020-09-20-%E5%8D%9A%E5%AE%A2%E5%BE%85%E5%8A%9E/</url>
+    <content><![CDATA[<ul>
+<li><input disabled="" type="checkbox"> 看板娘</li>
+<li><input disabled="" type="checkbox"> 豆瓣读书&amp;电影</li>
+<li><input disabled="" type="checkbox"> 自定义背景<a id="more"></a></li>
+<li><input disabled="" type="checkbox"> 圆角化</li>
+<li><input disabled="" type="checkbox"> 热度文章</li>
+<li><input disabled="" type="checkbox"> 加密文章</li>
+<li><input disabled="" type="checkbox"> 鼠标点击特效</li>
+<li><input disabled="" type="checkbox"> 评论</li>
+<li><input disabled="" type="checkbox"> 博文顶置</li>
+<li><input disabled="" type="checkbox"> 相册</li>
+</ul>
 ]]></content>
   </entry>
 </search>
