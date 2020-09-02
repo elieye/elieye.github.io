@@ -42,6 +42,26 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>刷新网站就可以看到网站主题更新成功了。</p>
+<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><p>NexT每个月都会发布新版本，可以通过以下命令来快速更新。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd themes&#x2F;next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>博客待办</title>
+    <url>/2020/09/02/2020-09-20-%E5%8D%9A%E5%AE%A2%E5%BE%85%E5%8A%9E/</url>
+    <content><![CDATA[<ul>
+<li><input disabled="" type="checkbox"> 看板娘</li>
+<li><input disabled="" type="checkbox"> 豆瓣读书&amp;电影</li>
+<li><input disabled="" type="checkbox"> 自定义背景<a id="more"></a></li>
+<li><input disabled="" type="checkbox"> 圆角化</li>
+<li><input disabled="" type="checkbox"> 热度文章</li>
+<li><input disabled="" type="checkbox"> 加密文章</li>
+<li><input disabled="" type="checkbox"> 鼠标点击特效</li>
+<li><input disabled="" type="checkbox"> 评论</li>
+<li><input disabled="" type="checkbox"> 博文顶置</li>
+<li><input disabled="" type="checkbox"> 相册</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
@@ -270,23 +290,6 @@
 <p>hexo g 即 hexo generate 生成；hexo s 即 hexo server 启动服务预览；hexo d 即 hexo deploy 部署</p>
 </blockquote>
 <p>刷新网站，能看到文章就说明成功了。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>博客待办</title>
-    <url>/2020/09/02/2020-09-20-%E5%8D%9A%E5%AE%A2%E5%BE%85%E5%8A%9E/</url>
-    <content><![CDATA[<ul>
-<li><input disabled="" type="checkbox"> 看板娘</li>
-<li><input disabled="" type="checkbox"> 豆瓣读书&amp;电影</li>
-<li><input disabled="" type="checkbox"> 自定义背景<a id="more"></a></li>
-<li><input disabled="" type="checkbox"> 圆角化</li>
-<li><input disabled="" type="checkbox"> 热度文章</li>
-<li><input disabled="" type="checkbox"> 加密文章</li>
-<li><input disabled="" type="checkbox"> 鼠标点击特效</li>
-<li><input disabled="" type="checkbox"> 评论</li>
-<li><input disabled="" type="checkbox"> 博文顶置</li>
-<li><input disabled="" type="checkbox"> 相册</li>
-</ul>
 ]]></content>
   </entry>
 </search>
