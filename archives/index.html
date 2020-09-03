@@ -194,13 +194,33 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
+        <span class="collection-header">嗯..! 目前共计 5 篇日志。 继续努力。</span>
       </div>
 
       
     <div class="collection-year">
       <span class="collection-header">2020</span>
     </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-09-03T00:40:10+08:00"
+              content="2020-09-03">
+          09-03
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2020/09/03/2020-09-03-%E6%96%AD%E8%88%8D%E7%A6%BB/" itemprop="url">
+            <span itemprop="name">断舍离</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -214,7 +234,7 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2020/09/02/2020-09-20-%E5%8D%9A%E5%AE%A2%E5%BE%85%E5%8A%9E/" itemprop="url">
+          <a class="post-title-link" href="/2020/09/02/2020-09-02-%E5%8D%9A%E5%AE%A2%E5%BE%85%E5%8A%9E/" itemprop="url">
             <span itemprop="name">博客待办</span>
           </a>
       </div>
@@ -356,9 +376,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -401,12 +433,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">18k</span>
+    <span title="站点总字数">20k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">17 分钟</span>
+    <span title="站点阅读时长">18 分钟</span>
 </div>
 
 <!--
@@ -428,7 +460,7 @@
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "暂且存活 "+dnum+" 天 ";
+        document.getElementById("timeDate").innerHTML = "已存活 "+dnum+" 天 ";
         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
     }
 setInterval("createtime()",250);
