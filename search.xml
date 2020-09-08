@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>NexT主题</title>
-    <url>/2020/06/01/NexT%E4%B8%BB%E9%A2%98/</url>
+    <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98/</url>
     <content><![CDATA[<blockquote>
 <p>Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
 <p>Hexo主题排行榜：<a href="https://hexo.voxel.site/" target="_blank" rel="noopener">https://hexo.voxel.site/</a></p>
@@ -47,10 +47,13 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd themes&#x2F;next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>NexT主题优化</title>
-    <url>/2020/06/01/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
+    <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<blockquote>
 <p>常见的问题可以去NexT官网查询<br><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">https://theme-next.iissnan.com/</a><br>参考的文章<br><a href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener">http://yearito.cn/posts/hexo-advanced-settings.html</a><br><a href="http://yearito.cn/posts/hexo-theme-beautify.html" target="_blank" rel="noopener">http://yearito.cn/posts/hexo-theme-beautify.html</a><br><a href="https://io-oi.me/tech/hexo-next-optimization/" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization/</a><br><a href="https://guanqr.com/tech/website/hexo-theme-next-customization/" target="_blank" rel="noopener">https://guanqr.com/tech/website/hexo-theme-next-customization/</a></p>
 </blockquote>
@@ -186,7 +189,7 @@
     <title>断舍离</title>
     <url>/2020/09/03/%E6%96%AD%E8%88%8D%E7%A6%BB/</url>
     <content><![CDATA[<blockquote>
-<p>作者：【日】山下英子<br>豆瓣：<a href="https://book.douban.com/subject/30415402/" target="_blank" rel="noopener">https://book.douban.com/subject/30415402/</a><br>评分：★★☆☆☆<br>评价：结构散乱，泛泛而谈，且有夸大之嫌。过于强调断舍离的作用，多用简单的“因为断舍离所以……”的结构来举例，毫无说服力。并且全文所涉及的内容较浅，陈述的观点单一，行文缺乏活力。但不可否认的是这本书将我们日常忽略并逐渐放弃的行为提了出来，能够起到很好的警醒作用。</p>
+<p>作者：【日】山下英子<br>豆瓣：<a href="https://book.douban.com/subject/30415402/" target="_blank" rel="noopener">https://book.douban.com/subject/30415402/</a><br>评价：结构散乱，泛泛而谈，且有夸大之嫌。过于强调断舍离的作用，多用简单的“因为断舍离所以……”的结构来举例，毫无说服力。并且全文所涉及的内容较浅，陈述的观点单一，行文缺乏活力。但不可否认的是这本书将我们日常忽略并逐渐放弃的行为提了出来，能够起到很好的警醒作用。</p>
 </blockquote>
 <a id="more"></a>
 
@@ -198,7 +201,7 @@
 <p>生活中处处都需要断舍离，当断必断才能日后不受其乱。践行断舍离需要融入到我们的习惯中，当我们能够像呼吸一样无意识地进行断舍离，那么我们也就不需要在进行断舍离了。</p>
 ]]></content>
       <categories>
-        <category>悦记</category>
+        <category>阅记</category>
       </categories>
       <tags>
         <tag>读书</tag>
@@ -279,7 +282,7 @@
           </blockquote>
 
 <p>可以通过以下两种方式使用该标签：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% centerquote %&#125;文本居中&#123;% endcenterquote %&#125;</span><br><span class="line">---</span><br><span class="line">&#123;% cq %&#125; blah blah blah &#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% centerquote %&#125;文本居中&#123;% endcenterquote %&#125;</span><br><span class="line">---</span><br><span class="line">&#123;% cq %&#125;文本居中&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="代码块进阶用法"><a href="#代码块进阶用法" class="headerlink" title="代码块进阶用法"></a>代码块进阶用法</h3><p>可以通过为代码块附加参数的形式为其添加更丰富的信息提示。</p>
 <p>代码块进阶语法规则：</p>
@@ -413,7 +416,7 @@
 </blockquote>
 <h4 id="图床引用"><a href="#图床引用" class="headerlink" title="图床引用"></a>图床引用</h4><p>在Github上建立一个新仓库来存放图片，利用Picgo来进行上传并生成markdown。同时Picgo还支持七牛云，腾讯云等等。如果使用的是Typora编辑器，它能很好的兼容Picgo，方便的在编辑时插入图片并通过Picgo上传到图床。</p>
 <blockquote>
-<p>Picgo：<a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo/releases</a><br>教程：<a href="https://picgo.github.io/PicGo-Doc/zh/guide/#%E5%BA%94%E7%94%A8%E6%A6%82%E8%BF%B0" target="_blank" rel="noopener">https://picgo.github.io/PicGo-Doc/zh/guide/#%E5%BA%94%E7%94%A8%E6%A6%82%E8%BF%B0</a></p>
+<p>Picgo：<a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo/releases</a><br>教程：<a href="https://picgo.github.io/PicGo-Doc/" target="_blank" rel="noopener">https://picgo.github.io/PicGo-Doc/</a></p>
 </blockquote>
 <h3 id="插入网易云音乐"><a href="#插入网易云音乐" class="headerlink" title="插入网易云音乐"></a>插入网易云音乐</h3><p>找到要插入的歌曲，点击左侧图片下方的<strong>生成外链播放器</strong>，复制代码直接插入到文档中。某些受版权保护的歌曲无法生成外链。</p>
 <p>例子如下，其中的<code>marginwidth</code>控制播放器的宽度，<code>marginheight</code>控制播放器的高度，auto控制是否自动播放，1为自动播放，0为不自动播放，可以自行修改参数：</p>
@@ -429,10 +432,13 @@
 
 <p>B站同样的，找到分享，选择<code>嵌入代码</code>，再将代码插入文档即可（突然发现b站可以边看视频边做笔记了）。</p>
 ]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>博客搭建</title>
-    <url>/2020/06/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <url>/2020/04/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h2 id="在GitHub上创建个人仓库"><a href="#在GitHub上创建个人仓库" class="headerlink" title="在GitHub上创建个人仓库"></a>在GitHub上创建个人仓库</h2><blockquote>
 <p>GitHub官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
 </blockquote>
@@ -512,5 +518,111 @@
 </blockquote>
 <p>刷新网站，能看到文章就说明成功了。</p>
 ]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风景</title>
+    <url>/2020/09/04/%E6%99%AF%E8%89%B2/</url>
+    <content><![CDATA[<center>炙热的太阳烘烤着运动场上的人</center>
+
+<center>运动场上的人尽情的挥洒汗水</center>
+
+<center>顺流而下的汗水打在滚烫的地面</center>
+
+<center>然后</center>
+
+<center>急速的上升</center>
+
+<center>汇成远处女生眼中</center>
+
+<center>最美好的风景</center>]]></content>
+      <categories>
+        <category>随写</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>校园</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>写给大家看的设计书</title>
+    <url>/2020/09/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/</url>
+    <content><![CDATA[<blockquote>
+<p>作者：[美]威廉姆斯（Robin Williams）<br>豆瓣：<a href="https://book.douban.com/subject/26657933/" target="_blank" rel="noopener">https://book.douban.com/subject/26657933/</a><br>评价：设计并不是一件离我们很远的事情，也并非专业人士才能够进行设计，在生活中摆放物品的艺术，生日贺卡的排版，海报的合成都是设计的过程。这本书对于设计新手有很大的帮助，虽然都只是讲述的简单的设计原则，但如果能够在欣赏作品时加以理解，创作一些作品时加以运用，就能够起到立竿见影的效果。</p>
+</blockquote>
+<a id="more"></a>
+
+<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>一旦能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，让它受你所控。</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p>很多时候我们说不出一副作品好在哪，或者说差在哪，是因为我们不知道从哪些方面去考虑。如果我们知道从哪些角度来看待问题，那么我们就能逐渐掌握它。</p>
+<p>Robin引出了四大基本原则来帮助我们思考、设计。</p>
+<ul>
+<li><strong>对比</strong>：如果两个元素应该相同，那么就让他们截然不同。相似只会造成冲突。</li>
+<li><strong>重复</strong>：增加我们作品的条理性和统一性。</li>
+<li><strong>对齐</strong>：每个元素都应当与页面上的另一个元素有某种视觉联系。</li>
+<li><strong>亲密性</strong>：如果某些元素存在某种关系，那么在视觉上也应该有关联（物理的接近就意味着存在关联）。</li>
+</ul>
+<p>一副优秀的作品往往都应用了这些设计原则。没有充分考虑到这四个方面的作品总是会给以以不舒服的感觉。</p>
+<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><blockquote>
+<p>将一些有关联的项移动在一起，这样相关的项就会被视为一个整体。</p>
+</blockquote>
+<p>有些时候将有关系的元素放在一起不仅会让读者在读起来有逻辑性，还能给读者一种有始有终的感觉，让页面的布置更有组织性。在考虑如何将元素联系在一起时要控制距离的度。相关的项距离足够小，而在不同的部分之间增加合适的空间，让信息的表达更加直观。在我们进行阅读的时候，我们眼睛移动的路径：从哪里开始看，看到哪里算结束，应该是一个合理的过程。优秀的设计师应该引导读者更高效的获取我们要表达的信息。</p>
+<p>在运用亲密性原则时，我们可以尝试眯着眼睛，数一数在浏览页面时我们的眼睛停顿了几次，它们之间是否有关系，可以将它们归为一类使之成为一组视觉单元。同时我们要避免以下问题：</p>
+<ul>
+<li>一个页面上有太多孤立的元素。</li>
+<li>不属于同一个子集的元素间留出了同样大小的空白。</li>
+<li>标题、子标题、图表标题、图片是否应分类至视觉单元。</li>
+<li>不同属一组的元素之间不要建立关系。</li>
+<li>不要仅仅因为有空白就把元素放在中间或角落。</li>
+</ul>
+<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><blockquote>
+<p>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</p>
+</blockquote>
+<p>页面上所有的元素都应该遵循某种对齐原则，尽管我们可能利用亲密性原则将一些元素分开，但是利用对齐原则就会在各元素间建立某种线将它们联系起来，表现出一种有序性。在欣赏作品的时候养成划线的习惯可以帮助我们找到元素的对齐。常见的对齐有左对齐、右对齐和居中对齐。</p>
+<p>不管是左对齐或者右对齐，就算对齐的元素之间有足够的距离，但是对齐的边界就像一条线一样将元素联系在一起。两侧对齐不一定要是虚拟的线，我们可以用文字来创造一条线，或者用图片创造一条线，文字则对齐图片的边缘。注意绝对不要在左对齐的正文或缩进的文本上方将标题居中。如果文本没有明确的左边界和右边界，就无法区分标题是否确实居中，看起来它只是悬挂着而已。这样一来，没有对齐的部分就造成页面非常杂乱：缩进很大，文本的右边界呈锯齿状参差不齐，居中的标题左右两边都有空白，另外插图也居中。</p>
+<p>居中对齐是最稳妥的方式，它庄重高雅但是也缺乏活力死板，而且它没有一条明确的线来表达对齐的元素之间的关系，两侧凹凸不平的边界弱化了对齐线的强度，所以不建议使用居中对齐，除非你明确像表现出一种端庄的感觉。在运用居中对齐时我们可以运用一些技巧来让我们的设计不那么刻板。</p>
+<ul>
+<li>同时包含居中文本的块不要居中对齐。</li>
+<li>采用可爱的字体。</li>
+<li>设置较大的行距，较小的字体，文字周围没有边框。</li>
+</ul>
+<p>不管是使用那种对齐方式，我们都应该做到只使用一种对齐方式。如果在你的作品中出现了几种对齐方式，那么一定要让它们有联系。比如右对齐的边界线是左对齐的边界线，居中对齐的右边缘是左对齐的边界限等等。总之页面上的元素一定要与其他元素之间存在某种对齐。</p>
+<p>新手在设计时往往天马行空，放任自己去摆放元素，并美名其曰打破规则，但最后效果往往不好。<strong>创立规则就是用来打破的，但是打破规则的前提是你必须清楚规则是什么</strong>。你的设计的混乱是有意为之还是无意之举往往更容易就能够看出来。</p>
+<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><blockquote>
+<p>设计的某些方面需要在整个作品中重复。</p>
+</blockquote>
+<p>我们在设计时经常用到重复的字体大小，粗细，图标等等，重复能够增加我们作品的一致性。如果我们在不同的作品中使用重复的元素往往会产生意想不到的效果。怎么利用重复原则为我们的作品服务呢？如果我们在一张传单的标题处使用了红色加粗字体，在结尾处同样使用红色加粗字体，读者在看到最后时往往会有一种首尾呼应的感觉，连接了整个设计。</p>
+<p>可以重复的元素多种多样，可以是字体、项目符号、缩进、对齐、留白、剪贴画等等。使用重复原则时，有时可以把一个元素从现在的设计中抽取出来，并根据这个元素创建一个新设计。或者只使用我们熟知元素的一部分给予暗示。</p>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><blockquote>
+<p>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</p>
+</blockquote>
+<p>Robin指出，要想实现有效的对比，对比就必须强烈。如果两个元素虽然不同，但是区别不大，这时候就不是对比了，而是冲突。新闻简报中又高又窄的列和水平方向有一些突出的标题，黑色背景和白色字体等等都形成了强烈的对比。对比的根本目的有两个。一个目的是增强页面的效果，另一个目的是有助于信息的组织。对比元素不能让读者混淆，也不能错误地强调重点。</p>
+<h2 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h2><p>常见的色彩模式有CMYK,RGB和Lab三种模式，Lab的色域最广，RGB运用最广，CMYK常用于印刷。</p>
+<p>色轮的基础是红绿蓝三原色，将两两相邻的颜色混合就得到了<strong>三间色</strong>。色轮上相对的颜色称为<strong>互补色</strong>，搭配方法常常是一种作为主色，一种作为强调色。彼此等距的三种颜色通常会形成一个让人愉悦的<strong>三色组</strong>。红色、黄色和蓝色是基色三色组。从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色，不过并不直接使用这个互补色，而是使用该互补色两侧的颜色叫做<strong>分裂互补三色组</strong>。配色时使用彼此相邻的颜色称为<strong>类似色</strong>。</p>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>字体设计是一门很深的学问，单独出一本书也不一定能说透彻，在平面设计中字体是非常重要的一环。当然，Robin也花了相当大的篇幅来阐述字体的原则。</p>
+<p>标点符号后需要跟一个空格。早在打字机时代，所有的字体都是等宽字体，而且每个标点符号后面都是两个空格（英文）。人们为了强调标题或者重要的内容常常将英文全大写。这并不是一个好的选择。因为我们辨识一个单词往往还需要根据它们的形状。英文的上半部分被称为海岸线，是我们辨识的重要依据。当我们把英文全大写了，它们就都是一个个矩形了。而且全大写的字号较比与同字号的小写看起来更小了。就是说如果我们像通过大写字母增大字号来突出重点的话，大可不必了。</p>
+<p>不要使用下划线。不得不说在文字下面加上下划线并不美观，而且会分割长英文字母。在汉字里会稍微没有那么突兀。下划线最初是打字员为了要告诉正在给这本书排字的工人哪些字需要印成斜体而留下的信号。</p>
+<p>段落缩进的距离不在是固定的，而是1em的距离，em根据字体大小决定。同时标题下面的首段可以不用缩进，大家都知道那是一个新的段落。</p>
+<p>字体设计的三个原则</p>
+<ol>
+<li>协调。如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。你可能标题会加粗，重点的地方会又斜体，但这基本是协调的。</li>
+<li>冲突。如果在同一个页面上设置了两个或多个类似的字体，它们并非完全不同，但也不完全相同，这个设计就是冲突的。</li>
+<li>对比。冲突是必须要避免的，而对比则是我们要表现的。对比可以是字体大小，粗细，结构，形状，方向，颜色等方面的对比。比如衬线体和无衬线体，全大写和全小写，罗马体和斜体等等都是明显的对比。以后有时间了可以找字体方面的专业书籍来学习。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>阅记</category>
+      </categories>
+      <tags>
+        <tag>读书</tag>
+        <tag>设计</tag>
+      </tags>
   </entry>
 </search>
