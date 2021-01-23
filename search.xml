@@ -224,9 +224,6 @@
 
 <p>B站同样的，找到分享，选择<code>嵌入代码</code>，再将代码插入文档即可（突然发现b站可以边看视频边做笔记了）。</p>
 ]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
     <title>NexT主题</title>
@@ -272,9 +269,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd themes&#x2F;next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 
 ]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
     <title>冬天的宣战</title>
@@ -285,178 +279,8 @@
 <p>一坐在图书馆我的腿就直哆嗦，板凳的凉透过裤子也能感受到，早晨泡的茶还没有挺过一个小时就宣布妥协了。知识好像也变得懒懒散散，怎么也不肯自己进脑子，非得我去书本上一个一个的抠出来才能往脑子里塞，这也导致我废了老大劲花了很多时间但没学到啥东西。就这状态还不如早点回去呢！我刚走到图书馆门口，外面的风就像一直守在外面似的，一露头，就一巴掌把我扇了回去——我还是老实在图书馆多待会吧。</p>
 ]]></content>
       <categories>
-        <category>沧海遗珠</category>
+        <category>拾穗者</category>
       </categories>
-      <tags>
-        <tag>随写</tag>
-        <tag>校园</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>写给大家看的设计书</title>
-    <url>/2020/09/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/</url>
-    <content><![CDATA[<blockquote>
-<p>作者：【美】威廉姆斯（Robin Williams）<br>豆瓣：<a href="https://book.douban.com/subject/26657933/" target="_blank" rel="noopener">https://book.douban.com/subject/26657933/</a><br>评价：设计并不是一件离我们很远的事情，也并非专业人士才能够进行设计，在生活中摆放物品的艺术，生日贺卡的排版，海报的合成都是设计的过程。这本书对于设计新手有很大的帮助，虽然都只是讲述的简单的设计原则，但如果能够在欣赏作品时加以理解，创作作品时加以运用，就能够起到立竿见影的效果。</p>
-</blockquote>
-<a id="more"></a>
-
-<hr>
-<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>一旦能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，让它受你所控。</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
-
-<p>很多时候我们说不出一副作品好在哪，或者说差在哪，是因为我们不知道从哪些方面去考虑。如果我们知道从哪些角度来看待问题，那么我们就能逐渐掌握它。Robin引出了四大基本原则来帮助我们思考问题。</p>
-<ul>
-<li><strong>亲密性</strong>：如果某些元素存在某种关系，那么在视觉上也应该有关联（物理的接近就意味着存在关联）。</li>
-<li><strong>对齐</strong>：每个元素都应当与页面上的另一个元素有某种视觉联系。</li>
-<li><strong>重复</strong>：增加我们作品的条理性和统一性。</li>
-<li><strong>对比</strong>：如果两个元素应该相同，那么就让他们截然不同。相似只会造成冲突。</li>
-</ul>
-<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><blockquote>
-<p>将一些有关联的项移动在一起，这样相关的项就会被视为一个整体。</p>
-</blockquote>
-<p>有些时候将有关系的元素放在一起不仅会让读者在读起来有逻辑性，还能给读者一种有始有终的感觉，让页面的布置更有组织性。在考虑如何将元素联系在一起时要控制距离的度。相关的项距离足够小，而在不同的部分之间增加合适的空间，让信息的表达更加直观。在我们进行阅读的时候，我们眼睛移动的路径：从哪里开始看，看到哪里算结束，应该是一个合理的过程。优秀的设计师应该引导读者更高效的获取我们要表达的信息。</p>
-<p>在运用亲密性原则时，我们可以尝试眯着眼睛，数一数在浏览页面时我们的眼睛停顿了几次，它们之间是否有关系，可以将它们归为一类使之成为一组视觉单元。同时我们要避免以下问题：</p>
-<ul>
-<li>一个页面上有太多孤立的元素。</li>
-<li>不属于同一个子集的元素间留出了同样大小的空白。</li>
-<li>标题、子标题、图表标题、图片是否应分类至视觉单元。</li>
-<li>不同属一组的元素之间不要建立关系。</li>
-<li>不要仅仅因为有空白就把元素放在中间或角落。</li>
-</ul>
-<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><blockquote>
-<p>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</p>
-</blockquote>
-<p>页面上所有的元素都应该遵循某种对齐原则，尽管我们可能利用亲密性原则将一些元素分开，但是利用对齐原则就会在各元素间建立某种线将它们联系起来，表现出一种有序性。在欣赏作品的时候养成划线的习惯可以帮助我们找到元素的对齐。常见的对齐有左对齐、右对齐和居中对齐。</p>
-<p>不管是左对齐或者右对齐，就算对齐的元素之间有足够的距离，但是对齐的边界就像一条线一样将元素联系在一起。两侧对齐不一定要是虚拟的线，我们可以用文字来创造一条线，或者用图片创造一条线，文字则对齐图片的边缘。注意绝对不要在左对齐的正文或缩进的文本上方将标题居中。如果文本没有明确的左边界和右边界，就无法区分标题是否确实居中，看起来它只是悬挂着而已。这样一来，没有对齐的部分就造成页面非常杂乱：缩进很大，文本的右边界呈锯齿状参差不齐，居中的标题左右两边都有空白，另外插图也居中。</p>
-<p>居中对齐是最稳妥的方式，它庄重高雅但是也缺乏活力死板，而且它没有一条明确的线来表达对齐的元素之间的关系，两侧凹凸不平的边界弱化了对齐线的强度，所以不建议使用居中对齐，除非你明确像表现出一种端庄的感觉。在运用居中对齐时我们可以运用一些技巧来让我们的设计不那么刻板。</p>
-<ul>
-<li>同时包含居中文本的块不要居中对齐。</li>
-<li>采用可爱的字体。</li>
-<li>设置较大的行距，较小的字体，文字周围没有边框。</li>
-</ul>
-<p>不管是使用那种对齐方式，我们都应该做到只使用一种对齐方式。如果在你的作品中出现了几种对齐方式，那么一定要让它们有联系。比如右对齐的边界线是左对齐的边界线，居中对齐的右边缘是左对齐的边界限等等。总之页面上的元素一定要与其他元素之间存在某种对齐。</p>
-<p>新手在设计时往往天马行空，放任自己去摆放元素，并美名其曰打破规则，但最后效果往往不好。<strong>创立规则就是用来打破的，但是打破规则的前提是你必须清楚规则是什么</strong>。你的设计的混乱是有意为之还是无意之举往往更容易就能够看出来。</p>
-<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><blockquote>
-<p>设计的某些方面需要在整个作品中重复。</p>
-</blockquote>
-<p>我们在设计时经常用到重复的字体大小，粗细，图标等等，重复能够增加我们作品的一致性。如果我们在不同的作品中使用重复的元素往往会产生意想不到的效果。怎么利用重复原则为我们的作品服务呢？如果我们在一张传单的标题处使用了红色加粗字体，在结尾处同样使用红色加粗字体，读者在看到最后时往往会有一种首尾呼应的感觉，连接了整个设计。</p>
-<p>可以重复的元素多种多样，可以是字体、项目符号、缩进、对齐、留白、剪贴画等等。使用重复原则时，有时可以把一个元素从现在的设计中抽取出来，并根据这个元素创建一个新设计。或者只使用我们熟知元素的一部分给予暗示。</p>
-<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><blockquote>
-<p>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</p>
-</blockquote>
-<p>Robin指出，<strong>要想实现有效的对比，对比就必须强烈</strong>。如果两个元素虽然不同，但是区别不大，这时候就不是对比了，而是冲突。新闻简报中又高又窄的列和水平方向有一些突出的标题，黑色背景和白色字体等等都形成了强烈的对比。对比的根本目的有两个。一个目的是增强页面的效果，另一个目的是有助于信息的组织。对比元素不能让读者混淆，也不能错误地强调重点。</p>
-<h2 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h2><p>常见的色彩模式有CMYK、RGB和Lab三种模式，Lab的色域最广，RGB运用最广，CMYK常用于印刷。</p>
-<p>色轮的基础是红绿蓝三原色，将两两相邻的颜色混合就得到了<strong>三间色</strong>。色轮上相对的颜色称为<strong>互补色</strong>，搭配方法常常是一种作为主色，一种作为强调色。彼此等距的三种颜色通常会形成一个让人愉悦的<strong>三色组</strong>。红色、黄色和蓝色是基色三色组。从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色，不过并不直接使用这个互补色，而是使用该互补色两侧的颜色叫做<strong>分裂互补三色组</strong>。配色时使用彼此相邻的颜色称为<strong>类似色</strong>。</p>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>字体设计是一门很深的学问，单独出一本书也不一定能说透彻，在平面设计中字体是非常重要的一环。当然，Robin也花了相当大的篇幅来阐述字体的原则。</p>
-<p>标点符号后需要跟一个空格。早在打字机时代，所有的字体都是等宽字体，而且每个标点符号后面都是两个空格（英文）。人们为了强调标题或者重要的内容常常将英文全大写。这并不是一个好的选择。因为我们辨识一个单词往往还需要根据它们的形状。英文的上半部分被称为海岸线，是我们辨识的重要依据。当我们把英文全大写了，它们就都是一个个矩形了。而且全大写的字号较比与同字号的小写看起来更小了。就是说如果我们像通过大写字母增大字号来突出重点的话，大可不必了。</p>
-<p>不要使用下划线。在字母下面加上下划线并不美观，而且会分割长英文字母。在汉字里会稍微没有那么突兀。下划线最初是打字员为了要告诉正在给这本书排字的工人哪些字需要印成斜体而留下的信号。</p>
-<p>段落缩进的距离不在是固定的，而是1em的距离，em根据字体大小决定。同时标题下面的首段可以不用缩进，大家都知道那是一个新的段落。</p>
-<p>字体设计的三个原则</p>
-<ol>
-<li>协调。如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。你可能标题会加粗，重点的地方会用斜体，但这基本是协调的。</li>
-<li>冲突。如果在同一个页面上设置了两个或多个类似的字体，它们并非完全不同，但也不完全相同，这个设计就是冲突的。</li>
-<li>对比。冲突是必须要避免的，而对比则是我们要表现的。对比可以是字体大小，粗细，结构，形状，方向，颜色等方面的对比。比如衬线体和无衬线体，全大写和全小写，罗马体和斜体等等都是明显的对比。可以找字体方面的专业书籍来系统地学习字体与字体的搭配。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>拾穗</category>
-      </categories>
-      <tags>
-        <tag>读书</tag>
-        <tag>设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建</title>
-    <url>/2020/04/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h2 id="在GitHub上创建个人仓库"><a href="#在GitHub上创建个人仓库" class="headerlink" title="在GitHub上创建个人仓库"></a>在GitHub上创建个人仓库</h2><blockquote>
-<p>GitHub官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
-</blockquote>
-<p>单击右上角的＋号，选择<code>New repository</code>，在<code>Repository name</code>一栏填入</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yourname.github.io</span><br></pre></td></tr></table></figure>
-
-<p>yourname为你的GitHub用户名，例如<code>elieye.github.io</code>。</p>
-<p>勾选下方的<code>Initialize this repository with a README</code>栏。</p>
-<p>然后单击下方绿色按钮<code>Create repository</code>即创建成功。</p>
-<p>在浏览器地址栏输入<code>yourname.github.io</code>即可跳转至你的网站。</p>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><blockquote>
-<p>node.js官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></p>
-</blockquote>
-<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>显示版本号即安装成功。</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><blockquote>
-<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-</blockquote>
-<blockquote>
-<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-</blockquote>
-<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
-<p>显示版本号即安装成功。</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在D盘新建一个文件夹，命名为<code>blog</code>，用来存放博客的文章、配置文件等等。</p>
-<p>右键单击<code>blog</code>文件夹选择<code>Git Bash Here</code>，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>安装完毕后检验是否安装成功，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-<p>接着初始化博客网站，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>安装必需的组件，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>至此本地网站已经配置完毕，下面生成静态网页，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>打开本地服务器，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>打开浏览器地址栏输入<code>localhost:4000</code>如果显示了我们的网站即配置成功，<code>ctrl+c</code>退出。</p>
-<h2 id="将Git与GitHub进行绑定"><a href="#将Git与GitHub进行绑定" class="headerlink" title="将Git与GitHub进行绑定"></a>将Git与GitHub进行绑定</h2><p>鼠标右键选择<code>Git Bash Here</code>,输入你的GitHub用户名和邮箱</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>生成ssh文件，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>复制ssh文件的内容，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>将输出的内容复制到剪切板，打开<code>GitHub-&gt;settings-&gt;SSH and GPG keys</code>，选择<code>New SSH key</code>，新建一个ssh，Title栏输入ssh，Key栏填入刚才复制的内容。</p>
-<p>检测GitHub公钥设置是否成功，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>如果显示你的用户名即成功</p>
-<p>使用文本编辑器（vs、sublime等）打开blog文件夹下的<code>_config.yml</code>文件（它是博客的配置文件区别于<code>themes</code>文件夹下的<code>_config.yml</code>，它是主题配置文件），找到文件的最后修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;yourname&#x2F;yourname.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>在<code>blog</code>文件夹右键单击选择<code>Git Bash Here</code>，安装扩展，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>创建一篇文章，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;article title&quot;</span><br></pre></td></tr></table></figure>
-
-<p>打开<code>blog\source\_posts</code>文件夹，里面应该会有一个md文件，它就是我们的文章。再创建一个images文件夹用来存放md里面的图片</p>
-<p>下面将我们写好的文字上传至GitHub，依次输入以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>hexo g 即 hexo generate 生成；hexo s 即 hexo server 启动服务预览；hexo d 即 hexo deploy 部署</p>
-</blockquote>
-<p>刷新网站，能看到文章就说明成功了。</p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
     <title>NexT主题优化</title>
@@ -592,20 +416,96 @@
 <h2 id="代码块复制功能"><a href="#代码块复制功能" class="headerlink" title="代码块复制功能"></a>代码块复制功能</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>copy_button</code>，将<code>false</code>改为<code>true</code>。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy_button:</span><br><span class="line">   enable: true</span><br></pre></td></tr></table></figure>
 ]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
-    <title>断舍离</title>
-    <url>/2020/09/03/%E6%96%AD%E8%88%8D%E7%A6%BB/</url>
-    <content><![CDATA[<blockquote>
-<p>作者：【日】山下英子<br>豆瓣：<a href="https://book.douban.com/subject/30415402/" target="_blank" rel="noopener">https://book.douban.com/subject/30415402/</a><br>评价：结构散乱，泛泛而谈，且有夸大之嫌。过于强调断舍离的作用，多用简单的“因为断舍离所以……”的结构来举例，毫无说服力。并且全文所涉及的内容较浅，陈述的观点单一，行文缺乏活力。但不可否认的是这本书将我们日常忽略并逐渐放弃的行为提了出来，能够起到很好的警醒作用。</p>
-</blockquote>
-<a id="more"></a>
+    <title>《思维导图完整手册》</title>
+    <url>/2020/09/08/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%AE%8C%E6%95%B4%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>要交给人们一种新的思维方式，就不要刻意地教他们，而应该教给他们一种工具，通过工具培养新的思维方式。</p>
 
-<hr>
-<p>断离舍是一种简单而自然的行为，精炼的总结它的核心观点就在于一个字——出。出是一种自然而然地状态，有进则有出，自然法则造就的一种生态平衡。我们用一个中性不含情感色彩的词去表达断舍离的意境，拂去了我们故以为的断舍离为一种壮士断腕的悲壮情绪，减少了我们对断离舍的仪式感，它本就是我们日常生活中应该做的事情之一，这也体现了断离舍自身的境界。生活中只进不出只会让我们的居住环境变得混乱不堪，并且形成恶性循环，生活也因此变得一团糟，所以我们提倡“出”的哲学。</p>
+            <i class="fa fa-quote-right"></i>
+          </blockquote><a id="more"></a>
+
+<p>有时候我不禁思考，是否传统的书籍编排方式已经过时了呢？最近流行起来的RR双向链接与ZK笔记法让我看到了在笔记领域的一股不同的潮流，也让我更加意识到思维的过程不是线性的，但是获取知识的方式和笔记的方式却是线性的，这是否不利于我们的思考和创作呢？知识的线性编排自有其优点，它拥有精密的逻辑性和连贯性，对于建立知识的框架和理清脉络十分有利，但我们在笔记的过程中应该将一维的知识过程，立体起来。简单的串联不利于我们管理与引用，采用RR笔记法可以在笔记间互相跳转，构建学科知识体系。思维导图也是一种方便我们进行思考和链接知识的工具，它的每一个分支都可以进行下分，同时可以在分支间建立联系方便跳转。二者其实是擅长的不同的领域。对于要构筑庞大的学科知识，并且要细化到每一个知识点，RR双链结合ZK可以很好的胜任。对于一个小概念，我们想要发散和记忆，思维导图就更擅长。合理的利用思维导图来进行思考和笔记，现在网络上有丰富的软件可以供给我们选择，简化我们的制作过程，降低修改的成本，所以，不要在用传统的笔记来阻碍我们思考的过程，采用适合的工具做它擅长的事。</p>
+]]></content>
+      <categories>
+        <category>拾穗</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>《写给大家看的设计书》</title>
+    <url>/2020/09/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/</url>
+    <content><![CDATA[<hr>
+<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>一旦能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，让它受你所控。</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote><a id="more"></a>
+
+<p>很多时候我们说不出一副作品好在哪，或者说差在哪，是因为我们不知道从哪些方面去考虑。如果我们知道从哪些角度来看待问题，那么我们就能逐渐掌握它。Robin引出了四大基本原则来帮助我们思考问题。</p>
+<ul>
+<li><strong>亲密性</strong>：如果某些元素存在某种关系，那么在视觉上也应该有关联（物理的接近就意味着存在关联）。</li>
+<li><strong>对齐</strong>：每个元素都应当与页面上的另一个元素有某种视觉联系。</li>
+<li><strong>重复</strong>：增加我们作品的条理性和统一性。</li>
+<li><strong>对比</strong>：如果两个元素应该相同，那么就让他们截然不同。相似只会造成冲突。</li>
+</ul>
+<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><blockquote>
+<p>将一些有关联的项移动在一起，这样相关的项就会被视为一个整体。</p>
+</blockquote>
+<p>有些时候将有关系的元素放在一起不仅会让读者在读起来有逻辑性，还能给读者一种有始有终的感觉，让页面的布置更有组织性。在考虑如何将元素联系在一起时要控制距离的度。相关的项距离足够小，而在不同的部分之间增加合适的空间，让信息的表达更加直观。在我们进行阅读的时候，我们眼睛移动的路径：从哪里开始看，看到哪里算结束，应该是一个合理的过程。优秀的设计师应该引导读者更高效的获取我们要表达的信息。</p>
+<p>在运用亲密性原则时，我们可以尝试眯着眼睛，数一数在浏览页面时我们的眼睛停顿了几次，它们之间是否有关系，可以将它们归为一类使之成为一组视觉单元。同时我们要避免以下问题：</p>
+<ul>
+<li>一个页面上有太多孤立的元素。</li>
+<li>不属于同一个子集的元素间留出了同样大小的空白。</li>
+<li>标题、子标题、图表标题、图片是否应分类至视觉单元。</li>
+<li>不同属一组的元素之间不要建立关系。</li>
+<li>不要仅仅因为有空白就把元素放在中间或角落。</li>
+</ul>
+<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><blockquote>
+<p>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</p>
+</blockquote>
+<p>页面上所有的元素都应该遵循某种对齐原则，尽管我们可能利用亲密性原则将一些元素分开，但是利用对齐原则就会在各元素间建立某种线将它们联系起来，表现出一种有序性。在欣赏作品的时候养成划线的习惯可以帮助我们找到元素的对齐。常见的对齐有左对齐、右对齐和居中对齐。</p>
+<p>不管是左对齐或者右对齐，就算对齐的元素之间有足够的距离，但是对齐的边界就像一条线一样将元素联系在一起。两侧对齐不一定要是虚拟的线，我们可以用文字来创造一条线，或者用图片创造一条线，文字则对齐图片的边缘。注意绝对不要在左对齐的正文或缩进的文本上方将标题居中。如果文本没有明确的左边界和右边界，就无法区分标题是否确实居中，看起来它只是悬挂着而已。这样一来，没有对齐的部分就造成页面非常杂乱：缩进很大，文本的右边界呈锯齿状参差不齐，居中的标题左右两边都有空白，另外插图也居中。</p>
+<p>居中对齐是最稳妥的方式，它庄重高雅但是也缺乏活力死板，而且它没有一条明确的线来表达对齐的元素之间的关系，两侧凹凸不平的边界弱化了对齐线的强度，所以不建议使用居中对齐，除非你明确像表现出一种端庄的感觉。在运用居中对齐时我们可以运用一些技巧来让我们的设计不那么刻板。</p>
+<ul>
+<li>同时包含居中文本的块不要居中对齐。</li>
+<li>采用可爱的字体。</li>
+<li>设置较大的行距，较小的字体，文字周围没有边框。</li>
+</ul>
+<p>不管是使用那种对齐方式，我们都应该做到只使用一种对齐方式。如果在你的作品中出现了几种对齐方式，那么一定要让它们有联系。比如右对齐的边界线是左对齐的边界线，居中对齐的右边缘是左对齐的边界限等等。总之页面上的元素一定要与其他元素之间存在某种对齐。</p>
+<p>新手在设计时往往天马行空，放任自己去摆放元素，并美名其曰打破规则，但最后效果往往不好。<strong>创立规则就是用来打破的，但是打破规则的前提是你必须清楚规则是什么</strong>。你的设计的混乱是有意为之还是无意之举往往更容易就能够看出来。</p>
+<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><blockquote>
+<p>设计的某些方面需要在整个作品中重复。</p>
+</blockquote>
+<p>我们在设计时经常用到重复的字体大小，粗细，图标等等，重复能够增加我们作品的一致性。如果我们在不同的作品中使用重复的元素往往会产生意想不到的效果。怎么利用重复原则为我们的作品服务呢？如果我们在一张传单的标题处使用了红色加粗字体，在结尾处同样使用红色加粗字体，读者在看到最后时往往会有一种首尾呼应的感觉，连接了整个设计。</p>
+<p>可以重复的元素多种多样，可以是字体、项目符号、缩进、对齐、留白、剪贴画等等。使用重复原则时，有时可以把一个元素从现在的设计中抽取出来，并根据这个元素创建一个新设计。或者只使用我们熟知元素的一部分给予暗示。</p>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><blockquote>
+<p>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</p>
+</blockquote>
+<p>Robin指出，<strong>要想实现有效的对比，对比就必须强烈</strong>。如果两个元素虽然不同，但是区别不大，这时候就不是对比了，而是冲突。新闻简报中又高又窄的列和水平方向有一些突出的标题，黑色背景和白色字体等等都形成了强烈的对比。对比的根本目的有两个。一个目的是增强页面的效果，另一个目的是有助于信息的组织。对比元素不能让读者混淆，也不能错误地强调重点。</p>
+<h2 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h2><p>常见的色彩模式有CMYK、RGB和Lab三种模式，Lab的色域最广，RGB运用最广，CMYK常用于印刷。</p>
+<p>色轮的基础是红绿蓝三原色，将两两相邻的颜色混合就得到了<strong>三间色</strong>。色轮上相对的颜色称为<strong>互补色</strong>，搭配方法常常是一种作为主色，一种作为强调色。彼此等距的三种颜色通常会形成一个让人愉悦的<strong>三色组</strong>。红色、黄色和蓝色是基色三色组。从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色，不过并不直接使用这个互补色，而是使用该互补色两侧的颜色叫做<strong>分裂互补三色组</strong>。配色时使用彼此相邻的颜色称为<strong>类似色</strong>。</p>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>字体设计是一门很深的学问，单独出一本书也不一定能说透彻，在平面设计中字体是非常重要的一环。当然，Robin也花了相当大的篇幅来阐述字体的原则。</p>
+<p>标点符号后需要跟一个空格。早在打字机时代，所有的字体都是等宽字体，而且每个标点符号后面都是两个空格（英文）。人们为了强调标题或者重要的内容常常将英文全大写。这并不是一个好的选择。因为我们辨识一个单词往往还需要根据它们的形状。英文的上半部分被称为海岸线，是我们辨识的重要依据。当我们把英文全大写了，它们就都是一个个矩形了。而且全大写的字号较比与同字号的小写看起来更小了。就是说如果我们像通过大写字母增大字号来突出重点的话，大可不必了。</p>
+<p>不要使用下划线。在字母下面加上下划线并不美观，而且会分割长英文字母。在汉字里会稍微没有那么突兀。下划线最初是打字员为了要告诉正在给这本书排字的工人哪些字需要印成斜体而留下的信号。</p>
+<p>段落缩进的距离不在是固定的，而是1em的距离，em根据字体大小决定。同时标题下面的首段可以不用缩进，大家都知道那是一个新的段落。</p>
+<p>字体设计的三个原则</p>
+<ol>
+<li>协调。如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。你可能标题会加粗，重点的地方会用斜体，但这基本是协调的。</li>
+<li>冲突。如果在同一个页面上设置了两个或多个类似的字体，它们并非完全不同，但也不完全相同，这个设计就是冲突的。</li>
+<li>对比。冲突是必须要避免的，而对比则是我们要表现的。对比可以是字体大小，粗细，结构，形状，方向，颜色等方面的对比。比如衬线体和无衬线体，全大写和全小写，罗马体和斜体等等都是明显的对比。可以找字体方面的专业书籍来系统地学习字体与字体的搭配。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>拾穗</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>《断舍离》</title>
+    <url>/2020/09/03/%E6%96%AD%E8%88%8D%E7%A6%BB/</url>
+    <content><![CDATA[<p>断离舍是一种简单而自然的行为，精炼的总结它的核心观点就在于一个字——出。出是一种自然而然地状态，有进则有出，自然法则造就的一种生态平衡。我们用一个中性不含情感色彩的词去表达断舍离<a id="more"></a>的意境，拂去了我们故以为的断舍离为一种壮士断腕的悲壮情绪，减少了我们对断离舍的仪式感，它本就是我们日常生活中应该做的事情之一，这也体现了断离舍自身的境界。生活中只进不出只会让我们的居住环境变得混乱不堪，并且形成恶性循环，生活也因此变得一团糟，所以我们提倡“出”的哲学。</p>
 <p>如果面对一个物质时，我们不是从这个东西需不需要的角度来思考，而是下意识从这个东西能不能用的角度——以物质资料为基准轴的观点来进行取舍和判断，我们就进入了“物质轴”的观点，我们的立场处在了外物的角度，忽略自己的实际需求。</p>
 <p>经济学上有个“巴莱多定律”，它指的是“公司80%销售额是由20%的员工创造的”“80%的成果是在所花全部时间的20%中产生的”等这些现象，又简称8/2定律。同样的，屋子里不用的物品占用了80%的空间，经常使用的只占了20%的空间。翻一翻家里的柜子，书桌的角落，看看是不是有很多物品都积了灰了？它们长时间摆放在那里，一直无人问津，却占据着有限的空间。“未来可能有用吧”。我们这么想到，但事实是过了很久，它仍然没有被利用起来，直到有一天屋子里实在堆不下了，我们才极不情愿的将它丢弃。</p>
 <p>我们当然需要为未来做积累，贮备好以后需要的物质财富和精神财富，但是更应该判断我们的积累是否有价值，许多时候都是做无用功而已。可能因为某一次商品促销，我们购入了大量的纸巾，将它们囤积在杂货间里。我们在网络上阅读到了一篇文章，把它剪贴下来，保存在我们的笔记里。就这样，我们的杂货间塞得满满当当，我们的笔记本杂乱不堪。一味的收集并不是一个好的习惯，只进不出就犹如一滩死水般毫无活力。日用百货够用就好，购买时也很方便，并且这些物品也是需要经常更替的；收藏的知识要有反复阅读的价值，如果是网络上随手一搜就能够找到了的没有收集的意义。况且无论是什么东西，总是具有一定的时效性。如非具有收藏价值的物品，存放过久总是会造成一定的贬值。需要点明的是，我们是生活在当下的人，能够改善当下的生活，提高当下幸福感的物品才最具价值。</p>
@@ -615,164 +515,91 @@
       <categories>
         <category>拾穗</category>
       </categories>
-      <tags>
-        <tag>读书</tag>
-        <tag>生活</tag>
-      </tags>
   </entry>
   <entry>
-    <title>思维导图完整手册</title>
-    <url>/2020/09/08/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%AE%8C%E6%95%B4%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<blockquote>
-<p>作者：【英】东尼·博赞<br>豆瓣：<a href="https://book.douban.com/subject/30374613/" target="_blank" rel="noopener">https://book.douban.com/subject/30374613/</a><br>评价：过多的理论阐述降低了本书的可读性，且主要针对的是手绘思维导图。</p>
+    <title>博客搭建</title>
+    <url>/2020/04/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="在GitHub上创建个人仓库"><a href="#在GitHub上创建个人仓库" class="headerlink" title="在GitHub上创建个人仓库"></a>在GitHub上创建个人仓库</h2><blockquote>
+<p>GitHub官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
 </blockquote>
+<p>单击右上角的＋号，选择<code>New repository</code>，在<code>Repository name</code>一栏填入</p>
 <a id="more"></a>
 
-<hr>
-<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>要交给人们一种新的思维方式，就不要刻意地教他们，而应该教给他们一种工具，通过工具培养新的思维方式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yourname.github.io</span><br></pre></td></tr></table></figure>
 
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
+<p>yourname为你的GitHub用户名，例如<code>elieye.github.io</code>。</p>
+<p>勾选下方的<code>Initialize this repository with a README</code>栏。</p>
+<p>然后单击下方绿色按钮<code>Create repository</code>即创建成功。</p>
+<p>在浏览器地址栏输入<code>yourname.github.io</code>即可跳转至你的网站。</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><blockquote>
+<p>node.js官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></p>
+</blockquote>
+<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
-<p>有时候我不禁思考，是否传统的书籍编排方式已经过时了呢？最近流行起来的RR双向链接与ZK笔记法让我看到了在笔记领域的一股不同的潮流，也让我更加意识到思维的过程不是线性的，但是获取知识的方式和笔记的方式却是线性的，这是否不利于我们的思考和创作呢？知识的线性编排自有其优点，它拥有精密的逻辑性和连贯性，对于建立知识的框架和理清脉络十分有利，但我们在笔记的过程中应该将一维的知识过程，立体起来。简单的串联不利于我们管理与引用，采用RR笔记法可以在笔记间互相跳转，构建学科知识体系。思维导图也是一种方便我们进行思考和链接知识的工具，它的每一个分支都可以进行下分，同时可以在分支间建立联系方便跳转。二者其实是擅长的不同的领域。对于要构筑庞大的学科知识，并且要细化到每一个知识点，RR双链结合ZK可以很好的胜任。对于一个小概念，我们想要发散和记忆，思维导图就更擅长。合理的利用思维导图来进行思考和笔记，现在网络上有丰富的软件可以供给我们选择，简化我们的制作过程，降低修改的成本，所以，不要在用传统的笔记来阻碍我们思考的过程，采用适合的工具做它擅长的事。</p>
+<p>显示版本号即安装成功。</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><blockquote>
+<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+</blockquote>
+<blockquote>
+<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+</blockquote>
+<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>显示版本号即安装成功。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在D盘新建一个文件夹，命名为<code>blog</code>，用来存放博客的文章、配置文件等等。</p>
+<p>右键单击<code>blog</code>文件夹选择<code>Git Bash Here</code>，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕后检验是否安装成功，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p>接着初始化博客网站，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>安装必需的组件，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>至此本地网站已经配置完毕，下面生成静态网页，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>打开本地服务器，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>打开浏览器地址栏输入<code>localhost:4000</code>如果显示了我们的网站即配置成功，<code>ctrl+c</code>退出。</p>
+<h2 id="将Git与GitHub进行绑定"><a href="#将Git与GitHub进行绑定" class="headerlink" title="将Git与GitHub进行绑定"></a>将Git与GitHub进行绑定</h2><p>鼠标右键选择<code>Git Bash Here</code>,输入你的GitHub用户名和邮箱</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>生成ssh文件，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>复制ssh文件的内容，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>将输出的内容复制到剪切板，打开<code>GitHub-&gt;settings-&gt;SSH and GPG keys</code>，选择<code>New SSH key</code>，新建一个ssh，Title栏输入ssh，Key栏填入刚才复制的内容。</p>
+<p>检测GitHub公钥设置是否成功，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>如果显示你的用户名即成功</p>
+<p>使用文本编辑器（vs、sublime等）打开blog文件夹下的<code>_config.yml</code>文件（它是博客的配置文件区别于<code>themes</code>文件夹下的<code>_config.yml</code>，它是主题配置文件），找到文件的最后修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;yourname&#x2F;yourname.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>在<code>blog</code>文件夹右键单击选择<code>Git Bash Here</code>，安装扩展，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>创建一篇文章，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;article title&quot;</span><br></pre></td></tr></table></figure>
+
+<p>打开<code>blog\source\_posts</code>文件夹，里面应该会有一个md文件，它就是我们的文章。再创建一个images文件夹用来存放md里面的图片</p>
+<p>下面将我们写好的文字上传至GitHub，依次输入以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo g 即 hexo generate 生成；hexo s 即 hexo server 启动服务预览；hexo d 即 hexo deploy 部署</p>
+</blockquote>
+<p>刷新网站，能看到文章就说明成功了。</p>
 ]]></content>
-      <categories>
-        <category>拾穗</category>
-      </categories>
-      <tags>
-        <tag>读书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>筑梦者的浪漫</title>
-    <url>/2020/12/05/%E7%AD%91%E6%A2%A6%E8%80%85%E7%9A%84%E6%B5%AA%E6%BC%AB/</url>
-    <content><![CDATA[<center>已经口干舌燥两眼发昏
-
-<center>拖着疲惫的身体也要往前走
-<a id="more"></a>
-
-<center>我曾以为有自己的追寻
-
-<center>就足够支撑我走到它面前
-
-<center>直到这一路发生的一切
-
-<center>给了我沉重一击
-<br>
-<br>
-
-<center>我吞了一口雪让自己冷静下来
-
-<center>又开始抓自己的头发
-
-<center>咬自己的舌头
-
-<center>撕扯自己的皮肤
-
-<center>已经疯了！
-<br>
-<br>
-
-<center>又不是第一次疯了
-
-<center>只好往死里走
-
-<center>麻木
-
-<center>给自己扎一刀
-
-<center>也要小心翼翼不能伤及大脑
-
-<center>把头摘下来放在袖子里
-
-<center>把身体活生生的剥出来在寒冬里酿造最香最烈的酒
-
-<center>为唤醒已经趋于沉睡的思想奉献最后的烟火
-
-<center>没人愿意饮鸩止渴
-<br>
-<br>
-
-<center>远方的伊甸园啊
-
-<center>为什么你不愿往我靠近一点
-
-<center>从林间的竹笋到雨打的芭蕉
-
-<center>从枝巅的蜜橘到砌下的梨花
-
-<center>都没能拉近我们间的距离
-
-<center>还能继续吗？
-
-<center>还有什么可以抛弃的吗？
-<br>
-<br>
-
-<center>我将仅剩的大脑也切开
-
-<center>掏空所有
-
-<center>用来作最后盛放皇冠的容器
-
-<center>看着地上冒着热气的青灰色物质
-
-<center>我陷入了困惑
-
-<center>这是什么？
-
-<center>可恶！
-
-<center>这一定是假象
-
-<center>是犹大的阴谋诡计
-
-<center>是阿撒托斯的低语
-
-<center>是殉道者的倔强意识
-<br>
-<br>
-
-<center>我还没有想明白
-
-<center>最后的头颅也跌落
-
-<center>在雪上滚了三滚
-
-<center>空空如也的脑壳迎着天空
-<br>
-<br>
-
-<center>最后一盏灯灭了
-
-<center>我睡了下去
-
-<center>再没有醒过来
-
-<center>新雪掩埋了我的头颅
-
-<center>后来者把我挖出来
-
-<center>得意般的说到
-
-<center>——又发现一个
-
-<center>飞速的笔尖在纸上停留了足足三秒
-
-<center>我被扔到地上
-
-<center>脑壳朝着地上那个缺口
-
-<center>仿佛躲避他们离去时肩上闪着的刺眼的光]]></content>
-      <categories>
-        <category>沧海遗珠</category>
-      </categories>
-      <tags>
-        <tag>随写</tag>
-        <tag>校园</tag>
-      </tags>
   </entry>
   <entry>
     <title>雨落湖心心亦摇</title>
@@ -800,12 +627,8 @@
 <p>全部都刚刚好，上课也没有迟到。</p>
 ]]></content>
       <categories>
-        <category>沧海遗珠</category>
+        <category>拾穗者</category>
       </categories>
-      <tags>
-        <tag>随写</tag>
-        <tag>校园</tag>
-      </tags>
   </entry>
   <entry>
     <title>风中白兰地</title>
@@ -825,12 +648,8 @@
 <p>从两年前刚发现时的轻视，再到整天焦虑，再到今天，不知道算是释然了还是放弃了，反正我知道我可以不用做那些无谓的尝试了。我早就身心俱疲，生活也被毁的一团糟，就算被丢弃在垃圾桶边上等着回收加工的破旧布偶玩具也不过如此了。晚上七点，我回到了学校。还没有来得及休息，就又匆匆忙忙的前往图书馆。已经耽误了太多时间了，不管以后是什么，至少现在的我还没有选择。</p>
 ]]></content>
       <categories>
-        <category>沧海遗珠</category>
+        <category>拾穗者</category>
       </categories>
-      <tags>
-        <tag>随写</tag>
-        <tag>生活</tag>
-      </tags>
   </entry>
   <entry>
     <title>马克思主义者的悲伤</title>
@@ -847,11 +666,7 @@
 <p>这样的世界，再也不好了。</p>
 ]]></content>
       <categories>
-        <category>沧海遗珠</category>
+        <category>拾穗者</category>
       </categories>
-      <tags>
-        <tag>随写</tag>
-        <tag>校园</tag>
-      </tags>
   </entry>
 </search>
