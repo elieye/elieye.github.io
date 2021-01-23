@@ -46,6 +46,141 @@
 ]]></content>
   </entry>
   <entry>
+    <title>NexT主题优化</title>
+    <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<blockquote>
+<p>常见的问题可以去NexT官网查询<br><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">https://theme-next.iissnan.com/</a><br>参考的文章<br><a href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener">http://yearito.cn/posts/hexo-advanced-settings.html</a><br><a href="http://yearito.cn/posts/hexo-theme-beautify.html" target="_blank" rel="noopener">http://yearito.cn/posts/hexo-theme-beautify.html</a><br><a href="https://io-oi.me/tech/hexo-next-optimization/" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization/</a><br><a href="https://guanqr.com/tech/website/hexo-theme-next-customization/" target="_blank" rel="noopener">https://guanqr.com/tech/website/hexo-theme-next-customization/</a></p>
+</blockquote>
+<h2 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h2><a id="more"></a>
+
+<p>首先安装hexo-symbols-count-time插件，在博客根目录下打开Git，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>exclude_codeblock排除代码块中的内容，默认为false。</p>
+</blockquote>
+<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 2</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>awl为平均字长。</p>
+</blockquote>
+<blockquote>
+<p>wpm为每分钟字数。</p>
+</blockquote>
+<p>如果字数显示为空白，阅读时长显示NaN，尝试清空缓存，运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>再次部署网站刷新即可。</p>
+<h2 id="添加网站运行时间"><a href="#添加网站运行时间" class="headerlink" title="添加网站运行时间"></a>添加网站运行时间</h2><p>修改<code>/blog/themes/next/layout/_partials/footer.swig</code>文件，在末尾加入如下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;br&#x2F;&gt;</span><br><span class="line">&lt;!-- 网站运行时间的设置 --&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        var grt&#x3D; new Date(&quot;04&#x2F;21&#x2F;2019 15:54:40&quot;);&#x2F;&#x2F;此处修改你的建站时间或者网站上线时间</span><br><span class="line">        now.setTime(now.getTime()+250);</span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days);</span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours);</span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum);</span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125;</span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125;</span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;;</span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="侧边栏社交按钮"><a href="#侧边栏社交按钮" class="headerlink" title="侧边栏社交按钮"></a>侧边栏社交按钮</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>social</code>，去掉要启用的链接前面的注释，并将链接设置为自己的链接。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;your-user-name</span><br><span class="line">  Twitter: https:&#x2F;&#x2F;twitter.com&#x2F;your-user-name</span><br><span class="line">  微博: http:&#x2F;&#x2F;weibo.com&#x2F;your-user-name</span><br><span class="line">  豆瓣: http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;your-user-name</span><br><span class="line">  知乎: http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;your-user-name</span><br></pre></td></tr></table></figure>
+
+<p>下方的<code>social_icons</code>对于相应的图标（大小写严格匹配），<code>enable</code>控制是否显示图标。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  微博: weibo</span><br></pre></td></tr></table></figure>
+
+<h2 id="首页文章折叠"><a href="#首页文章折叠" class="headerlink" title="首页文章折叠"></a>首页文章折叠</h2><ol>
+<li>在文章要要隐藏的内容后面添加<code>&lt;!-- more --&gt;</code>手动进行截断，这样在首页就只会显示<code>&lt;!-- more --&gt;</code>之前的内容<strong>（推荐）</strong>。</li>
+<li>在文章的头部添加一个<code>description</code>，<code>description</code>后面描述的内容就是显示的内容。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 主题美化</span><br><span class="line">date: 2020-04-2 21:07:16</span><br><span class="line">description: 描述内容</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2 id="首页及归档显示的文章篇数"><a href="#首页及归档显示的文章篇数" class="headerlink" title="首页及归档显示的文章篇数"></a><strong>首页及归档显示的文章篇数</strong></h2><p>打开站点配置文件<code>_config.yml</code>，搜索<code>index_generator</code>，将下面的<code>per_page</code>字段修改为自己想要的数字即可，默认为10。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;</span><br><span class="line">  per_page: 6</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+
+<p>归档页面的文章篇数通过修改<code># Pagination</code>字段下的<code>per_page</code>控制，默认为10。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 15</span><br><span class="line">pagination_dir: page</span><br></pre></td></tr></table></figure>
+
+<h2 id="更改侧栏"><a href="#更改侧栏" class="headerlink" title="更改侧栏"></a>更改侧栏</h2><h3 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改主题配置文件中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
+<ol>
+<li><p>设置侧栏的位置，修改<code>sidebar.position</code>的值，支持的选项有：</p>
+<ul>
+<li>left - 靠左放置</li>
+<li>right - 靠右放置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">   positon: left</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置侧栏显示的时机，修改<code>sidebar.display</code>的值，支持的选项有：</p>
+<ul>
+<li><p><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</p>
+</li>
+<li><p><code>always</code> - 在所有页面中都显示</p>
+</li>
+<li><p><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</p>
+</li>
+<li><p><code>remove</code> - 完全移除</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  display: post</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h3><p>打开主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。链接地址可以是完整的网络链接，配置成以下格式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: http:&#x2F;&#x2F;example.com&#x2F;avatar.gif</span><br></pre></td></tr></table></figure>
+
+<p>如果是本地的地址，则将头像文件命名为avatar.gif，放在next文件夹下的<code>source/images/</code> 目录下或者<code>source/uploads/</code> 下（ uploads 目录若不存在就新建）。两种方法的配置如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="作者昵称"><a href="#作者昵称" class="headerlink" title="作者昵称"></a>作者昵称</h3><p>打开站点配置文件，设置<code>author</code>为你的昵称。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">author： elieye</span><br></pre></td></tr></table></figure>
+
+<h3 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h3><p>打开站点配置文件， 设置 <code>description</code> 字段为你的站点描述。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">description: &#39;漫漫长路，半程风雨，半程春&#39;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章底部标签图标"><a href="#文章底部标签图标" class="headerlink" title="文章底部标签图标"></a><strong>文章底部标签图标</strong></h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>tag_icon</code>，将<code>false</code>改为<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="隐藏底部由Hexo驱动"><a href="#隐藏底部由Hexo驱动" class="headerlink" title="隐藏底部由Hexo驱动"></a>隐藏底部由Hexo驱动</h2><p>打开<code>themes/next/layout/_partials/footer.swig</code>隐藏之间的代码即可，或者直接删除。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--</span><br><span class="line">&#123;%- if theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class&#x3D;&quot;powered-by&quot;&gt;</span><br><span class="line">    &#123;%- set next_site &#x3D; &#39;https:&#x2F;&#x2F;theme-next.org&#39; %&#125;</span><br><span class="line">    &#123;%- if theme.scheme !&#x3D;&#x3D; &#39;Gemini&#39; %&#125;</span><br><span class="line">      &#123;%- set next_site &#x3D; &#39;https:&#x2F;&#x2F;&#39; + theme.scheme | lower + &#39;.theme-next.org&#39; %&#125;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">    &#123;&#123;- __(&#39;footer.powered&#39;, next_url(&#39;https:&#x2F;&#x2F;hexo.io&#39;, &#39;Hexo&#39;, &#123;class: &#39;theme-link&#39;&#125;) + &#39; &amp; &#39; + next_url(next_site, &#39;NexT.&#39; + theme.scheme, &#123;class: &#39;theme-link&#39;&#125;)) &#125;&#125;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;%- if theme.add_this_id %&#125;</span><br><span class="line">  &lt;div class&#x3D;&quot;addthis_inline_share_toolbox&quot;&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;&#x2F;s7.addthis.com&#x2F;js&#x2F;300&#x2F;addthis_widget.js#pubid&#x3D;&#123;&#123; theme.add_this_id &#125;&#125;&quot; async&#x3D;&quot;async&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果同时设置了底部显示网站运行时间，需要删除底部时间的显示代码的换行<code>&lt;br/&gt;</code>，不然会有一行空白行。</p>
+<h2 id="夜间模式"><a href="#夜间模式" class="headerlink" title="夜间模式"></a>夜间模式</h2><p>打开主题配置文件，搜索<code>\# Dark Mode</code>，将下面的<code>false</code>字段改为<code>auto</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Dark Mode</span><br><span class="line">darkmode: auto</span><br></pre></td></tr></table></figure>
+
+<p>网站将根据系统是否开启暗色主题选择开启夜间模式，缺点就是不能自己手动打开。Win10的黑暗模式需要通过创建任务来自动开启，详细方法见<a href="https://sspai.com/post/57593。" target="_blank" rel="noopener">https://sspai.com/post/57593。</a></p>
+<h2 id="博客模板"><a href="#博客模板" class="headerlink" title="博客模板"></a>博客模板</h2><p>打开博客根文件夹<code>/scaffolds/post.md</code></p>
+<h2 id="设置字体"><a href="#设置字体" class="headerlink" title="设置字体"></a>设置字体</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>font</code>，将下面的<code>enable</code>字段改为<code>true</code>，在<code>host</code>字段填入你想要更换的外链字体。下方的<code>global</code>控制全局字体，<code>headings</code>控制标题字体，<code>posts</code>控制正文字体，<code>logo</code>控制logo字体，<code>codes</code>控制代码字体，<code>size</code>字段的单位为em。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line">  </span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Lato</span><br><span class="line">    size: 0.8</span><br></pre></td></tr></table></figure>
+
+<h2 id="取消目录自动编号"><a href="#取消目录自动编号" class="headerlink" title="取消目录自动编号"></a>取消目录自动编号</h2><p>在主题配置文件中搜索</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\# Automatically add list number to toc.</span><br></pre></td></tr></table></figure>
+
+<p>将下面的<code>number: ture</code>改为false。</p>
+<h2 id="显示阅读进度"><a href="#显示阅读进度" class="headerlink" title="显示阅读进度"></a>显示阅读进度</h2><p>侧边栏阅读进度：打开 主题配置文件<code>_config.yml</code>，搜索 <code>scrollpercent</code>，把 <code>false</code> 改为 <code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+<p>顶栏阅读进度（二者可共存）：打开主题配置文件<code>_config.yml</code>搜索reading_progress，把<code>false</code>修改为<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="鼠标点击爱心"><a href="#鼠标点击爱心" class="headerlink" title="鼠标点击爱心"></a>鼠标点击爱心</h2><p>打开<code>next&gt;source&gt;js</code>文件夹，在里面新建一个src文件夹（有就打开它），新建<code>clicklove.js</code>文件，将以下代码复制至里面。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+
+<p>然后打开<code>themes&gt;next&gt;layout&gt;_layout.swig</code>文件，在末尾添加以下代码。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="鼠标点击爆炸效果"><a href="#鼠标点击爆炸效果" class="headerlink" title="鼠标点击爆炸效果"></a>鼠标点击爆炸效果</h2><p>打开<code>next&gt;source&gt;js</code>文件夹，在里面新建一个src文件夹（有就打开它），新建<code>fireworks.js</code>文件，将以下代码复制至里面。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;use strict&quot;;function updateCoords(e)&#123;pointerX&#x3D;(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY&#x3D;e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t&#x3D;anime.random(0,360)*Math.PI&#x2F;180,a&#x3D;anime.random(50,180),n&#x3D;[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;colors[anime.random(0,colors.length-1)],a.radius&#x3D;anime.random(16,32),a.endPos&#x3D;setParticuleDirection(a),a.draw&#x3D;function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle&#x3D;a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;&quot;#F00&quot;,a.radius&#x3D;0.1,a.alpha&#x3D;0.5,a.lineWidth&#x3D;6,a.draw&#x3D;function()&#123;ctx.globalAlpha&#x3D;a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth&#x3D;a.lineWidth,ctx.strokeStyle&#x3D;a.color,ctx.stroke(),ctx.globalAlpha&#x3D;1&#125;,a&#125;function renderParticule(e)&#123;for(var t&#x3D;0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a&#x3D;createCircle(e,t),n&#x3D;[],i&#x3D;0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n&#x3D;this,i&#x3D;arguments;clearTimeout(a),a&#x3D;setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl&#x3D;document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx&#x3D;canvasEl.getContext(&quot;2d&quot;),numberOfParticules&#x3D;30,pointerX&#x3D;0,pointerY&#x3D;0,tap&#x3D;&quot;mousedown&quot;,colors&#x3D;[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize&#x3D;debounce(function()&#123;canvasEl.width&#x3D;2*window.innerWidth,canvasEl.height&#x3D;2*window.innerHeight,canvasEl.style.width&#x3D;window.innerWidth+&quot;px&quot;,canvasEl.style.height&#x3D;window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render&#x3D;anime(&#123;duration:1&#x2F;0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;A&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;&quot;IMG&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;&quot;use strict&quot;;function updateCoords(e)&#123;pointerX&#x3D;(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY&#x3D;e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t&#x3D;anime.random(0,360)*Math.PI&#x2F;180,a&#x3D;anime.random(50,180),n&#x3D;[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;colors[anime.random(0,colors.length-1)],a.radius&#x3D;anime.random(16,32),a.endPos&#x3D;setParticuleDirection(a),a.draw&#x3D;function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle&#x3D;a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;&quot;#F00&quot;,a.radius&#x3D;0.1,a.alpha&#x3D;0.5,a.lineWidth&#x3D;6,a.draw&#x3D;function()&#123;ctx.globalAlpha&#x3D;a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth&#x3D;a.lineWidth,ctx.strokeStyle&#x3D;a.color,ctx.stroke(),ctx.globalAlpha&#x3D;1&#125;,a&#125;function renderParticule(e)&#123;for(var t&#x3D;0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a&#x3D;createCircle(e,t),n&#x3D;[],i&#x3D;0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n&#x3D;this,i&#x3D;arguments;clearTimeout(a),a&#x3D;setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl&#x3D;document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx&#x3D;canvasEl.getContext(&quot;2d&quot;),numberOfParticules&#x3D;30,pointerX&#x3D;0,pointerY&#x3D;0,tap&#x3D;&quot;mousedown&quot;,colors&#x3D;[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize&#x3D;debounce(function()&#123;canvasEl.width&#x3D;2*window.innerWidth,canvasEl.height&#x3D;2*window.innerHeight,canvasEl.style.width&#x3D;window.innerWidth+&quot;px&quot;,canvasEl.style.height&#x3D;window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render&#x3D;anime(&#123;duration:1&#x2F;0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;A&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;&quot;IMG&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>然后打开<code>themes/next/layout/_layout.swig</code>,在<code>&lt;/body&gt;</code>上面写下如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">   &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt; </span><br><span class="line">   &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt; </span><br><span class="line">   &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打开主题配置文件，在里面最后写下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Fireworks</span><br><span class="line">fireworks: true</span><br></pre></td></tr></table></figure>
+
+<p>刷新页面即可。</p>
+<h2 id="文章阅读次数"><a href="#文章阅读次数" class="headerlink" title="文章阅读次数"></a>文章阅读次数</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>busuanzi</code>，将<code>false</code>改为<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码块复制功能"><a href="#代码块复制功能" class="headerlink" title="代码块复制功能"></a>代码块复制功能</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>copy_button</code>，将<code>false</code>改为<code>true</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy_button:</span><br><span class="line">   enable: true</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo博客写作指南</title>
     <url>/2020/09/04/Hexo%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<blockquote>
@@ -271,16 +406,69 @@
 ]]></content>
   </entry>
   <entry>
-    <title>冬天的宣战</title>
-    <url>/2020/11/24/%E5%86%AC%E5%A4%A9%E7%9A%84%E5%AE%A3%E6%88%98/</url>
-    <content><![CDATA[<p>在经历了昨天气温骤降后，今天再次迎来了一次小幅降温。我感觉这个天气正式向我宣战了。</p>
-<a id="more"></a>
+    <title>《写给大家看的设计书》</title>
+    <url>/2020/09/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>一旦能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，让它受你所控。</p>
 
-<p>一坐在图书馆我的腿就直哆嗦，板凳的凉透过裤子也能感受到，早晨泡的茶还没有挺过一个小时就宣布妥协了。知识好像也变得懒懒散散，怎么也不肯自己进脑子，非得我去书本上一个一个的抠出来才能往脑子里塞，这也导致我废了老大劲花了很多时间但没学到啥东西。就这状态还不如早点回去呢！我刚走到图书馆门口，外面的风就像一直守在外面似的，一露头，就一巴掌把我扇了回去——我还是老实在图书馆多待会吧。</p>
+            <i class="fa fa-quote-right"></i>
+          </blockquote><a id="more"></a>
+
+<p>很多时候我们说不出一副作品好在哪，或者说差在哪，是因为我们不知道从哪些方面去考虑。如果我们知道从哪些角度来看待问题，那么我们就能逐渐掌握它。Robin引出了四大基本原则来帮助我们思考问题。</p>
+<ul>
+<li><strong>亲密性</strong>：如果某些元素存在某种关系，那么在视觉上也应该有关联（物理的接近就意味着存在关联）。</li>
+<li><strong>对齐</strong>：每个元素都应当与页面上的另一个元素有某种视觉联系。</li>
+<li><strong>重复</strong>：增加我们作品的条理性和统一性。</li>
+<li><strong>对比</strong>：如果两个元素应该相同，那么就让他们截然不同。相似只会造成冲突。</li>
+</ul>
+<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><blockquote>
+<p>将一些有关联的项移动在一起，这样相关的项就会被视为一个整体。</p>
+</blockquote>
+<p>有些时候将有关系的元素放在一起不仅会让读者在读起来有逻辑性，还能给读者一种有始有终的感觉，让页面的布置更有组织性。在考虑如何将元素联系在一起时要控制距离的度。相关的项距离足够小，而在不同的部分之间增加合适的空间，让信息的表达更加直观。在我们进行阅读的时候，我们眼睛移动的路径：从哪里开始看，看到哪里算结束，应该是一个合理的过程。优秀的设计师应该引导读者更高效的获取我们要表达的信息。</p>
+<p>在运用亲密性原则时，我们可以尝试眯着眼睛，数一数在浏览页面时我们的眼睛停顿了几次，它们之间是否有关系，可以将它们归为一类使之成为一组视觉单元。同时我们要避免以下问题：</p>
+<ul>
+<li>一个页面上有太多孤立的元素。</li>
+<li>不属于同一个子集的元素间留出了同样大小的空白。</li>
+<li>标题、子标题、图表标题、图片是否应分类至视觉单元。</li>
+<li>不同属一组的元素之间不要建立关系。</li>
+<li>不要仅仅因为有空白就把元素放在中间或角落。</li>
+</ul>
+<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><blockquote>
+<p>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</p>
+</blockquote>
+<p>页面上所有的元素都应该遵循某种对齐原则，尽管我们可能利用亲密性原则将一些元素分开，但是利用对齐原则就会在各元素间建立某种线将它们联系起来，表现出一种有序性。在欣赏作品的时候养成划线的习惯可以帮助我们找到元素的对齐。常见的对齐有左对齐、右对齐和居中对齐。</p>
+<p>不管是左对齐或者右对齐，就算对齐的元素之间有足够的距离，但是对齐的边界就像一条线一样将元素联系在一起。两侧对齐不一定要是虚拟的线，我们可以用文字来创造一条线，或者用图片创造一条线，文字则对齐图片的边缘。注意绝对不要在左对齐的正文或缩进的文本上方将标题居中。如果文本没有明确的左边界和右边界，就无法区分标题是否确实居中，看起来它只是悬挂着而已。这样一来，没有对齐的部分就造成页面非常杂乱：缩进很大，文本的右边界呈锯齿状参差不齐，居中的标题左右两边都有空白，另外插图也居中。</p>
+<p>居中对齐是最稳妥的方式，它庄重高雅但是也缺乏活力死板，而且它没有一条明确的线来表达对齐的元素之间的关系，两侧凹凸不平的边界弱化了对齐线的强度，所以不建议使用居中对齐，除非你明确像表现出一种端庄的感觉。在运用居中对齐时我们可以运用一些技巧来让我们的设计不那么刻板。</p>
+<ul>
+<li>同时包含居中文本的块不要居中对齐。</li>
+<li>采用可爱的字体。</li>
+<li>设置较大的行距，较小的字体，文字周围没有边框。</li>
+</ul>
+<p>不管是使用那种对齐方式，我们都应该做到只使用一种对齐方式。如果在你的作品中出现了几种对齐方式，那么一定要让它们有联系。比如右对齐的边界线是左对齐的边界线，居中对齐的右边缘是左对齐的边界限等等。总之页面上的元素一定要与其他元素之间存在某种对齐。</p>
+<p>新手在设计时往往天马行空，放任自己去摆放元素，并美名其曰打破规则，但最后效果往往不好。<strong>创立规则就是用来打破的，但是打破规则的前提是你必须清楚规则是什么</strong>。你的设计的混乱是有意为之还是无意之举往往更容易就能够看出来。</p>
+<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><blockquote>
+<p>设计的某些方面需要在整个作品中重复。</p>
+</blockquote>
+<p>我们在设计时经常用到重复的字体大小，粗细，图标等等，重复能够增加我们作品的一致性。如果我们在不同的作品中使用重复的元素往往会产生意想不到的效果。怎么利用重复原则为我们的作品服务呢？如果我们在一张传单的标题处使用了红色加粗字体，在结尾处同样使用红色加粗字体，读者在看到最后时往往会有一种首尾呼应的感觉，连接了整个设计。</p>
+<p>可以重复的元素多种多样，可以是字体、项目符号、缩进、对齐、留白、剪贴画等等。使用重复原则时，有时可以把一个元素从现在的设计中抽取出来，并根据这个元素创建一个新设计。或者只使用我们熟知元素的一部分给予暗示。</p>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><blockquote>
+<p>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</p>
+</blockquote>
+<p>Robin指出，<strong>要想实现有效的对比，对比就必须强烈</strong>。如果两个元素虽然不同，但是区别不大，这时候就不是对比了，而是冲突。新闻简报中又高又窄的列和水平方向有一些突出的标题，黑色背景和白色字体等等都形成了强烈的对比。对比的根本目的有两个。一个目的是增强页面的效果，另一个目的是有助于信息的组织。对比元素不能让读者混淆，也不能错误地强调重点。</p>
+<h2 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h2><p>常见的色彩模式有CMYK、RGB和Lab三种模式，Lab的色域最广，RGB运用最广，CMYK常用于印刷。</p>
+<p>色轮的基础是红绿蓝三原色，将两两相邻的颜色混合就得到了<strong>三间色</strong>。色轮上相对的颜色称为<strong>互补色</strong>，搭配方法常常是一种作为主色，一种作为强调色。彼此等距的三种颜色通常会形成一个让人愉悦的<strong>三色组</strong>。红色、黄色和蓝色是基色三色组。从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色，不过并不直接使用这个互补色，而是使用该互补色两侧的颜色叫做<strong>分裂互补三色组</strong>。配色时使用彼此相邻的颜色称为<strong>类似色</strong>。</p>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>字体设计是一门很深的学问，单独出一本书也不一定能说透彻，在平面设计中字体是非常重要的一环。当然，Robin也花了相当大的篇幅来阐述字体的原则。</p>
+<p>标点符号后需要跟一个空格。早在打字机时代，所有的字体都是等宽字体，而且每个标点符号后面都是两个空格（英文）。人们为了强调标题或者重要的内容常常将英文全大写。这并不是一个好的选择。因为我们辨识一个单词往往还需要根据它们的形状。英文的上半部分被称为海岸线，是我们辨识的重要依据。当我们把英文全大写了，它们就都是一个个矩形了。而且全大写的字号较比与同字号的小写看起来更小了。就是说如果我们像通过大写字母增大字号来突出重点的话，大可不必了。</p>
+<p>不要使用下划线。在字母下面加上下划线并不美观，而且会分割长英文字母。在汉字里会稍微没有那么突兀。下划线最初是打字员为了要告诉正在给这本书排字的工人哪些字需要印成斜体而留下的信号。</p>
+<p>段落缩进的距离不在是固定的，而是1em的距离，em根据字体大小决定。同时标题下面的首段可以不用缩进，大家都知道那是一个新的段落。</p>
+<p>字体设计的三个原则</p>
+<ol>
+<li>协调。如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。你可能标题会加粗，重点的地方会用斜体，但这基本是协调的。</li>
+<li>冲突。如果在同一个页面上设置了两个或多个类似的字体，它们并非完全不同，但也不完全相同，这个设计就是冲突的。</li>
+<li>对比。冲突是必须要避免的，而对比则是我们要表现的。对比可以是字体大小，粗细，结构，形状，方向，颜色等方面的对比。比如衬线体和无衬线体，全大写和全小写，罗马体和斜体等等都是明显的对比。可以找字体方面的专业书籍来系统地学习字体与字体的搭配。</li>
+</ol>
 ]]></content>
-      <categories>
-        <category>拾穗者</category>
-      </categories>
   </entry>
   <entry>
     <title>博客搭建</title>
@@ -368,206 +556,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>《写给大家看的设计书》</title>
-    <url>/2020/09/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>一旦能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，让它受你所控。</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote><a id="more"></a>
-
-<p>很多时候我们说不出一副作品好在哪，或者说差在哪，是因为我们不知道从哪些方面去考虑。如果我们知道从哪些角度来看待问题，那么我们就能逐渐掌握它。Robin引出了四大基本原则来帮助我们思考问题。</p>
-<ul>
-<li><strong>亲密性</strong>：如果某些元素存在某种关系，那么在视觉上也应该有关联（物理的接近就意味着存在关联）。</li>
-<li><strong>对齐</strong>：每个元素都应当与页面上的另一个元素有某种视觉联系。</li>
-<li><strong>重复</strong>：增加我们作品的条理性和统一性。</li>
-<li><strong>对比</strong>：如果两个元素应该相同，那么就让他们截然不同。相似只会造成冲突。</li>
-</ul>
-<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><blockquote>
-<p>将一些有关联的项移动在一起，这样相关的项就会被视为一个整体。</p>
-</blockquote>
-<p>有些时候将有关系的元素放在一起不仅会让读者在读起来有逻辑性，还能给读者一种有始有终的感觉，让页面的布置更有组织性。在考虑如何将元素联系在一起时要控制距离的度。相关的项距离足够小，而在不同的部分之间增加合适的空间，让信息的表达更加直观。在我们进行阅读的时候，我们眼睛移动的路径：从哪里开始看，看到哪里算结束，应该是一个合理的过程。优秀的设计师应该引导读者更高效的获取我们要表达的信息。</p>
-<p>在运用亲密性原则时，我们可以尝试眯着眼睛，数一数在浏览页面时我们的眼睛停顿了几次，它们之间是否有关系，可以将它们归为一类使之成为一组视觉单元。同时我们要避免以下问题：</p>
-<ul>
-<li>一个页面上有太多孤立的元素。</li>
-<li>不属于同一个子集的元素间留出了同样大小的空白。</li>
-<li>标题、子标题、图表标题、图片是否应分类至视觉单元。</li>
-<li>不同属一组的元素之间不要建立关系。</li>
-<li>不要仅仅因为有空白就把元素放在中间或角落。</li>
-</ul>
-<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><blockquote>
-<p>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</p>
-</blockquote>
-<p>页面上所有的元素都应该遵循某种对齐原则，尽管我们可能利用亲密性原则将一些元素分开，但是利用对齐原则就会在各元素间建立某种线将它们联系起来，表现出一种有序性。在欣赏作品的时候养成划线的习惯可以帮助我们找到元素的对齐。常见的对齐有左对齐、右对齐和居中对齐。</p>
-<p>不管是左对齐或者右对齐，就算对齐的元素之间有足够的距离，但是对齐的边界就像一条线一样将元素联系在一起。两侧对齐不一定要是虚拟的线，我们可以用文字来创造一条线，或者用图片创造一条线，文字则对齐图片的边缘。注意绝对不要在左对齐的正文或缩进的文本上方将标题居中。如果文本没有明确的左边界和右边界，就无法区分标题是否确实居中，看起来它只是悬挂着而已。这样一来，没有对齐的部分就造成页面非常杂乱：缩进很大，文本的右边界呈锯齿状参差不齐，居中的标题左右两边都有空白，另外插图也居中。</p>
-<p>居中对齐是最稳妥的方式，它庄重高雅但是也缺乏活力死板，而且它没有一条明确的线来表达对齐的元素之间的关系，两侧凹凸不平的边界弱化了对齐线的强度，所以不建议使用居中对齐，除非你明确像表现出一种端庄的感觉。在运用居中对齐时我们可以运用一些技巧来让我们的设计不那么刻板。</p>
-<ul>
-<li>同时包含居中文本的块不要居中对齐。</li>
-<li>采用可爱的字体。</li>
-<li>设置较大的行距，较小的字体，文字周围没有边框。</li>
-</ul>
-<p>不管是使用那种对齐方式，我们都应该做到只使用一种对齐方式。如果在你的作品中出现了几种对齐方式，那么一定要让它们有联系。比如右对齐的边界线是左对齐的边界线，居中对齐的右边缘是左对齐的边界限等等。总之页面上的元素一定要与其他元素之间存在某种对齐。</p>
-<p>新手在设计时往往天马行空，放任自己去摆放元素，并美名其曰打破规则，但最后效果往往不好。<strong>创立规则就是用来打破的，但是打破规则的前提是你必须清楚规则是什么</strong>。你的设计的混乱是有意为之还是无意之举往往更容易就能够看出来。</p>
-<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><blockquote>
-<p>设计的某些方面需要在整个作品中重复。</p>
-</blockquote>
-<p>我们在设计时经常用到重复的字体大小，粗细，图标等等，重复能够增加我们作品的一致性。如果我们在不同的作品中使用重复的元素往往会产生意想不到的效果。怎么利用重复原则为我们的作品服务呢？如果我们在一张传单的标题处使用了红色加粗字体，在结尾处同样使用红色加粗字体，读者在看到最后时往往会有一种首尾呼应的感觉，连接了整个设计。</p>
-<p>可以重复的元素多种多样，可以是字体、项目符号、缩进、对齐、留白、剪贴画等等。使用重复原则时，有时可以把一个元素从现在的设计中抽取出来，并根据这个元素创建一个新设计。或者只使用我们熟知元素的一部分给予暗示。</p>
-<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><blockquote>
-<p>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</p>
-</blockquote>
-<p>Robin指出，<strong>要想实现有效的对比，对比就必须强烈</strong>。如果两个元素虽然不同，但是区别不大，这时候就不是对比了，而是冲突。新闻简报中又高又窄的列和水平方向有一些突出的标题，黑色背景和白色字体等等都形成了强烈的对比。对比的根本目的有两个。一个目的是增强页面的效果，另一个目的是有助于信息的组织。对比元素不能让读者混淆，也不能错误地强调重点。</p>
-<h2 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h2><p>常见的色彩模式有CMYK、RGB和Lab三种模式，Lab的色域最广，RGB运用最广，CMYK常用于印刷。</p>
-<p>色轮的基础是红绿蓝三原色，将两两相邻的颜色混合就得到了<strong>三间色</strong>。色轮上相对的颜色称为<strong>互补色</strong>，搭配方法常常是一种作为主色，一种作为强调色。彼此等距的三种颜色通常会形成一个让人愉悦的<strong>三色组</strong>。红色、黄色和蓝色是基色三色组。从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色，不过并不直接使用这个互补色，而是使用该互补色两侧的颜色叫做<strong>分裂互补三色组</strong>。配色时使用彼此相邻的颜色称为<strong>类似色</strong>。</p>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>字体设计是一门很深的学问，单独出一本书也不一定能说透彻，在平面设计中字体是非常重要的一环。当然，Robin也花了相当大的篇幅来阐述字体的原则。</p>
-<p>标点符号后需要跟一个空格。早在打字机时代，所有的字体都是等宽字体，而且每个标点符号后面都是两个空格（英文）。人们为了强调标题或者重要的内容常常将英文全大写。这并不是一个好的选择。因为我们辨识一个单词往往还需要根据它们的形状。英文的上半部分被称为海岸线，是我们辨识的重要依据。当我们把英文全大写了，它们就都是一个个矩形了。而且全大写的字号较比与同字号的小写看起来更小了。就是说如果我们像通过大写字母增大字号来突出重点的话，大可不必了。</p>
-<p>不要使用下划线。在字母下面加上下划线并不美观，而且会分割长英文字母。在汉字里会稍微没有那么突兀。下划线最初是打字员为了要告诉正在给这本书排字的工人哪些字需要印成斜体而留下的信号。</p>
-<p>段落缩进的距离不在是固定的，而是1em的距离，em根据字体大小决定。同时标题下面的首段可以不用缩进，大家都知道那是一个新的段落。</p>
-<p>字体设计的三个原则</p>
-<ol>
-<li>协调。如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。你可能标题会加粗，重点的地方会用斜体，但这基本是协调的。</li>
-<li>冲突。如果在同一个页面上设置了两个或多个类似的字体，它们并非完全不同，但也不完全相同，这个设计就是冲突的。</li>
-<li>对比。冲突是必须要避免的，而对比则是我们要表现的。对比可以是字体大小，粗细，结构，形状，方向，颜色等方面的对比。比如衬线体和无衬线体，全大写和全小写，罗马体和斜体等等都是明显的对比。可以找字体方面的专业书籍来系统地学习字体与字体的搭配。</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>NexT主题优化</title>
-    <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<blockquote>
-<p>常见的问题可以去NexT官网查询<br><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">https://theme-next.iissnan.com/</a><br>参考的文章<br><a href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener">http://yearito.cn/posts/hexo-advanced-settings.html</a><br><a href="http://yearito.cn/posts/hexo-theme-beautify.html" target="_blank" rel="noopener">http://yearito.cn/posts/hexo-theme-beautify.html</a><br><a href="https://io-oi.me/tech/hexo-next-optimization/" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization/</a><br><a href="https://guanqr.com/tech/website/hexo-theme-next-customization/" target="_blank" rel="noopener">https://guanqr.com/tech/website/hexo-theme-next-customization/</a></p>
-</blockquote>
-<h2 id="增加字数统计和阅读计时功能"><a href="#增加字数统计和阅读计时功能" class="headerlink" title="增加字数统计和阅读计时功能"></a>增加字数统计和阅读计时功能</h2><a id="more"></a>
-
-<p>首先安装hexo-symbols-count-time插件，在博客根目录下打开Git，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
-
-<p>打开博客根目录下的博客配置文件<code>_config.yml</code>，添加以下代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">symbols: true</span><br><span class="line">time: true</span><br><span class="line">total_symbols: true</span><br><span class="line">total_time: true</span><br><span class="line">exclude_codeblock: false</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>exclude_codeblock排除代码块中的内容，默认为false。</p>
-</blockquote>
-<p>NexT集成了该插件，所以我们修改主题配置，打开next文件夹下的<code>_config.yml</code>文件，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">separated_meta: true</span><br><span class="line">item_text_post: true</span><br><span class="line">item_text_total: false</span><br><span class="line">awl: 2</span><br><span class="line">wpm: 275</span><br><span class="line">suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>awl为平均字长。</p>
-</blockquote>
-<blockquote>
-<p>wpm为每分钟字数。</p>
-</blockquote>
-<p>如果字数显示为空白，阅读时长显示NaN，尝试清空缓存，运行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>再次部署网站刷新即可。</p>
-<h2 id="添加网站运行时间"><a href="#添加网站运行时间" class="headerlink" title="添加网站运行时间"></a>添加网站运行时间</h2><p>修改<code>/blog/themes/next/layout/_partials/footer.swig</code>文件，在末尾加入如下代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;br&#x2F;&gt;</span><br><span class="line">&lt;!-- 网站运行时间的设置 --&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        var grt&#x3D; new Date(&quot;04&#x2F;21&#x2F;2019 15:54:40&quot;);&#x2F;&#x2F;此处修改你的建站时间或者网站上线时间</span><br><span class="line">        now.setTime(now.getTime()+250);</span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days);</span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours);</span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum);</span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125;</span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125;</span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;;</span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="侧边栏社交按钮"><a href="#侧边栏社交按钮" class="headerlink" title="侧边栏社交按钮"></a>侧边栏社交按钮</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>social</code>，去掉要启用的链接前面的注释，并将链接设置为自己的链接。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;your-user-name</span><br><span class="line">  Twitter: https:&#x2F;&#x2F;twitter.com&#x2F;your-user-name</span><br><span class="line">  微博: http:&#x2F;&#x2F;weibo.com&#x2F;your-user-name</span><br><span class="line">  豆瓣: http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;your-user-name</span><br><span class="line">  知乎: http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;your-user-name</span><br></pre></td></tr></table></figure>
-
-<p>下方的<code>social_icons</code>对于相应的图标（大小写严格匹配），<code>enable</code>控制是否显示图标。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  微博: weibo</span><br></pre></td></tr></table></figure>
-
-<h2 id="首页文章折叠"><a href="#首页文章折叠" class="headerlink" title="首页文章折叠"></a>首页文章折叠</h2><ol>
-<li>在文章要要隐藏的内容后面添加<code>&lt;!-- more --&gt;</code>手动进行截断，这样在首页就只会显示<code>&lt;!-- more --&gt;</code>之前的内容<strong>（推荐）</strong>。</li>
-<li>在文章的头部添加一个<code>description</code>，<code>description</code>后面描述的内容就是显示的内容。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 主题美化</span><br><span class="line">date: 2020-04-2 21:07:16</span><br><span class="line">description: 描述内容</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h2 id="首页及归档显示的文章篇数"><a href="#首页及归档显示的文章篇数" class="headerlink" title="首页及归档显示的文章篇数"></a><strong>首页及归档显示的文章篇数</strong></h2><p>打开站点配置文件<code>_config.yml</code>，搜索<code>index_generator</code>，将下面的<code>per_page</code>字段修改为自己想要的数字即可，默认为10。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;</span><br><span class="line">  per_page: 6</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
-
-<p>归档页面的文章篇数通过修改<code># Pagination</code>字段下的<code>per_page</code>控制，默认为10。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 15</span><br><span class="line">pagination_dir: page</span><br></pre></td></tr></table></figure>
-
-<h2 id="更改侧栏"><a href="#更改侧栏" class="headerlink" title="更改侧栏"></a>更改侧栏</h2><h3 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改主题配置文件中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
-<ol>
-<li><p>设置侧栏的位置，修改<code>sidebar.position</code>的值，支持的选项有：</p>
-<ul>
-<li>left - 靠左放置</li>
-<li>right - 靠右放置</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">   positon: left</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置侧栏显示的时机，修改<code>sidebar.display</code>的值，支持的选项有：</p>
-<ul>
-<li><p><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</p>
-</li>
-<li><p><code>always</code> - 在所有页面中都显示</p>
-</li>
-<li><p><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</p>
-</li>
-<li><p><code>remove</code> - 完全移除</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  display: post</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h3><p>打开主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。链接地址可以是完整的网络链接，配置成以下格式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: http:&#x2F;&#x2F;example.com&#x2F;avatar.gif</span><br></pre></td></tr></table></figure>
-
-<p>如果是本地的地址，则将头像文件命名为avatar.gif，放在next文件夹下的<code>source/images/</code> 目录下或者<code>source/uploads/</code> 下（ uploads 目录若不存在就新建）。两种方法的配置如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
-
-<h3 id="作者昵称"><a href="#作者昵称" class="headerlink" title="作者昵称"></a>作者昵称</h3><p>打开站点配置文件，设置<code>author</code>为你的昵称。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">author： elieye</span><br></pre></td></tr></table></figure>
-
-<h3 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h3><p>打开站点配置文件， 设置 <code>description</code> 字段为你的站点描述。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">description: &#39;漫漫长路，半程风雨，半程春&#39;</span><br></pre></td></tr></table></figure>
-
-<h2 id="文章底部标签图标"><a href="#文章底部标签图标" class="headerlink" title="文章底部标签图标"></a><strong>文章底部标签图标</strong></h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>tag_icon</code>，将<code>false</code>改为<code>true</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="隐藏底部由Hexo驱动"><a href="#隐藏底部由Hexo驱动" class="headerlink" title="隐藏底部由Hexo驱动"></a>隐藏底部由Hexo驱动</h2><p>打开<code>themes/next/layout/_partials/footer.swig</code>隐藏之间的代码即可，或者直接删除。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--</span><br><span class="line">&#123;%- if theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class&#x3D;&quot;powered-by&quot;&gt;</span><br><span class="line">    &#123;%- set next_site &#x3D; &#39;https:&#x2F;&#x2F;theme-next.org&#39; %&#125;</span><br><span class="line">    &#123;%- if theme.scheme !&#x3D;&#x3D; &#39;Gemini&#39; %&#125;</span><br><span class="line">      &#123;%- set next_site &#x3D; &#39;https:&#x2F;&#x2F;&#39; + theme.scheme | lower + &#39;.theme-next.org&#39; %&#125;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">    &#123;&#123;- __(&#39;footer.powered&#39;, next_url(&#39;https:&#x2F;&#x2F;hexo.io&#39;, &#39;Hexo&#39;, &#123;class: &#39;theme-link&#39;&#125;) + &#39; &amp; &#39; + next_url(next_site, &#39;NexT.&#39; + theme.scheme, &#123;class: &#39;theme-link&#39;&#125;)) &#125;&#125;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;%- if theme.add_this_id %&#125;</span><br><span class="line">  &lt;div class&#x3D;&quot;addthis_inline_share_toolbox&quot;&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;&#x2F;s7.addthis.com&#x2F;js&#x2F;300&#x2F;addthis_widget.js#pubid&#x3D;&#123;&#123; theme.add_this_id &#125;&#125;&quot; async&#x3D;&quot;async&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
-
-<p>如果同时设置了底部显示网站运行时间，需要删除底部时间的显示代码的换行<code>&lt;br/&gt;</code>，不然会有一行空白行。</p>
-<h2 id="夜间模式"><a href="#夜间模式" class="headerlink" title="夜间模式"></a>夜间模式</h2><p>打开主题配置文件，搜索<code>\# Dark Mode</code>，将下面的<code>false</code>字段改为<code>auto</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Dark Mode</span><br><span class="line">darkmode: auto</span><br></pre></td></tr></table></figure>
-
-<p>网站将根据系统是否开启暗色主题选择开启夜间模式，缺点就是不能自己手动打开。Win10的黑暗模式需要通过创建任务来自动开启，详细方法见<a href="https://sspai.com/post/57593。" target="_blank" rel="noopener">https://sspai.com/post/57593。</a></p>
-<h2 id="博客模板"><a href="#博客模板" class="headerlink" title="博客模板"></a>博客模板</h2><p>打开博客根文件夹<code>/scaffolds/post.md</code></p>
-<h2 id="设置字体"><a href="#设置字体" class="headerlink" title="设置字体"></a>设置字体</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>font</code>，将下面的<code>enable</code>字段改为<code>true</code>，在<code>host</code>字段填入你想要更换的外链字体。下方的<code>global</code>控制全局字体，<code>headings</code>控制标题字体，<code>posts</code>控制正文字体，<code>logo</code>控制logo字体，<code>codes</code>控制代码字体，<code>size</code>字段的单位为em。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line">  </span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Lato</span><br><span class="line">    size: 0.8</span><br></pre></td></tr></table></figure>
-
-<h2 id="取消目录自动编号"><a href="#取消目录自动编号" class="headerlink" title="取消目录自动编号"></a>取消目录自动编号</h2><p>在主题配置文件中搜索</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\# Automatically add list number to toc.</span><br></pre></td></tr></table></figure>
-
-<p>将下面的<code>number: ture</code>改为false。</p>
-<h2 id="显示阅读进度"><a href="#显示阅读进度" class="headerlink" title="显示阅读进度"></a>显示阅读进度</h2><p>侧边栏阅读进度：打开 主题配置文件<code>_config.yml</code>，搜索 <code>scrollpercent</code>，把 <code>false</code> 改为 <code>true</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
-
-<p>顶栏阅读进度（二者可共存）：打开主题配置文件<code>_config.yml</code>搜索reading_progress，把<code>false</code>修改为<code>true</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="鼠标点击爱心"><a href="#鼠标点击爱心" class="headerlink" title="鼠标点击爱心"></a>鼠标点击爱心</h2><p>打开<code>next&gt;source&gt;js</code>文件夹，在里面新建一个src文件夹（有就打开它），新建<code>clicklove.js</code>文件，将以下代码复制至里面。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
-
-<p>然后打开<code>themes&gt;next&gt;layout&gt;_layout.swig</code>文件，在末尾添加以下代码。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="鼠标点击爆炸效果"><a href="#鼠标点击爆炸效果" class="headerlink" title="鼠标点击爆炸效果"></a>鼠标点击爆炸效果</h2><p>打开<code>next&gt;source&gt;js</code>文件夹，在里面新建一个src文件夹（有就打开它），新建<code>fireworks.js</code>文件，将以下代码复制至里面。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;use strict&quot;;function updateCoords(e)&#123;pointerX&#x3D;(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY&#x3D;e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t&#x3D;anime.random(0,360)*Math.PI&#x2F;180,a&#x3D;anime.random(50,180),n&#x3D;[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;colors[anime.random(0,colors.length-1)],a.radius&#x3D;anime.random(16,32),a.endPos&#x3D;setParticuleDirection(a),a.draw&#x3D;function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle&#x3D;a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;&quot;#F00&quot;,a.radius&#x3D;0.1,a.alpha&#x3D;0.5,a.lineWidth&#x3D;6,a.draw&#x3D;function()&#123;ctx.globalAlpha&#x3D;a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth&#x3D;a.lineWidth,ctx.strokeStyle&#x3D;a.color,ctx.stroke(),ctx.globalAlpha&#x3D;1&#125;,a&#125;function renderParticule(e)&#123;for(var t&#x3D;0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a&#x3D;createCircle(e,t),n&#x3D;[],i&#x3D;0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n&#x3D;this,i&#x3D;arguments;clearTimeout(a),a&#x3D;setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl&#x3D;document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx&#x3D;canvasEl.getContext(&quot;2d&quot;),numberOfParticules&#x3D;30,pointerX&#x3D;0,pointerY&#x3D;0,tap&#x3D;&quot;mousedown&quot;,colors&#x3D;[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize&#x3D;debounce(function()&#123;canvasEl.width&#x3D;2*window.innerWidth,canvasEl.height&#x3D;2*window.innerHeight,canvasEl.style.width&#x3D;window.innerWidth+&quot;px&quot;,canvasEl.style.height&#x3D;window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render&#x3D;anime(&#123;duration:1&#x2F;0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;A&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;&quot;IMG&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;&quot;use strict&quot;;function updateCoords(e)&#123;pointerX&#x3D;(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY&#x3D;e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t&#x3D;anime.random(0,360)*Math.PI&#x2F;180,a&#x3D;anime.random(50,180),n&#x3D;[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;colors[anime.random(0,colors.length-1)],a.radius&#x3D;anime.random(16,32),a.endPos&#x3D;setParticuleDirection(a),a.draw&#x3D;function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle&#x3D;a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;&quot;#F00&quot;,a.radius&#x3D;0.1,a.alpha&#x3D;0.5,a.lineWidth&#x3D;6,a.draw&#x3D;function()&#123;ctx.globalAlpha&#x3D;a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth&#x3D;a.lineWidth,ctx.strokeStyle&#x3D;a.color,ctx.stroke(),ctx.globalAlpha&#x3D;1&#125;,a&#125;function renderParticule(e)&#123;for(var t&#x3D;0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a&#x3D;createCircle(e,t),n&#x3D;[],i&#x3D;0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n&#x3D;this,i&#x3D;arguments;clearTimeout(a),a&#x3D;setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl&#x3D;document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx&#x3D;canvasEl.getContext(&quot;2d&quot;),numberOfParticules&#x3D;30,pointerX&#x3D;0,pointerY&#x3D;0,tap&#x3D;&quot;mousedown&quot;,colors&#x3D;[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize&#x3D;debounce(function()&#123;canvasEl.width&#x3D;2*window.innerWidth,canvasEl.height&#x3D;2*window.innerHeight,canvasEl.style.width&#x3D;window.innerWidth+&quot;px&quot;,canvasEl.style.height&#x3D;window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render&#x3D;anime(&#123;duration:1&#x2F;0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;A&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;&quot;IMG&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>然后打开<code>themes/next/layout/_layout.swig</code>,在<code>&lt;/body&gt;</code>上面写下如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">   &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt; </span><br><span class="line">   &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt; </span><br><span class="line">   &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>打开主题配置文件，在里面最后写下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Fireworks</span><br><span class="line">fireworks: true</span><br></pre></td></tr></table></figure>
-
-<p>刷新页面即可。</p>
-<h2 id="文章阅读次数"><a href="#文章阅读次数" class="headerlink" title="文章阅读次数"></a>文章阅读次数</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>busuanzi</code>，将<code>false</code>改为<code>true</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="代码块复制功能"><a href="#代码块复制功能" class="headerlink" title="代码块复制功能"></a>代码块复制功能</h2><p>打开主题配置文件<code>_config.yml</code>，搜索<code>copy_button</code>，将<code>false</code>改为<code>true</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy_button:</span><br><span class="line">   enable: true</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>《思维导图完整手册》</title>
     <url>/2020/09/08/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%AE%8C%E6%95%B4%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -579,6 +567,18 @@
 
 <p>有时候我不禁思考，是否传统的书籍编排方式已经过时了呢？最近流行起来的RR双向链接与ZK笔记法让我看到了在笔记领域的一股不同的潮流，也让我更加意识到思维的过程不是线性的，但是获取知识的方式和笔记的方式却是线性的，这是否不利于我们的思考和创作呢？知识的线性编排自有其优点，它拥有精密的逻辑性和连贯性，对于建立知识的框架和理清脉络十分有利，但我们在笔记的过程中应该将一维的知识过程，立体起来。简单的串联不利于我们管理与引用，采用RR笔记法可以在笔记间互相跳转，构建学科知识体系。思维导图也是一种方便我们进行思考和链接知识的工具，它的每一个分支都可以进行下分，同时可以在分支间建立联系方便跳转。二者其实是擅长的不同的领域。对于要构筑庞大的学科知识，并且要细化到每一个知识点，RR双链结合ZK可以很好的胜任。对于一个小概念，我们想要发散和记忆，思维导图就更擅长。合理的利用思维导图来进行思考和笔记，现在网络上有丰富的软件可以供给我们选择，简化我们的制作过程，降低修改的成本，所以，不要在用传统的笔记来阻碍我们思考的过程，采用适合的工具做它擅长的事。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>冬天的宣战</title>
+    <url>/2020/11/24/%E5%86%AC%E5%A4%A9%E7%9A%84%E5%AE%A3%E6%88%98/</url>
+    <content><![CDATA[<p>在经历了昨天气温骤降后，今天再次迎来了一次小幅降温。我感觉这个天气正式向我宣战了。</p>
+<a id="more"></a>
+
+<p>一坐在图书馆我的腿就直哆嗦，板凳的凉透过裤子也能感受到，早晨泡的茶还没有挺过一个小时就宣布妥协了。知识好像也变得懒懒散散，怎么也不肯自己进脑子，非得我去书本上一个一个的抠出来才能往脑子里塞，这也导致我废了老大劲花了很多时间但没学到啥东西。就这状态还不如早点回去呢！我刚走到图书馆门口，外面的风就像一直守在外面似的，一露头，就一巴掌把我扇了回去——我还是老实在图书馆多待会吧。</p>
+]]></content>
+      <categories>
+        <category>拾穗者</category>
+      </categories>
   </entry>
   <entry>
     <title>《断舍离》</title>
@@ -621,24 +621,6 @@
       </categories>
   </entry>
   <entry>
-    <title>马克思主义者的悲伤</title>
-    <url>/2020/11/06/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E6%82%B2%E4%BC%A4/</url>
-    <content><![CDATA[<p>又是遭受这样令人焦虑的痛苦，如同花园里修剪的整整齐齐的洋苏草被顽皮的小男孩随意践踏成东倒西歪。</p>
-<a id="more"></a>
-
-<p>我维持着尴尬，就像维持着我可怜的尊严，那段路现在回想起来也会让我感到心里隐隐刺痛。</p>
-<p>雾气萦绕着的灰天，入冬微微冰凉的空气，忽远忽近的争论声，还有脚下坑坑洼洼的石砖路和旁边粗糙的绿化树，只有这些是我这一段百无聊赖的路程的伴侣。</p>
-<p>我试图抚摸他们不光滑的肌肤，倾听他们在风中的诉说，融入静谧的氛围。</p>
-<p>我企图推翻笛卡尔的哲学起点，探索叔本华脑中存在的世界，沉寂到尼采地虚无世界里，像贝克莱一样思考。</p>
-<p>可惜我失败了，我没能挣脱外界缠绕在我身上千丝万缕的联系，我没能构造出我以为更好的抽象世界，我没能彻底否认我经历的一切。</p>
-<p>这就是马克思主义者的悲伤吗？</p>
-<p>这样的世界，再也不好了。</p>
-]]></content>
-      <categories>
-        <category>拾穗者</category>
-      </categories>
-  </entry>
-  <entry>
     <title>风中白兰地</title>
     <url>/2020/10/13/%E9%A3%8E%E4%B8%AD%E7%99%BD%E5%85%B0%E5%9C%B0/</url>
     <content><![CDATA[<p>下午到医院的时候已经是两点过了。</p>
@@ -654,6 +636,24 @@
 <p>我出了医院，颓然的坐在公交车站等车，点了一杯果汁希望能让自己放松一下，但还是提不起任何精神。周围的人有说有笑，我只好坐在那条窄的像横栏的板凳上，腘窝紧紧夹住它的边缘和底部，脊柱也不自觉弯曲成拱桥的形状，双手和头部往前倾来保持平衡。</p>
 <p>只能这样了，不然没法坐稳。</p>
 <p>从两年前刚发现时的轻视，再到整天焦虑，再到今天，不知道算是释然了还是放弃了，反正我知道我可以不用做那些无谓的尝试了。我早就身心俱疲，生活也被毁的一团糟，就算被丢弃在垃圾桶边上等着回收加工的破旧布偶玩具也不过如此了。晚上七点，我回到了学校。还没有来得及休息，就又匆匆忙忙的前往图书馆。已经耽误了太多时间了，不管以后是什么，至少现在的我还没有选择。</p>
+]]></content>
+      <categories>
+        <category>拾穗者</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>马克思主义者的悲伤</title>
+    <url>/2020/11/06/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E6%82%B2%E4%BC%A4/</url>
+    <content><![CDATA[<p>又是遭受这样令人焦虑的痛苦，如同花园里修剪的整整齐齐的洋苏草被顽皮的小男孩随意践踏成东倒西歪。</p>
+<a id="more"></a>
+
+<p>我维持着尴尬，就像维持着我可怜的尊严，那段路现在回想起来也会让我感到心里隐隐刺痛。</p>
+<p>雾气萦绕着的灰天，入冬微微冰凉的空气，忽远忽近的争论声，还有脚下坑坑洼洼的石砖路和旁边粗糙的绿化树，只有这些是我这一段百无聊赖的路程的伴侣。</p>
+<p>我试图抚摸他们不光滑的肌肤，倾听他们在风中的诉说，融入静谧的氛围。</p>
+<p>我企图推翻笛卡尔的哲学起点，探索叔本华脑中存在的世界，沉寂到尼采地虚无世界里，像贝克莱一样思考。</p>
+<p>可惜我失败了，我没能挣脱外界缠绕在我身上千丝万缕的联系，我没能构造出我以为更好的抽象世界，我没能彻底否认我经历的一切。</p>
+<p>这就是马克思主义者的悲伤吗？</p>
+<p>这样的世界，再也不好了。</p>
 ]]></content>
       <categories>
         <category>拾穗者</category>
