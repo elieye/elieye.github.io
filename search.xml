@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>NexT主题</title>
+    <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<blockquote>
+<p>Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a><br>Hexo主题排行榜：<a href="https://hexo.voxel.site/" target="_blank" rel="noopener">https://hexo.voxel.site/</a></p>
+</blockquote>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><blockquote>
+<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a><br>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
+</blockquote>
+<a id="more"></a>
+
+<p>右键单击hexo文件夹git bash here，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>也可去GitHub网站下载压缩包解压。</p>
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse。</p>
+<p>修改语言为中文：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
+
+<p>设置顶栏的显示：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>把要显示的栏目前的<code>＃</code>去掉即可。</p>
+<p>再博客根目录下打开Git，创建标签文件夹</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件。</p>
+<h2 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h2><p>依次执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>刷新网站就可以看到网站主题更新成功了。</p>
+<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><p>NexT每个月都会发布新版本，可以通过以下命令来快速更新。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd themes&#x2F;next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo博客写作指南</title>
     <url>/2020/09/04/Hexo%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<blockquote>
@@ -226,6 +271,168 @@
 ]]></content>
   </entry>
   <entry>
+    <title>冬天的宣战</title>
+    <url>/2020/11/24/%E5%86%AC%E5%A4%A9%E7%9A%84%E5%AE%A3%E6%88%98/</url>
+    <content><![CDATA[<p>在经历了昨天气温骤降后，今天再次迎来了一次小幅降温。我感觉这个天气正式向我宣战了。</p>
+<a id="more"></a>
+
+<p>一坐在图书馆我的腿就直哆嗦，板凳的凉透过裤子也能感受到，早晨泡的茶还没有挺过一个小时就宣布妥协了。知识好像也变得懒懒散散，怎么也不肯自己进脑子，非得我去书本上一个一个的抠出来才能往脑子里塞，这也导致我废了老大劲花了很多时间但没学到啥东西。就这状态还不如早点回去呢！我刚走到图书馆门口，外面的风就像一直守在外面似的，一露头，就一巴掌把我扇了回去——我还是老实在图书馆多待会吧。</p>
+]]></content>
+      <categories>
+        <category>拾穗者</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>博客搭建</title>
+    <url>/2020/04/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="在GitHub上创建个人仓库"><a href="#在GitHub上创建个人仓库" class="headerlink" title="在GitHub上创建个人仓库"></a>在GitHub上创建个人仓库</h2><blockquote>
+<p>GitHub官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
+</blockquote>
+<p>单击右上角的＋号，选择<code>New repository</code>，在<code>Repository name</code>一栏填入</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yourname.github.io</span><br></pre></td></tr></table></figure>
+
+<p>yourname为你的GitHub用户名，例如<code>elieye.github.io</code>。</p>
+<p>勾选下方的<code>Initialize this repository with a README</code>栏。</p>
+<p>然后单击下方绿色按钮<code>Create repository</code>即创建成功。</p>
+<p>在浏览器地址栏输入<code>yourname.github.io</code>即可跳转至你的网站。</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><blockquote>
+<p>node.js官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></p>
+</blockquote>
+<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>显示版本号即安装成功。</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><blockquote>
+<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+</blockquote>
+<blockquote>
+<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+</blockquote>
+<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>显示版本号即安装成功。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在D盘新建一个文件夹，命名为<code>blog</code>，用来存放博客的文章、配置文件等等。</p>
+<p>右键单击<code>blog</code>文件夹选择<code>Git Bash Here</code>，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕后检验是否安装成功，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p>接着初始化博客网站，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>安装必需的组件，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>至此本地网站已经配置完毕，下面生成静态网页，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>打开本地服务器，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>打开浏览器地址栏输入<code>localhost:4000</code>如果显示了我们的网站即配置成功，<code>ctrl+c</code>退出。</p>
+<h2 id="将Git与GitHub进行绑定"><a href="#将Git与GitHub进行绑定" class="headerlink" title="将Git与GitHub进行绑定"></a>将Git与GitHub进行绑定</h2><p>鼠标右键选择<code>Git Bash Here</code>,输入你的GitHub用户名和邮箱</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>生成ssh文件，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>复制ssh文件的内容，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>将输出的内容复制到剪切板，打开<code>GitHub-&gt;settings-&gt;SSH and GPG keys</code>，选择<code>New SSH key</code>，新建一个ssh，Title栏输入ssh，Key栏填入刚才复制的内容。</p>
+<p>检测GitHub公钥设置是否成功，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>如果显示你的用户名即成功</p>
+<p>使用文本编辑器（vs、sublime等）打开blog文件夹下的<code>_config.yml</code>文件（它是博客的配置文件区别于<code>themes</code>文件夹下的<code>_config.yml</code>，它是主题配置文件），找到文件的最后修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;yourname&#x2F;yourname.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>在<code>blog</code>文件夹右键单击选择<code>Git Bash Here</code>，安装扩展，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>创建一篇文章，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;article title&quot;</span><br></pre></td></tr></table></figure>
+
+<p>打开<code>blog\source\_posts</code>文件夹，里面应该会有一个md文件，它就是我们的文章。再创建一个images文件夹用来存放md里面的图片</p>
+<p>下面将我们写好的文字上传至GitHub，依次输入以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo g 即 hexo generate 生成；hexo s 即 hexo server 启动服务预览；hexo d 即 hexo deploy 部署</p>
+</blockquote>
+<p>刷新网站，能看到文章就说明成功了。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>《写给大家看的设计书》</title>
+    <url>/2020/09/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>一旦能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，让它受你所控。</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote><a id="more"></a>
+
+<p>很多时候我们说不出一副作品好在哪，或者说差在哪，是因为我们不知道从哪些方面去考虑。如果我们知道从哪些角度来看待问题，那么我们就能逐渐掌握它。Robin引出了四大基本原则来帮助我们思考问题。</p>
+<ul>
+<li><strong>亲密性</strong>：如果某些元素存在某种关系，那么在视觉上也应该有关联（物理的接近就意味着存在关联）。</li>
+<li><strong>对齐</strong>：每个元素都应当与页面上的另一个元素有某种视觉联系。</li>
+<li><strong>重复</strong>：增加我们作品的条理性和统一性。</li>
+<li><strong>对比</strong>：如果两个元素应该相同，那么就让他们截然不同。相似只会造成冲突。</li>
+</ul>
+<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><blockquote>
+<p>将一些有关联的项移动在一起，这样相关的项就会被视为一个整体。</p>
+</blockquote>
+<p>有些时候将有关系的元素放在一起不仅会让读者在读起来有逻辑性，还能给读者一种有始有终的感觉，让页面的布置更有组织性。在考虑如何将元素联系在一起时要控制距离的度。相关的项距离足够小，而在不同的部分之间增加合适的空间，让信息的表达更加直观。在我们进行阅读的时候，我们眼睛移动的路径：从哪里开始看，看到哪里算结束，应该是一个合理的过程。优秀的设计师应该引导读者更高效的获取我们要表达的信息。</p>
+<p>在运用亲密性原则时，我们可以尝试眯着眼睛，数一数在浏览页面时我们的眼睛停顿了几次，它们之间是否有关系，可以将它们归为一类使之成为一组视觉单元。同时我们要避免以下问题：</p>
+<ul>
+<li>一个页面上有太多孤立的元素。</li>
+<li>不属于同一个子集的元素间留出了同样大小的空白。</li>
+<li>标题、子标题、图表标题、图片是否应分类至视觉单元。</li>
+<li>不同属一组的元素之间不要建立关系。</li>
+<li>不要仅仅因为有空白就把元素放在中间或角落。</li>
+</ul>
+<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><blockquote>
+<p>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</p>
+</blockquote>
+<p>页面上所有的元素都应该遵循某种对齐原则，尽管我们可能利用亲密性原则将一些元素分开，但是利用对齐原则就会在各元素间建立某种线将它们联系起来，表现出一种有序性。在欣赏作品的时候养成划线的习惯可以帮助我们找到元素的对齐。常见的对齐有左对齐、右对齐和居中对齐。</p>
+<p>不管是左对齐或者右对齐，就算对齐的元素之间有足够的距离，但是对齐的边界就像一条线一样将元素联系在一起。两侧对齐不一定要是虚拟的线，我们可以用文字来创造一条线，或者用图片创造一条线，文字则对齐图片的边缘。注意绝对不要在左对齐的正文或缩进的文本上方将标题居中。如果文本没有明确的左边界和右边界，就无法区分标题是否确实居中，看起来它只是悬挂着而已。这样一来，没有对齐的部分就造成页面非常杂乱：缩进很大，文本的右边界呈锯齿状参差不齐，居中的标题左右两边都有空白，另外插图也居中。</p>
+<p>居中对齐是最稳妥的方式，它庄重高雅但是也缺乏活力死板，而且它没有一条明确的线来表达对齐的元素之间的关系，两侧凹凸不平的边界弱化了对齐线的强度，所以不建议使用居中对齐，除非你明确像表现出一种端庄的感觉。在运用居中对齐时我们可以运用一些技巧来让我们的设计不那么刻板。</p>
+<ul>
+<li>同时包含居中文本的块不要居中对齐。</li>
+<li>采用可爱的字体。</li>
+<li>设置较大的行距，较小的字体，文字周围没有边框。</li>
+</ul>
+<p>不管是使用那种对齐方式，我们都应该做到只使用一种对齐方式。如果在你的作品中出现了几种对齐方式，那么一定要让它们有联系。比如右对齐的边界线是左对齐的边界线，居中对齐的右边缘是左对齐的边界限等等。总之页面上的元素一定要与其他元素之间存在某种对齐。</p>
+<p>新手在设计时往往天马行空，放任自己去摆放元素，并美名其曰打破规则，但最后效果往往不好。<strong>创立规则就是用来打破的，但是打破规则的前提是你必须清楚规则是什么</strong>。你的设计的混乱是有意为之还是无意之举往往更容易就能够看出来。</p>
+<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><blockquote>
+<p>设计的某些方面需要在整个作品中重复。</p>
+</blockquote>
+<p>我们在设计时经常用到重复的字体大小，粗细，图标等等，重复能够增加我们作品的一致性。如果我们在不同的作品中使用重复的元素往往会产生意想不到的效果。怎么利用重复原则为我们的作品服务呢？如果我们在一张传单的标题处使用了红色加粗字体，在结尾处同样使用红色加粗字体，读者在看到最后时往往会有一种首尾呼应的感觉，连接了整个设计。</p>
+<p>可以重复的元素多种多样，可以是字体、项目符号、缩进、对齐、留白、剪贴画等等。使用重复原则时，有时可以把一个元素从现在的设计中抽取出来，并根据这个元素创建一个新设计。或者只使用我们熟知元素的一部分给予暗示。</p>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><blockquote>
+<p>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</p>
+</blockquote>
+<p>Robin指出，<strong>要想实现有效的对比，对比就必须强烈</strong>。如果两个元素虽然不同，但是区别不大，这时候就不是对比了，而是冲突。新闻简报中又高又窄的列和水平方向有一些突出的标题，黑色背景和白色字体等等都形成了强烈的对比。对比的根本目的有两个。一个目的是增强页面的效果，另一个目的是有助于信息的组织。对比元素不能让读者混淆，也不能错误地强调重点。</p>
+<h2 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h2><p>常见的色彩模式有CMYK、RGB和Lab三种模式，Lab的色域最广，RGB运用最广，CMYK常用于印刷。</p>
+<p>色轮的基础是红绿蓝三原色，将两两相邻的颜色混合就得到了<strong>三间色</strong>。色轮上相对的颜色称为<strong>互补色</strong>，搭配方法常常是一种作为主色，一种作为强调色。彼此等距的三种颜色通常会形成一个让人愉悦的<strong>三色组</strong>。红色、黄色和蓝色是基色三色组。从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色，不过并不直接使用这个互补色，而是使用该互补色两侧的颜色叫做<strong>分裂互补三色组</strong>。配色时使用彼此相邻的颜色称为<strong>类似色</strong>。</p>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>字体设计是一门很深的学问，单独出一本书也不一定能说透彻，在平面设计中字体是非常重要的一环。当然，Robin也花了相当大的篇幅来阐述字体的原则。</p>
+<p>标点符号后需要跟一个空格。早在打字机时代，所有的字体都是等宽字体，而且每个标点符号后面都是两个空格（英文）。人们为了强调标题或者重要的内容常常将英文全大写。这并不是一个好的选择。因为我们辨识一个单词往往还需要根据它们的形状。英文的上半部分被称为海岸线，是我们辨识的重要依据。当我们把英文全大写了，它们就都是一个个矩形了。而且全大写的字号较比与同字号的小写看起来更小了。就是说如果我们像通过大写字母增大字号来突出重点的话，大可不必了。</p>
+<p>不要使用下划线。在字母下面加上下划线并不美观，而且会分割长英文字母。在汉字里会稍微没有那么突兀。下划线最初是打字员为了要告诉正在给这本书排字的工人哪些字需要印成斜体而留下的信号。</p>
+<p>段落缩进的距离不在是固定的，而是1em的距离，em根据字体大小决定。同时标题下面的首段可以不用缩进，大家都知道那是一个新的段落。</p>
+<p>字体设计的三个原则</p>
+<ol>
+<li>协调。如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。你可能标题会加粗，重点的地方会用斜体，但这基本是协调的。</li>
+<li>冲突。如果在同一个页面上设置了两个或多个类似的字体，它们并非完全不同，但也不完全相同，这个设计就是冲突的。</li>
+<li>对比。冲突是必须要避免的，而对比则是我们要表现的。对比可以是字体大小，粗细，结构，形状，方向，颜色等方面的对比。比如衬线体和无衬线体，全大写和全小写，罗马体和斜体等等都是明显的对比。可以找字体方面的专业书籍来系统地学习字体与字体的搭配。</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>NexT主题优化</title>
     <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<blockquote>
@@ -361,131 +568,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>NexT主题</title>
-    <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<blockquote>
-<p>Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a><br>Hexo主题排行榜：<a href="https://hexo.voxel.site/" target="_blank" rel="noopener">https://hexo.voxel.site/</a></p>
-</blockquote>
-<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><blockquote>
-<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a><br>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
-</blockquote>
-<a id="more"></a>
-
-<p>右键单击hexo文件夹git bash here，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>也可去GitHub网站下载压缩包解压。</p>
-<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse。</p>
-<p>修改语言为中文：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
-
-<p>设置顶栏的显示：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<p>把要显示的栏目前的<code>＃</code>去掉即可。</p>
-<p>再博客根目录下打开Git，创建标签文件夹</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件。</p>
-<h2 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h2><p>依次执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>刷新网站就可以看到网站主题更新成功了。</p>
-<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><p>NexT每个月都会发布新版本，可以通过以下命令来快速更新。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd themes&#x2F;next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>《写给大家看的设计书》</title>
-    <url>/2020/09/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>一旦能够说出什么东西的名字，就会很容易注意到它。你就会掌握它，拥有它，让它受你所控。</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote><a id="more"></a>
-
-<p>很多时候我们说不出一副作品好在哪，或者说差在哪，是因为我们不知道从哪些方面去考虑。如果我们知道从哪些角度来看待问题，那么我们就能逐渐掌握它。Robin引出了四大基本原则来帮助我们思考问题。</p>
-<ul>
-<li><strong>亲密性</strong>：如果某些元素存在某种关系，那么在视觉上也应该有关联（物理的接近就意味着存在关联）。</li>
-<li><strong>对齐</strong>：每个元素都应当与页面上的另一个元素有某种视觉联系。</li>
-<li><strong>重复</strong>：增加我们作品的条理性和统一性。</li>
-<li><strong>对比</strong>：如果两个元素应该相同，那么就让他们截然不同。相似只会造成冲突。</li>
-</ul>
-<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><blockquote>
-<p>将一些有关联的项移动在一起，这样相关的项就会被视为一个整体。</p>
-</blockquote>
-<p>有些时候将有关系的元素放在一起不仅会让读者在读起来有逻辑性，还能给读者一种有始有终的感觉，让页面的布置更有组织性。在考虑如何将元素联系在一起时要控制距离的度。相关的项距离足够小，而在不同的部分之间增加合适的空间，让信息的表达更加直观。在我们进行阅读的时候，我们眼睛移动的路径：从哪里开始看，看到哪里算结束，应该是一个合理的过程。优秀的设计师应该引导读者更高效的获取我们要表达的信息。</p>
-<p>在运用亲密性原则时，我们可以尝试眯着眼睛，数一数在浏览页面时我们的眼睛停顿了几次，它们之间是否有关系，可以将它们归为一类使之成为一组视觉单元。同时我们要避免以下问题：</p>
-<ul>
-<li>一个页面上有太多孤立的元素。</li>
-<li>不属于同一个子集的元素间留出了同样大小的空白。</li>
-<li>标题、子标题、图表标题、图片是否应分类至视觉单元。</li>
-<li>不同属一组的元素之间不要建立关系。</li>
-<li>不要仅仅因为有空白就把元素放在中间或角落。</li>
-</ul>
-<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><blockquote>
-<p>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</p>
-</blockquote>
-<p>页面上所有的元素都应该遵循某种对齐原则，尽管我们可能利用亲密性原则将一些元素分开，但是利用对齐原则就会在各元素间建立某种线将它们联系起来，表现出一种有序性。在欣赏作品的时候养成划线的习惯可以帮助我们找到元素的对齐。常见的对齐有左对齐、右对齐和居中对齐。</p>
-<p>不管是左对齐或者右对齐，就算对齐的元素之间有足够的距离，但是对齐的边界就像一条线一样将元素联系在一起。两侧对齐不一定要是虚拟的线，我们可以用文字来创造一条线，或者用图片创造一条线，文字则对齐图片的边缘。注意绝对不要在左对齐的正文或缩进的文本上方将标题居中。如果文本没有明确的左边界和右边界，就无法区分标题是否确实居中，看起来它只是悬挂着而已。这样一来，没有对齐的部分就造成页面非常杂乱：缩进很大，文本的右边界呈锯齿状参差不齐，居中的标题左右两边都有空白，另外插图也居中。</p>
-<p>居中对齐是最稳妥的方式，它庄重高雅但是也缺乏活力死板，而且它没有一条明确的线来表达对齐的元素之间的关系，两侧凹凸不平的边界弱化了对齐线的强度，所以不建议使用居中对齐，除非你明确像表现出一种端庄的感觉。在运用居中对齐时我们可以运用一些技巧来让我们的设计不那么刻板。</p>
-<ul>
-<li>同时包含居中文本的块不要居中对齐。</li>
-<li>采用可爱的字体。</li>
-<li>设置较大的行距，较小的字体，文字周围没有边框。</li>
-</ul>
-<p>不管是使用那种对齐方式，我们都应该做到只使用一种对齐方式。如果在你的作品中出现了几种对齐方式，那么一定要让它们有联系。比如右对齐的边界线是左对齐的边界线，居中对齐的右边缘是左对齐的边界限等等。总之页面上的元素一定要与其他元素之间存在某种对齐。</p>
-<p>新手在设计时往往天马行空，放任自己去摆放元素，并美名其曰打破规则，但最后效果往往不好。<strong>创立规则就是用来打破的，但是打破规则的前提是你必须清楚规则是什么</strong>。你的设计的混乱是有意为之还是无意之举往往更容易就能够看出来。</p>
-<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><blockquote>
-<p>设计的某些方面需要在整个作品中重复。</p>
-</blockquote>
-<p>我们在设计时经常用到重复的字体大小，粗细，图标等等，重复能够增加我们作品的一致性。如果我们在不同的作品中使用重复的元素往往会产生意想不到的效果。怎么利用重复原则为我们的作品服务呢？如果我们在一张传单的标题处使用了红色加粗字体，在结尾处同样使用红色加粗字体，读者在看到最后时往往会有一种首尾呼应的感觉，连接了整个设计。</p>
-<p>可以重复的元素多种多样，可以是字体、项目符号、缩进、对齐、留白、剪贴画等等。使用重复原则时，有时可以把一个元素从现在的设计中抽取出来，并根据这个元素创建一个新设计。或者只使用我们熟知元素的一部分给予暗示。</p>
-<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><blockquote>
-<p>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</p>
-</blockquote>
-<p>Robin指出，<strong>要想实现有效的对比，对比就必须强烈</strong>。如果两个元素虽然不同，但是区别不大，这时候就不是对比了，而是冲突。新闻简报中又高又窄的列和水平方向有一些突出的标题，黑色背景和白色字体等等都形成了强烈的对比。对比的根本目的有两个。一个目的是增强页面的效果，另一个目的是有助于信息的组织。对比元素不能让读者混淆，也不能错误地强调重点。</p>
-<h2 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h2><p>常见的色彩模式有CMYK、RGB和Lab三种模式，Lab的色域最广，RGB运用最广，CMYK常用于印刷。</p>
-<p>色轮的基础是红绿蓝三原色，将两两相邻的颜色混合就得到了<strong>三间色</strong>。色轮上相对的颜色称为<strong>互补色</strong>，搭配方法常常是一种作为主色，一种作为强调色。彼此等距的三种颜色通常会形成一个让人愉悦的<strong>三色组</strong>。红色、黄色和蓝色是基色三色组。从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色，不过并不直接使用这个互补色，而是使用该互补色两侧的颜色叫做<strong>分裂互补三色组</strong>。配色时使用彼此相邻的颜色称为<strong>类似色</strong>。</p>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>字体设计是一门很深的学问，单独出一本书也不一定能说透彻，在平面设计中字体是非常重要的一环。当然，Robin也花了相当大的篇幅来阐述字体的原则。</p>
-<p>标点符号后需要跟一个空格。早在打字机时代，所有的字体都是等宽字体，而且每个标点符号后面都是两个空格（英文）。人们为了强调标题或者重要的内容常常将英文全大写。这并不是一个好的选择。因为我们辨识一个单词往往还需要根据它们的形状。英文的上半部分被称为海岸线，是我们辨识的重要依据。当我们把英文全大写了，它们就都是一个个矩形了。而且全大写的字号较比与同字号的小写看起来更小了。就是说如果我们像通过大写字母增大字号来突出重点的话，大可不必了。</p>
-<p>不要使用下划线。在字母下面加上下划线并不美观，而且会分割长英文字母。在汉字里会稍微没有那么突兀。下划线最初是打字员为了要告诉正在给这本书排字的工人哪些字需要印成斜体而留下的信号。</p>
-<p>段落缩进的距离不在是固定的，而是1em的距离，em根据字体大小决定。同时标题下面的首段可以不用缩进，大家都知道那是一个新的段落。</p>
-<p>字体设计的三个原则</p>
-<ol>
-<li>协调。如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。你可能标题会加粗，重点的地方会用斜体，但这基本是协调的。</li>
-<li>冲突。如果在同一个页面上设置了两个或多个类似的字体，它们并非完全不同，但也不完全相同，这个设计就是冲突的。</li>
-<li>对比。冲突是必须要避免的，而对比则是我们要表现的。对比可以是字体大小，粗细，结构，形状，方向，颜色等方面的对比。比如衬线体和无衬线体，全大写和全小写，罗马体和斜体等等都是明显的对比。可以找字体方面的专业书籍来系统地学习字体与字体的搭配。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>拾穗</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>冬天的宣战</title>
-    <url>/2020/11/24/%E5%86%AC%E5%A4%A9%E7%9A%84%E5%AE%A3%E6%88%98/</url>
-    <content><![CDATA[<p>在经历了昨天气温骤降后，今天再次迎来了一次小幅降温。我感觉这个天气正式向我宣战了。</p>
-<a id="more"></a>
-
-<p>一坐在图书馆我的腿就直哆嗦，板凳的凉透过裤子也能感受到，早晨泡的茶还没有挺过一个小时就宣布妥协了。知识好像也变得懒懒散散，怎么也不肯自己进脑子，非得我去书本上一个一个的抠出来才能往脑子里塞，这也导致我废了老大劲花了很多时间但没学到啥东西。就这状态还不如早点回去呢！我刚走到图书馆门口，外面的风就像一直守在外面似的，一露头，就一巴掌把我扇了回去——我还是老实在图书馆多待会吧。</p>
-]]></content>
-      <categories>
-        <category>拾穗者</category>
-      </categories>
-  </entry>
-  <entry>
     <title>《思维导图完整手册》</title>
     <url>/2020/09/08/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%AE%8C%E6%95%B4%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -497,133 +579,6 @@
 
 <p>有时候我不禁思考，是否传统的书籍编排方式已经过时了呢？最近流行起来的RR双向链接与ZK笔记法让我看到了在笔记领域的一股不同的潮流，也让我更加意识到思维的过程不是线性的，但是获取知识的方式和笔记的方式却是线性的，这是否不利于我们的思考和创作呢？知识的线性编排自有其优点，它拥有精密的逻辑性和连贯性，对于建立知识的框架和理清脉络十分有利，但我们在笔记的过程中应该将一维的知识过程，立体起来。简单的串联不利于我们管理与引用，采用RR笔记法可以在笔记间互相跳转，构建学科知识体系。思维导图也是一种方便我们进行思考和链接知识的工具，它的每一个分支都可以进行下分，同时可以在分支间建立联系方便跳转。二者其实是擅长的不同的领域。对于要构筑庞大的学科知识，并且要细化到每一个知识点，RR双链结合ZK可以很好的胜任。对于一个小概念，我们想要发散和记忆，思维导图就更擅长。合理的利用思维导图来进行思考和笔记，现在网络上有丰富的软件可以供给我们选择，简化我们的制作过程，降低修改的成本，所以，不要在用传统的笔记来阻碍我们思考的过程，采用适合的工具做它擅长的事。</p>
 ]]></content>
-      <categories>
-        <category>拾穗</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>博客搭建</title>
-    <url>/2020/04/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h2 id="在GitHub上创建个人仓库"><a href="#在GitHub上创建个人仓库" class="headerlink" title="在GitHub上创建个人仓库"></a>在GitHub上创建个人仓库</h2><blockquote>
-<p>GitHub官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
-</blockquote>
-<p>单击右上角的＋号，选择<code>New repository</code>，在<code>Repository name</code>一栏填入</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yourname.github.io</span><br></pre></td></tr></table></figure>
-
-<p>yourname为你的GitHub用户名，例如<code>elieye.github.io</code>。</p>
-<p>勾选下方的<code>Initialize this repository with a README</code>栏。</p>
-<p>然后单击下方绿色按钮<code>Create repository</code>即创建成功。</p>
-<p>在浏览器地址栏输入<code>yourname.github.io</code>即可跳转至你的网站。</p>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><blockquote>
-<p>node.js官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></p>
-</blockquote>
-<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>显示版本号即安装成功。</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><blockquote>
-<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-</blockquote>
-<blockquote>
-<p>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-</blockquote>
-<p>安装完成后打开<code>powershell</code>（shift+鼠标右键），输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
-<p>显示版本号即安装成功。</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在D盘新建一个文件夹，命名为<code>blog</code>，用来存放博客的文章、配置文件等等。</p>
-<p>右键单击<code>blog</code>文件夹选择<code>Git Bash Here</code>，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>安装完毕后检验是否安装成功，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-<p>接着初始化博客网站，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>安装必需的组件，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>至此本地网站已经配置完毕，下面生成静态网页，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>打开本地服务器，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>打开浏览器地址栏输入<code>localhost:4000</code>如果显示了我们的网站即配置成功，<code>ctrl+c</code>退出。</p>
-<h2 id="将Git与GitHub进行绑定"><a href="#将Git与GitHub进行绑定" class="headerlink" title="将Git与GitHub进行绑定"></a>将Git与GitHub进行绑定</h2><p>鼠标右键选择<code>Git Bash Here</code>,输入你的GitHub用户名和邮箱</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>生成ssh文件，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;yourmail@gmail.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>复制ssh文件的内容，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>将输出的内容复制到剪切板，打开<code>GitHub-&gt;settings-&gt;SSH and GPG keys</code>，选择<code>New SSH key</code>，新建一个ssh，Title栏输入ssh，Key栏填入刚才复制的内容。</p>
-<p>检测GitHub公钥设置是否成功，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>如果显示你的用户名即成功</p>
-<p>使用文本编辑器（vs、sublime等）打开blog文件夹下的<code>_config.yml</code>文件（它是博客的配置文件区别于<code>themes</code>文件夹下的<code>_config.yml</code>，它是主题配置文件），找到文件的最后修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;yourname&#x2F;yourname.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>在<code>blog</code>文件夹右键单击选择<code>Git Bash Here</code>，安装扩展，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>创建一篇文章，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;article title&quot;</span><br></pre></td></tr></table></figure>
-
-<p>打开<code>blog\source\_posts</code>文件夹，里面应该会有一个md文件，它就是我们的文章。再创建一个images文件夹用来存放md里面的图片</p>
-<p>下面将我们写好的文字上传至GitHub，依次输入以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>hexo g 即 hexo generate 生成；hexo s 即 hexo server 启动服务预览；hexo d 即 hexo deploy 部署</p>
-</blockquote>
-<p>刷新网站，能看到文章就说明成功了。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>风中白兰地</title>
-    <url>/2020/10/13/%E9%A3%8E%E4%B8%AD%E7%99%BD%E5%85%B0%E5%9C%B0/</url>
-    <content><![CDATA[<p>下午到医院的时候已经是两点过了。</p>
-<a id="more"></a>
-
-<p>挂了号我就在拥挤的人群中挤上电梯来到了七楼。周围的人都紧绷着脸，显得皱巴巴的脸上又多了几条沟壑。这也就是为什么我不愿意来医院的原因，它会让我觉得每个人都得了绝症一样，但我却很喜欢雷雨天气前的压抑气氛，它让我感到莫名很放松。旁边的男子推着一个老太太从我旁边经过，他握着轮椅的手指关节狠狠用力，关节处皮肤下的骨头忽隐忽现。前面的人都自觉的往边上靠了靠给他让出了一条路，他低声说了句谢谢就推着轮椅匆匆离开了。看到大家麻木又机械地做着值得夸赞的事情就感到很好笑，虽然心情都跌落到了谷底还是不忘互相尊重与礼貌待人。</p>
-<p>我无聊的在诊室门口坐着，把手机从书包里拿出来看了看又放回去，反反复复了好几次也没等到叫我号。可能是因为我很少来医院的缘故吧，上次来医院的记忆都已经模糊不清了，只隐约记得是看的精神科，后面随便开了点药就痊愈了。当时药起的更多的是一种心理慰藉，仿佛落水者因为慌乱在不断尝试往岸边游时旁边的人大喊“离岸边只有一点点了啊”的鼓励，这次我也希望有人能告诉我我离岸边还有多远，这很普遍也很容易。</p>
-<p>我再次拿出手机来看了看，已经快三点了，没感觉来医院快一个小时了，但等着也实在太难受了，罪犯在被宣判前是不是也是这样惴惴不安呢。我一个人在长廊里走来走去，又转而坐在椅子上。长廊左边就是窗户，外面还有太阳，透过树荫跳上窗台躲过空气中的灰尘悄悄打在地上发出细碎轻巧的声音。保洁阿姨把地面拖得发亮，水分还没有挥发，湿漉漉的地面闪着黄色的光，不知不觉想到了傍晚的海面上晃动着的金色碎片，不停的破碎又重组，不同于打碎的玻璃，海面的碎片有着更加柔和的边缘和多变的形状。</p>
-<p>我向朋友撒了个谎。我既不想装作没看到消息而不回复，也不想告诉他我独自去医院了，更烦躁回去后接踵而至的“质问”，所以我任性地撒了个小小的谎言来规避掉这么多麻烦。但凭着我拙劣的演技没法做到完美，一点点的紧张就差点露馅，好在这个失误特别细微，如果不是我后来细细审视都疏忽了。谎言确实是一个很劣质的谎言，因为十分简单而缺乏细节也蒙混过关了。</p>
-<p>看着屏幕上寥寥几条聊天记录，我松了一口气，身体在几秒内恢复了感觉，这才发现这里原来是这么的冷，明明左边就是太阳啊！直到等到医生叫到我的号了，我都感觉医院里的天气是不是单独一个系统，外面是暖阳，里面是凛冬。</p>
-<p>医生看上去有点老，但也很有精神，头发上的雪白告诉我应该是有资历的老医生了。和我印象中的诊断的流程不一样，整个检查都很简单，一个小时左右就结束了。结果对我而言算不上晴天霹雳但也是当头浇了一盆冷水吧。在来之前我就不奢求能有什么反转了，但是我期待的是医生能给我一些实质性的建议和药物，可惜什么都没有。他告诉我药物的副作用太大且治疗效果微乎其微，基本对于病情没有延缓作用，在我的再三请求下医生也没有给我开任何外用或内服的药，自然也没有给出任何实质性的建议，现在最好的办法就是顺其自然。可能这位医生深谙道家的思想吧，对患者也讲求无为而治。</p>
-<p>如果来之前就不抱希望多好，至少现在也能保持一丝平静。我知道除了药物才能有那么一点效果之外其他的都是白费力气的，但药物和针剂的费用与副作用都不是我现在能够承担的。我失落的离开了诊室，并没有寻找到鼠灰色细条纹的麻质和服。如果你告诉我顺其自然那就不用再挣扎了？这样也好，保持着那一丝念头还是很悲惨的，好比明明是绝症病人但就要吊着你一口气让你舍不得放弃治疗去尝尽所有方法以及痛苦之后才撒手人寰一般。</p>
-<p>我出了医院，颓然的坐在公交车站等车，点了一杯果汁希望能让自己放松一下，但还是提不起任何精神。周围的人有说有笑，我只好坐在那条窄的像横栏的板凳上，腘窝紧紧夹住它的边缘和底部，脊柱也不自觉弯曲成拱桥的形状，双手和头部往前倾来保持平衡。</p>
-<p>只能这样了，不然没法坐稳。</p>
-<p>从两年前刚发现时的轻视，再到整天焦虑，再到今天，不知道算是释然了还是放弃了，反正我知道我可以不用做那些无谓的尝试了。我早就身心俱疲，生活也被毁的一团糟，就算被丢弃在垃圾桶边上等着回收加工的破旧布偶玩具也不过如此了。晚上七点，我回到了学校。还没有来得及休息，就又匆匆忙忙的前往图书馆。已经耽误了太多时间了，不管以后是什么，至少现在的我还没有选择。</p>
-]]></content>
-      <categories>
-        <category>拾穗者</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>马克思主义者的悲伤</title>
-    <url>/2020/11/06/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E6%82%B2%E4%BC%A4/</url>
-    <content><![CDATA[<p>又是遭受这样令人焦虑的痛苦，如同花园里修剪的整整齐齐的洋苏草被顽皮的小男孩随意践踏成东倒西歪。</p>
-<a id="more"></a>
-
-<p>我维持着尴尬，就像维持着我可怜的尊严，那段路现在回想起来也会让我感到心里隐隐刺痛。</p>
-<p>雾气萦绕着的灰天，入冬微微冰凉的空气，忽远忽近的争论声，还有脚下坑坑洼洼的石砖路和旁边粗糙的绿化树，只有这些是我这一段百无聊赖的路程的伴侣。</p>
-<p>我试图抚摸他们不光滑的肌肤，倾听他们在风中的诉说，融入静谧的氛围。</p>
-<p>我企图推翻笛卡尔的哲学起点，探索叔本华脑中存在的世界，沉寂到尼采地虚无世界里，像贝克莱一样思考。</p>
-<p>可惜我失败了，我没能挣脱外界缠绕在我身上千丝万缕的联系，我没能构造出我以为更好的抽象世界，我没能彻底否认我经历的一切。</p>
-<p>这就是马克思主义者的悲伤吗？</p>
-<p>这样的世界，再也不好了。</p>
-]]></content>
-      <categories>
-        <category>拾穗者</category>
-      </categories>
   </entry>
   <entry>
     <title>《断舍离》</title>
@@ -635,9 +590,6 @@
 <p>对于不同的空间，物品有不同的收纳方法。例如「三分法」「7·5·1法」「1 out 1 in」「one touch」「自立·自由·自在」等，但我们这里不具体探讨某种方法，因为断舍离不仅仅是舍去一些物品，更深层次的是放空我们的思想上的包袱。我们通过处理掉无用的物品，释放出多余的空间来为生活减轻负担，为重复呆板的生活增加一丝新意。同样的，释放我们思想上的空间也为自己也换一换血。对于无形的“空间”，我们看不见摸不着，所以更需要谨慎处理。倘若我们要维持好友之间亲密关系，这个“空间”的把控就需要恰到好处。如果两个人无时无刻都腻在一起，对对方的所有都了如指掌，这种亲密关系就会逐渐走向死亡。一方面缺乏了新鲜感来让关系活跃起来，没有了神秘感就会对对方失去好奇心，慢慢的趋于平淡。另一方面斗争产生于同一性中，两个人太过于相似了，以至于只要有一方想要打破这个囹圄，挣脱这个桎梏就会受到对方的强烈打压，或者某一方突然表现得过于优秀就会让二者对立起来。所以我们强调要“若即若离”，在两人之间维持一定的空间，为两人之间的关系可以更进一步提供了基础，也为两人可以在某些时候都退一步却又不至于形同陌路。</p>
 <p>生活中处处都需要断舍离，当断必断才能日后不受其乱。践行断舍离需要融入到我们的习惯中，当我们能够像呼吸一样无意识地进行断舍离，那么我们也就不需要在进行断舍离了。</p>
 ]]></content>
-      <categories>
-        <category>拾穗</category>
-      </categories>
   </entry>
   <entry>
     <title>雨落湖心心亦摇</title>
@@ -663,6 +615,45 @@
 <p>过往的尝试都是无疾而终，这次也不例外。</p>
 <p>我坐在教室里，又回到了熟悉的生活。</p>
 <p>全部都刚刚好，上课也没有迟到。</p>
+]]></content>
+      <categories>
+        <category>拾穗者</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>马克思主义者的悲伤</title>
+    <url>/2020/11/06/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E6%82%B2%E4%BC%A4/</url>
+    <content><![CDATA[<p>又是遭受这样令人焦虑的痛苦，如同花园里修剪的整整齐齐的洋苏草被顽皮的小男孩随意践踏成东倒西歪。</p>
+<a id="more"></a>
+
+<p>我维持着尴尬，就像维持着我可怜的尊严，那段路现在回想起来也会让我感到心里隐隐刺痛。</p>
+<p>雾气萦绕着的灰天，入冬微微冰凉的空气，忽远忽近的争论声，还有脚下坑坑洼洼的石砖路和旁边粗糙的绿化树，只有这些是我这一段百无聊赖的路程的伴侣。</p>
+<p>我试图抚摸他们不光滑的肌肤，倾听他们在风中的诉说，融入静谧的氛围。</p>
+<p>我企图推翻笛卡尔的哲学起点，探索叔本华脑中存在的世界，沉寂到尼采地虚无世界里，像贝克莱一样思考。</p>
+<p>可惜我失败了，我没能挣脱外界缠绕在我身上千丝万缕的联系，我没能构造出我以为更好的抽象世界，我没能彻底否认我经历的一切。</p>
+<p>这就是马克思主义者的悲伤吗？</p>
+<p>这样的世界，再也不好了。</p>
+]]></content>
+      <categories>
+        <category>拾穗者</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>风中白兰地</title>
+    <url>/2020/10/13/%E9%A3%8E%E4%B8%AD%E7%99%BD%E5%85%B0%E5%9C%B0/</url>
+    <content><![CDATA[<p>下午到医院的时候已经是两点过了。</p>
+<a id="more"></a>
+
+<p>挂了号我就在拥挤的人群中挤上电梯来到了七楼。周围的人都紧绷着脸，显得皱巴巴的脸上又多了几条沟壑。这也就是为什么我不愿意来医院的原因，它会让我觉得每个人都得了绝症一样，但我却很喜欢雷雨天气前的压抑气氛，它让我感到莫名很放松。旁边的男子推着一个老太太从我旁边经过，他握着轮椅的手指关节狠狠用力，关节处皮肤下的骨头忽隐忽现。前面的人都自觉的往边上靠了靠给他让出了一条路，他低声说了句谢谢就推着轮椅匆匆离开了。看到大家麻木又机械地做着值得夸赞的事情就感到很好笑，虽然心情都跌落到了谷底还是不忘互相尊重与礼貌待人。</p>
+<p>我无聊的在诊室门口坐着，把手机从书包里拿出来看了看又放回去，反反复复了好几次也没等到叫我号。可能是因为我很少来医院的缘故吧，上次来医院的记忆都已经模糊不清了，只隐约记得是看的精神科，后面随便开了点药就痊愈了。当时药起的更多的是一种心理慰藉，仿佛落水者因为慌乱在不断尝试往岸边游时旁边的人大喊“离岸边只有一点点了啊”的鼓励，这次我也希望有人能告诉我我离岸边还有多远，这很普遍也很容易。</p>
+<p>我再次拿出手机来看了看，已经快三点了，没感觉来医院快一个小时了，但等着也实在太难受了，罪犯在被宣判前是不是也是这样惴惴不安呢。我一个人在长廊里走来走去，又转而坐在椅子上。长廊左边就是窗户，外面还有太阳，透过树荫跳上窗台躲过空气中的灰尘悄悄打在地上发出细碎轻巧的声音。保洁阿姨把地面拖得发亮，水分还没有挥发，湿漉漉的地面闪着黄色的光，不知不觉想到了傍晚的海面上晃动着的金色碎片，不停的破碎又重组，不同于打碎的玻璃，海面的碎片有着更加柔和的边缘和多变的形状。</p>
+<p>我向朋友撒了个谎。我既不想装作没看到消息而不回复，也不想告诉他我独自去医院了，更烦躁回去后接踵而至的“质问”，所以我任性地撒了个小小的谎言来规避掉这么多麻烦。但凭着我拙劣的演技没法做到完美，一点点的紧张就差点露馅，好在这个失误特别细微，如果不是我后来细细审视都疏忽了。谎言确实是一个很劣质的谎言，因为十分简单而缺乏细节也蒙混过关了。</p>
+<p>看着屏幕上寥寥几条聊天记录，我松了一口气，身体在几秒内恢复了感觉，这才发现这里原来是这么的冷，明明左边就是太阳啊！直到等到医生叫到我的号了，我都感觉医院里的天气是不是单独一个系统，外面是暖阳，里面是凛冬。</p>
+<p>医生看上去有点老，但也很有精神，头发上的雪白告诉我应该是有资历的老医生了。和我印象中的诊断的流程不一样，整个检查都很简单，一个小时左右就结束了。结果对我而言算不上晴天霹雳但也是当头浇了一盆冷水吧。在来之前我就不奢求能有什么反转了，但是我期待的是医生能给我一些实质性的建议和药物，可惜什么都没有。他告诉我药物的副作用太大且治疗效果微乎其微，基本对于病情没有延缓作用，在我的再三请求下医生也没有给我开任何外用或内服的药，自然也没有给出任何实质性的建议，现在最好的办法就是顺其自然。可能这位医生深谙道家的思想吧，对患者也讲求无为而治。</p>
+<p>如果来之前就不抱希望多好，至少现在也能保持一丝平静。我知道除了药物才能有那么一点效果之外其他的都是白费力气的，但药物和针剂的费用与副作用都不是我现在能够承担的。我失落的离开了诊室，并没有寻找到鼠灰色细条纹的麻质和服。如果你告诉我顺其自然那就不用再挣扎了？这样也好，保持着那一丝念头还是很悲惨的，好比明明是绝症病人但就要吊着你一口气让你舍不得放弃治疗去尝尽所有方法以及痛苦之后才撒手人寰一般。</p>
+<p>我出了医院，颓然的坐在公交车站等车，点了一杯果汁希望能让自己放松一下，但还是提不起任何精神。周围的人有说有笑，我只好坐在那条窄的像横栏的板凳上，腘窝紧紧夹住它的边缘和底部，脊柱也不自觉弯曲成拱桥的形状，双手和头部往前倾来保持平衡。</p>
+<p>只能这样了，不然没法坐稳。</p>
+<p>从两年前刚发现时的轻视，再到整天焦虑，再到今天，不知道算是释然了还是放弃了，反正我知道我可以不用做那些无谓的尝试了。我早就身心俱疲，生活也被毁的一团糟，就算被丢弃在垃圾桶边上等着回收加工的破旧布偶玩具也不过如此了。晚上七点，我回到了学校。还没有来得及休息，就又匆匆忙忙的前往图书馆。已经耽误了太多时间了，不管以后是什么，至少现在的我还没有选择。</p>
 ]]></content>
       <categories>
         <category>拾穗者</category>
