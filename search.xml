@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>NexT主题</title>
-    <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<blockquote>
-<p>Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a><br>Hexo主题排行榜：<a href="https://hexo.voxel.site/" target="_blank" rel="noopener">https://hexo.voxel.site/</a></p>
-</blockquote>
-<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><blockquote>
-<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a><br>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
-</blockquote>
-<a id="more"></a>
-
-<p>右键单击hexo文件夹git bash here，输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>也可去GitHub网站下载压缩包解压。</p>
-<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse。</p>
-<p>修改语言为中文：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
-
-<p>设置顶栏的显示：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<p>把要显示的栏目前的<code>＃</code>去掉即可。</p>
-<p>再博客根目录下打开Git，创建标签文件夹</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件。</p>
-<h2 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h2><p>依次执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>刷新网站就可以看到网站主题更新成功了。</p>
-<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><p>NexT每个月都会发布新版本，可以通过以下命令来快速更新。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd themes&#x2F;next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>NexT主题优化</title>
     <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<blockquote>
@@ -471,6 +426,63 @@
 ]]></content>
   </entry>
   <entry>
+    <title>NexT主题</title>
+    <url>/2020/04/01/NexT%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<blockquote>
+<p>Hexo主题官网：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a><br>Hexo主题排行榜：<a href="https://hexo.voxel.site/" target="_blank" rel="noopener">https://hexo.voxel.site/</a></p>
+</blockquote>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><blockquote>
+<p>NexT官网：<a href="https://theme-next.org/" target="_blank" rel="noopener">https://theme-next.org/</a><br>GitHub：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
+</blockquote>
+<a id="more"></a>
+
+<p>右键单击hexo文件夹git bash here，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>也可去GitHub网站下载压缩包解压。</p>
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>首先修改站点的配置文件。打开博客根目录，找到<code>_config.yml</code>文件，用文本编辑器打开，修改搜索<code>theme</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>再修改主题配置文件。打开<code>blog&gt;themes&gt;next</code>找到主题配置文件<code>_config.yml</code>，用文本编辑器打开，搜索<code>Scheme</code>，下面提供了四种主题样式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>删除掉要启用的主题样式前面的<code>＃</code>即可，默认是Muse。</p>
+<p>修改语言为中文：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language： zh-CN</span><br></pre></td></tr></table></figure>
+
+<p>设置顶栏的显示：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>把要显示的栏目前的<code>＃</code>去掉即可。</p>
+<p>再博客根目录下打开Git，创建标签文件夹</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &#39;tags&#39;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>resource</code>文件下找到<code>tags</code>文件夹，打开<code>index.md</code>，修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-04-1 19:57:14</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<p>同理，在新建<code>about</code>、<code>categories</code>文件夹并修改其<code>index.md</code>文件。</p>
+<h2 id="更新并上传主题"><a href="#更新并上传主题" class="headerlink" title="更新并上传主题"></a>更新并上传主题</h2><p>依次执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>刷新网站就可以看到网站主题更新成功了。</p>
+<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><p>NexT每个月都会发布新版本，可以通过以下命令来快速更新。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd themes&#x2F;next</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>冬天的宣战</title>
+    <url>/2020/11/24/%E5%86%AC%E5%A4%A9%E7%9A%84%E5%AE%A3%E6%88%98/</url>
+    <content><![CDATA[<p>在经历了昨天气温骤降后，今天再次迎来了一次小幅降温。我感觉这个天气正式向我宣战了。</p>
+<a id="more"></a>
+
+<p>一坐在图书馆我的腿就直哆嗦，板凳的凉透过裤子也能感受到，早晨泡的茶还没有挺过一个小时就宣布妥协了。知识好像也变得懒懒散散，怎么也不肯自己进脑子，非得我去书本上一个一个的抠出来才能往脑子里塞，这也导致我废了老大劲花了很多时间但没学到啥东西。就这状态还不如早点回去呢！我刚走到图书馆门口，外面的风就像一直守在外面似的，一露头，就一巴掌把我扇了回去——我还是老实在图书馆多待会吧。</p>
+]]></content>
+      <categories>
+        <category>拾穗者</category>
+      </categories>
+  </entry>
+  <entry>
     <title>博客搭建</title>
     <url>/2020/04/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h2 id="在GitHub上创建个人仓库"><a href="#在GitHub上创建个人仓库" class="headerlink" title="在GitHub上创建个人仓库"></a>在GitHub上创建个人仓库</h2><blockquote>
@@ -556,31 +568,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>《思维导图完整手册》</title>
-    <url>/2020/09/08/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%AE%8C%E6%95%B4%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>要交给人们一种新的思维方式，就不要刻意地教他们，而应该教给他们一种工具，通过工具培养新的思维方式。</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote><a id="more"></a>
-
-<p>有时候我不禁思考，是否传统的书籍编排方式已经过时了呢？最近流行起来的RR双向链接与ZK笔记法让我看到了在笔记领域的一股不同的潮流，也让我更加意识到思维的过程不是线性的，但是获取知识的方式和笔记的方式却是线性的，这是否不利于我们的思考和创作呢？知识的线性编排自有其优点，它拥有精密的逻辑性和连贯性，对于建立知识的框架和理清脉络十分有利，但我们在笔记的过程中应该将一维的知识过程，立体起来。简单的串联不利于我们管理与引用，采用RR笔记法可以在笔记间互相跳转，构建学科知识体系。思维导图也是一种方便我们进行思考和链接知识的工具，它的每一个分支都可以进行下分，同时可以在分支间建立联系方便跳转。二者其实是擅长的不同的领域。对于要构筑庞大的学科知识，并且要细化到每一个知识点，RR双链结合ZK可以很好的胜任。对于一个小概念，我们想要发散和记忆，思维导图就更擅长。合理的利用思维导图来进行思考和笔记，现在网络上有丰富的软件可以供给我们选择，简化我们的制作过程，降低修改的成本，所以，不要在用传统的笔记来阻碍我们思考的过程，采用适合的工具做它擅长的事。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>冬天的宣战</title>
-    <url>/2020/11/24/%E5%86%AC%E5%A4%A9%E7%9A%84%E5%AE%A3%E6%88%98/</url>
-    <content><![CDATA[<p>在经历了昨天气温骤降后，今天再次迎来了一次小幅降温。我感觉这个天气正式向我宣战了。</p>
-<a id="more"></a>
-
-<p>一坐在图书馆我的腿就直哆嗦，板凳的凉透过裤子也能感受到，早晨泡的茶还没有挺过一个小时就宣布妥协了。知识好像也变得懒懒散散，怎么也不肯自己进脑子，非得我去书本上一个一个的抠出来才能往脑子里塞，这也导致我废了老大劲花了很多时间但没学到啥东西。就这状态还不如早点回去呢！我刚走到图书馆门口，外面的风就像一直守在外面似的，一露头，就一巴掌把我扇了回去——我还是老实在图书馆多待会吧。</p>
-]]></content>
-      <categories>
-        <category>拾穗者</category>
-      </categories>
-  </entry>
-  <entry>
     <title>《断舍离》</title>
     <url>/2020/09/03/%E6%96%AD%E8%88%8D%E7%A6%BB/</url>
     <content><![CDATA[<p>断离舍是一种简单而自然的行为，精炼的总结它的核心观点就在于一个字——出。出是一种自然而然地状态，有进则有出，自然法则造就的一种生态平衡。我们用一个中性不含情感色彩的词去表达断舍离<a id="more"></a>的意境，拂去了我们故以为的断舍离为一种壮士断腕的悲壮情绪，减少了我们对断离舍的仪式感，它本就是我们日常生活中应该做的事情之一，这也体现了断离舍自身的境界。生活中只进不出只会让我们的居住环境变得混乱不堪，并且形成恶性循环，生活也因此变得一团糟，所以我们提倡“出”的哲学。</p>
@@ -621,6 +608,19 @@
       </categories>
   </entry>
   <entry>
+    <title>《思维导图完整手册》</title>
+    <url>/2020/09/08/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%AE%8C%E6%95%B4%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>要交给人们一种新的思维方式，就不要刻意地教他们，而应该教给他们一种工具，通过工具培养新的思维方式。</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote><a id="more"></a>
+
+<p>有时候我不禁思考，是否传统的书籍编排方式已经过时了呢？最近流行起来的RR双向链接与ZK笔记法让我看到了在笔记领域的一股不同的潮流，也让我更加意识到思维的过程不是线性的，但是获取知识的方式和笔记的方式却是线性的，这是否不利于我们的思考和创作呢？知识的线性编排自有其优点，它拥有精密的逻辑性和连贯性，对于建立知识的框架和理清脉络十分有利，但我们在笔记的过程中应该将一维的知识过程，立体起来。简单的串联不利于我们管理与引用，采用RR笔记法可以在笔记间互相跳转，构建学科知识体系。思维导图也是一种方便我们进行思考和链接知识的工具，它的每一个分支都可以进行下分，同时可以在分支间建立联系方便跳转。二者其实是擅长的不同的领域。对于要构筑庞大的学科知识，并且要细化到每一个知识点，RR双链结合ZK可以很好的胜任。对于一个小概念，我们想要发散和记忆，思维导图就更擅长。合理的利用思维导图来进行思考和笔记，现在网络上有丰富的软件可以供给我们选择，简化我们的制作过程，降低修改的成本，所以，不要在用传统的笔记来阻碍我们思考的过程，采用适合的工具做它擅长的事。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>风中白兰地</title>
     <url>/2020/10/13/%E9%A3%8E%E4%B8%AD%E7%99%BD%E5%85%B0%E5%9C%B0/</url>
     <content><![CDATA[<p>下午到医院的时候已经是两点过了。</p>
@@ -656,7 +656,132 @@
 <p>这样的世界，再也不好了。</p>
 ]]></content>
       <categories>
-        <category>拾穗者</category>
+        <category>星月夜</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>筑梦者的浪漫</title>
+    <url>/2020/12/05/%E7%AD%91%E6%A2%A6%E8%80%85%E7%9A%84%E6%B5%AA%E6%BC%AB/</url>
+    <content><![CDATA[<center>已经口干舌燥两眼发昏
+
+<center>拖着疲惫的身体也要往前走
+<a id="more"></a>
+
+<center>我曾以为有自己的追寻
+
+<center>就足够支撑我走到它面前
+
+<center>直到这一路发生的一切
+
+<center>给了我沉重一击
+<br>
+<br>
+
+<center>我吞了一口雪让自己冷静下来
+
+<center>又开始抓自己的头发
+
+<center>咬自己的舌头
+
+<center>撕扯自己的皮肤
+
+<center>已经疯了！
+<br>
+<br>
+
+<center>又不是第一次疯了
+
+<center>只好往死里走
+
+<center>麻木
+
+<center>给自己扎一刀
+
+<center>也要小心翼翼不能伤及大脑
+
+<center>把头摘下来放在袖子里
+
+<center>把身体活生生的剥出来在寒冬里酿造最香最烈的酒
+
+<center>为唤醒已经趋于沉睡的思想奉献最后的烟火
+
+<center>没人愿意饮鸩止渴
+<br>
+<br>
+
+<center>远方的伊甸园啊
+
+<center>为什么你不愿往我靠近一点
+
+<center>从林间的竹笋到雨打的芭蕉
+
+<center>从枝巅的蜜橘到砌下的梨花
+
+<center>都没能拉近我们间的距离
+
+<center>还能继续吗？
+
+<center>还有什么可以抛弃的吗？
+<br>
+<br>
+
+<center>我将仅剩的大脑也切开
+
+<center>掏空所有
+
+<center>用来作最后盛放皇冠的容器
+
+<center>看着地上冒着热气的青灰色物质
+
+<center>我陷入了困惑
+
+<center>这是什么？
+
+<center>可恶！
+
+<center>这一定是假象
+
+<center>是犹大的阴谋诡计
+
+<center>是阿撒托斯的低语
+
+<center>是殉道者的倔强意识
+<br>
+<br>
+
+<center>我还没有想明白
+
+<center>最后的头颅也跌落
+
+<center>在雪上滚了三滚
+
+<center>空空如也的脑壳迎着天空
+<br>
+<br>
+
+<center>最后一盏灯灭了
+
+<center>我睡了下去
+
+<center>再没有醒过来
+
+<center>新雪掩埋了我的头颅
+
+<center>后来者把我挖出来
+
+<center>得意般的说到
+
+<center>——又发现一个
+
+<center>飞速的笔尖在纸上停留了足足三秒
+
+<center>我被扔到地上
+
+<center>脑壳朝着地上那个缺口
+
+<center>仿佛躲避他们离去时肩上闪着的刺眼的光]]></content>
+      <categories>
+        <category>星月夜</category>
       </categories>
   </entry>
 </search>
