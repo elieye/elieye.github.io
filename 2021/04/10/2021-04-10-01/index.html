@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Cinzel:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":"ture"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="《The PARA Method: A Universal System for Organizing Digital Information》  个人知识管理（PKM）个人知识的组织与实际物品的组织有着本质的区别，即动态与静态的区别。整理物品我们只需要按照一定的组织原则（类别）来进行分类，并且在后续需要添加新物品的时候简单的判断它属于哪个类别。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P.A.R.A">
+<meta property="og:url" content="http://yoursite.com/2021/04/10/2021-04-10-01/index.html">
+<meta property="og:site_name" content="elieye">
+<meta property="og:description" content="《The PARA Method: A Universal System for Organizing Digital Information》  个人知识管理（PKM）个人知识的组织与实际物品的组织有着本质的区别，即动态与静态的区别。整理物品我们只需要按照一定的组织原则（类别）来进行分类，并且在后续需要添加新物品的时候简单的判断它属于哪个类别。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-10T13:38:04.000Z">
+<meta property="article:modified_time" content="2021-04-10T13:39:02.333Z">
+<meta property="article:author" content="elieye">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2021/04/10/2021-04-10-01/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>P.A.R.A | elieye</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">elieye</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/10/2021-04-10-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="elieye">
+      <meta itemprop="description" content="漫漫长路，半程风雨，半程春">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="elieye">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          P.A.R.A
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-10 21:38:04 / 修改时间：21:39:02" itemprop="dateCreated datePublished" datetime="2021-04-10T21:38:04+08:00">2021-04-10</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p><a href="https://fortelabs.co/blog/para/" target="_blank" rel="noopener">《The PARA Method: A Universal System for Organizing Digital Information》</a></p>
+</blockquote>
+<h2 id="个人知识管理（PKM）"><a href="#个人知识管理（PKM）" class="headerlink" title="个人知识管理（PKM）"></a>个人知识管理（PKM）</h2><p>个人知识的组织与实际物品的组织有着本质的区别，即动态与静态的区别。整理物品我们只需要按照一定的组织原则（类别）来进行分类，并且在后续需要添加新物品的时候简单的判断它属于哪个类别。<a id="more"></a>知识的组织方式是动态灵活的，而非一成不变，简单判断即可。我们可以把需要掌握的知识分为基础知识和专业知识。基础知识例如我们应对危险时应该采取的措施，做饭的方法，运动的技巧等等。基础知识是通往专业知识的道路，不同领域的专业知识是由某方面或者多方面的基础知识不断深入而来。</p>
+<p>如果将知识体系分解为一个个的粒子的话，那么粒子之间是存在一定的关联，并且知识的粒度越小，粒子之间的联系就越复杂，越紧密。知识粒子之间也建立了类似于大脑神经元突触之间一样的联系，每一个粒子都是构建知识网络的基础。将知识分解为粒子就像函数式编程一样意义重大但是却没办法达到函数式编程的方便快捷。当某一个函数错误时我们只需要更改这个函数内容，并不需要我们对每一处用到这个函数的地方进行修改。如果某一个粒子被证明是错误的，结果就会像多米诺骨牌一样发生连锁反应，所有建立在这个知识粒子基础上的其他知识存在着被推翻的风险，知识的大厦存在着倒塌的可能性。这种风险对于基础科学领域来说尤为显著，但是对于大多数人来说并没有到这么严峻的情况。首先我们知识的粒度必须足够小，并且在知识体系中占据足够重要的位置才会出现这种结果。</p>
+<p>因为存在这种风险，所以我们构建个人知识体系时，首先需要将基础知识掌握牢靠。并且我们需要不断将某个领域的基础知识进行深化研究。知识体系的构建就像游泳池，需要不断地“进水-出水”的循环，“进水”、“出水”需要我们谨慎思考，大胆接受。我们专攻的领域有了更前沿的理论，我们需要不断往知识库里补充，同化新知识，改变已有的认知结构顺应新知识，最终达成认知平衡。当某些知识过时了，或者历史遗留的问题解决了，我们需要更新知识库，不断地填补基础知识。</p>
+<h2 id="P-A-R-A"><a href="#P-A-R-A" class="headerlink" title="P.A.R.A"></a>P.A.R.A</h2><p>P.A.R.A的提出者是Tiago Forte，他针对互联网时代数字信息的管理提出了一个全新的系统，其目的是不仅仅是为了管理信息，更重要的是促进自身的成长。每个人一生都需要学习海量的知识来保证我们能够跟上时代的变化，但是并不是每个人都要能够在各个不同的领域深耕，对于大多数人而言只需要精通某一个领域来保证我们的知识不断更新。即便如此，在某一个领域的知识量也是不容小觑，并且根据记忆的衰退说，无论多么简单的知识都需要不断地巩固加强才能够保障我们不忘记。如果把我们的知识比喻成一座图书馆的话，那么我们就需要类似于杜威十进制图书分类法（Dewey Decimal Classification）一样的信息组织策略来帮助我们对知识进行组织分类，这就是P.A.R.A的价值所在。</p>
+<p>对于将知识数字化后进行信息管理，这个系统必须满足下面这些条件：</p>
+<ul>
+<li><strong>通用的（universal</strong>）：包含来自任何来源的任何种类的信息，并且能跨平台兼容不同时代的信息管理工具。</li>
+<li><strong>灵活的（flexible）</strong>：能够与你之前的任何项目或活动所兼容，并且能兼顾未来的拓展性。</li>
+<li><strong>简单的（simple）</strong>：不需要任何耗时的维护、编目、标记或重组，只需最低限度的维护、编目、标记或重组即可。</li>
+<li><strong>可操作（actionable）</strong>：与任务管理和项目管理方法的无缝集成。</li>
+<li><strong>结果导向（outcome-oriented）</strong>：构建信息的结构，以便能交付有价值工作。</li>
+<li><strong>模块化（modular）</strong>：根据当前任务的需要，允许隐藏或显示不同级别的细节。</li>
+<li><strong>机动性强（opportunistic）</strong>：从好的方面来说，是利用已经完成的工作，而不是需要专门的管理时间。</li>
+</ul>
+<p>P.A.R.A 代表 <strong>Projects - Areas - Resources - Archives</strong></p>
+<ul>
+<li><strong>项目（Projects）</strong>：具有明确的目标以及DDL，例如完成应用程序模型、开发项目计划、执行商务发展活动、撰写博客文章、敲定产品规格、参加会议。</li>
+<li><strong>领域（Areas）</strong>：一组活动范围，有一个需要长期保持的标准，例如健康、财务、职业发展、旅游、爱好、朋友、公寓、汽车、生产力、直接报告、产品开发、写作。</li>
+<li><strong>资源（Resources）</strong>：持续感兴趣的话题或主题，例如习惯养成、项目管理、超人类主义、咖啡、音乐、园艺、网络营销、搜索引擎优化、室内设计、建筑、笔记。</li>
+<li><strong>归档（Archives）</strong>：来自其他三个类别的非活动项目，例如已完成或不活动的项目、您不再致力于维护的领域、您不再感兴趣的资源。</li>
+</ul>
+<h2 id="Projects-vs-Areas"><a href="#Projects-vs-Areas" class="headerlink" title="Projects vs Areas"></a>Projects vs Areas</h2><p>Projects和Areas的概念似乎很简单，但是在实践中经常会遇到某些情况让我们不知道放在哪里。对于二者的定义，我们区别如下</p>
+<ul>
+<li>Projects<ul>
+<li>有明确的目标</li>
+<li>有DDL</li>
+</ul>
+</li>
+<li>Area<ul>
+<li>长期维持的标准</li>
+<li>没有DDL</li>
+</ul>
+</li>
+</ul>
+<p>一个项目要有一个实现目标，一个将要发生的独立事件，允许这个项目被完全删除并从列表中删除。这个目标应该在一个特定的时间点实现。它有一个最后期限或时间框架，无论是外部的还是自我强加的。</p>
+<p>相比之下，领域有一个标准需要维持。而且没有结束日期或最终结果。你在这方面的表现可能会随着时间的推移而起起伏伏，但是这个标准会无限期地持续下去，并且在任何时候都需要一定程度的关注。</p>
+<p>项目总是可以归属于某个领域，举几个例子：</p>
+<ul>
+<li>跑马拉松是一个项目，而健康是一个领域</li>
+<li>出版一本书是一个项目，而写作是一个领域</li>
+<li>节省3个月的开支是一个项目，而财务是一个领域</li>
+<li>去泰国度假是一个项目，而旅游是一个领域</li>
+<li>计划周年晚宴是一个项目，而配偶是一个领域</li>
+</ul>
+<p>在所有这些示例中，项目都有完成日期。它们要么是完整的，要么是不完整的。另一方面，责任领域有必须无限期维持的实行标准。</p>
+<p>我们创建了一个项目的清单，但是我们能够清楚地认识的里面每一个项目的意义吗？或者说我们创建的是项目而不是领域。每一个项目都是为需要长期专注与维护的领域存在的，不为领域服务的不是项目，而是爱好，是资源。每一个项目存在的意义就是和我们的长期目标联系在一起的。也正是因为DDL和目标赋予了它工作的性质，而对于我们的个人爱好，例如突然对某个文化起源感兴趣了，并收集了解了很多的资料，我们仍然不能称它为项目，因为这是我们自己的兴趣，没有最终期限，没有任务量，没有朝着某个目标前进，不需要对谁负责，不感兴趣了可以随时丢弃。</p>
+<p>我们常常因花了很多时间却没有看到明显的成效而烦恼，因为没有一个指标能够评估我们的成果。如果我们将领域分解为待执行的项目，并且每一个项目都建立在前一个项目之上，在领域里建立一个文件用来记录有关这个领域做了哪些项目，取得了哪些成果，久而久之，我们能够完成更加复杂的项目，也直观的看到了我们在某一领域的成果。</p>
+<p>项目的建立可以是被动的，也可以是主动的。被动的项目一般是外在力量强制我们完成的任务，例如毕业论文、导师安排的任务等，也可以是我们根据自己的实际情况，针对自己的短板来安排项目，有的放矢。通过花时间来定制项目清单，可以执行有启发性的联系。</p>
+<p>最后，项目和系统需要完全不同的思维方式、方法、工具和方法。项目要求我们十分专注，不断追求结果，突破或避开障碍，忽略干扰（例如人）。领域需要平衡，需要内省和自我意识。项目是一项是否符合标准的直观练习，而领域是分析构建性性练习。</p>
+<h2 id="流动与循环"><a href="#流动与循环" class="headerlink" title="流动与循环"></a>流动与循环</h2><p>P.A.R.A是一个流动的系统，这是它最大的优势，每个组成部分都可能会随着我们任务的进行、兴趣的衰减等因素而变化。对于一个项目，我们完成后就可以移到归档里面，资源里面的一些内容因为我们的深入产生了更加深厚的兴趣可以移到领域里进行长期管理。归档并不意味着是地下室一类存放杂物吃灰的地方，相反，我们很有可能经常去翻阅归档里面我们完成的项目来帮助我们完成现在的项目，去里面找我们以前感兴趣的资源进行学科融合等等。P.A.R.A里面的每一个部分都有着高度的机动性与可变性，PKM不仅仅是外部知识的输入，还有内部知识的自循环来保持每一部分的知识都能够得到利用。</p>
+<p>不要放太多时间去整理系统的内部分类，也不要担心流动的部分可能会让自己的系统变得混乱，及时组织（Just-In-Time Organization）策略可以很大避免这个问题。知识体系的建立没有完成时，需要的是我们平时的改变，一点点的积累，找到适合自己的一套整理习惯并坚持下去就是广义上的完美主义。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/21/2021-03-21-02/" rel="prev" title="传统笔记与思维导图">
+      <i class="fa fa-chevron-left"></i> 传统笔记与思维导图
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#个人知识管理（PKM）"><span class="nav-number">1.</span> <span class="nav-text">个人知识管理（PKM）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P-A-R-A"><span class="nav-number">2.</span> <span class="nav-text">P.A.R.A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Projects-vs-Areas"><span class="nav-number">3.</span> <span class="nav-text">Projects vs Areas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流动与循环"><span class="nav-number">4.</span> <span class="nav-text">流动与循环</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="elieye"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">elieye</p>
+  <div class="site-description" itemprop="description">漫漫长路，半程风雨，半程春</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/elieye" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;elieye" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:elieye@163.com" title="E-Mail → mailto:elieye@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">elieye</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">42k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">38 分钟</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+-->
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/29/2020 21::40");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已存活 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+</body>
+</html>
